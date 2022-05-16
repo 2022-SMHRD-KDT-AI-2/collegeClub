@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+img{
+  width: 100%;
+  height: 100%;
+  /* background-color: whitesmoke; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media screen and (min-width: 769px){
+  
+  .App {
+    position: relative;
+    width: 940px;
+    height: 770px;
+  
+    /* width: 360px;
+    height: 640px; */
+    background-color: black;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .logo{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    left: 2%;
+    top: 2%;
+  }
+
+  .main{
+    position: relative;
+    width: 96%;
+    height: 48%;
+    left: 2%;
+    top: 4%;
+    background-color: green;
+    border-radius: 30px;
+  }
+
+  .select{
+    position: relative;
+    width: 50%;
+    height: 15%;
+    /* padding-bottom: 20%; */
+    left: 25%;
+    top: 8%;
+    background-color: blue;
+  }
+
+  .selectButton1{
+    position: absolute;
+    background-color: brown;
+    width: 50%;
+    height: 100%;
+    left: -25%;
+  }
+
+  .selectButton2{
+    position: absolute;
+    background-color: brown;
+    width: 50%;
+    height: 100%;
+    right: -25%;
+  }
+
+  .selectButton{
+    position: absolute;
+    background-color: aquamarine;
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+
+
+@media screen and (max-width: 768px) {
+    
+  .App {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .logo{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    left: 2%;
+    top: 2%;
+  }
+
+  .main{
+    position: relative;
+    width: 96%;
+    height: 48%;
+    left: 2%;
+    top: 4%;
+    background-color: aquamarine;
+    border-radius: 30px;
+  }
+
+  .select{
+    position: relative;
+    width: 50%;
+    /* height: 5%; */
+    padding-bottom: 20%;
+    left: 25%;
+    top: 8%;
+    background-color: aquamarine;
+  }
+
+  .selectButton1{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: -25%;
+  }
+
+  .selectButton2{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: -25%;
+  }
+
+  .selectButton{
+    position: absolute;
+    background-color: white;
+    border: 3px solid green;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .menubar{
+    position : absolute;
+    width : 100%;
+    height: 10%;
+    bottom: 0px;
+    background: rgba(82, 178, 140, 0.75);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+  }
+
+  .menubarDiv{
+    position: relative;
+    height: 50%;
+    
+  }
+
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
