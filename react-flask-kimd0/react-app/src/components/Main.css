@@ -5,10 +5,15 @@
         margin: 0 auto;
     }
 
+    .start {
+        font-size: 0px;
+    }
+
     #sc1,
     #sc2,
     #sc3 {
         display: none;
+
     }
 
     html {
@@ -66,8 +71,18 @@
 
     }
 
-    .sce11:hover #sc1 {
-        display: block;
+
+    .sce11:hover .start {
+
+        font-size: 20px;
+
+    }
+
+
+
+    #sc1,
+    #sc2,
+    #sc3 {
         background: none;
         color: deeppink;
         font-size: 20px;
@@ -75,6 +90,11 @@
         height: 20vh;
         border: none
     }
+
+    .sce11:hover #sc1 {
+        display: block;
+    }
+
 
     .sce2 {
         position: relative;
@@ -113,12 +133,6 @@
 
     .sce22:hover #sc2 {
         display: block;
-        background: none;
-        color: deeppink;
-        font-size: 20px;
-        width: 80vw;
-        height: 20vh;
-        border: none
     }
 
     .sce3 {
@@ -159,12 +173,6 @@
     .sce33:hover #sc3 {
 
         display: block;
-        background: none;
-        color: deeppink;
-        font-size: 20px;
-        width: 80vw;
-        height: 20vh;
-        border: none
     }
 
 
