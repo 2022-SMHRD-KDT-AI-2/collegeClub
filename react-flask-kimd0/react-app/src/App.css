@@ -157,8 +157,9 @@
   height: 10vh;
   top : 75%;
   border-radius: 100%;
+  float: left;
   background-color: #ffffff;
-  border: 10px solid #52B28C;;
+  border: 10px solid red;;
 
 }
 
@@ -170,11 +171,24 @@
   background-color: #52B28C;
 }
 
-.quizRight {
+.quizCenter {
   width : 15vw;
   height: 10vh;
   top : 75%;
   border-radius: 100%;
+  float: left;
   background-color: #ffffff;
   border: 10px solid #52B28C;;
 }
+
+.quizRight {
+  width : 15vw;
+  height: 10vh;
+  top : 75%;
+  float: left;
+  border-radius: 100%;
+  background-color: #ffffff;
+  border: 10px solid blue;;
+}
+
+
