@@ -87,6 +87,9 @@ const Main = (props) => {
                 <Link to="/product/2">
                     <li>2번상품</li>
                 </Link> 
+                <Link to="/result">
+                    <li>result</li>
+                </Link>
             </ul> 
         </> 
     ); 
