@@ -5,9 +5,10 @@
         margin: 0 auto;
     }
 
-    .start {
-        font-size: 0px;
+    .link {
+        text-decoration: none;
     }
+
 
     #sc1,
     #sc2,

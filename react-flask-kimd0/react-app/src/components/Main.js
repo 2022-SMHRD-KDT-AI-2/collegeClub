@@ -26,18 +26,18 @@ const Main = (props) => {
           <div className="sce1">
 
             <div className="sce11">
-              <button id='sc1' type='button'> <Link to="/Screen1">  <p className='start'>시나리오 1</p></Link></button>
+              <button id='sc1' type='button'> <Link to="/Screen1" className='link'>  <p className='start'>시나리오 1</p></Link></button>
 
             </div>
           </div>
           <div className="sce2">
             <div className="sce22">
-              <button id='sc2' type='button'>  <Link to="/Screen1"><p className='start'>시나리오 2</p></Link></button>
+              <button id='sc2' type='button'>  <Link to="/Screen1" className='link'><p className='start'>시나리오 2</p></Link></button>
             </div>
           </div>
           <div className="sce3">
             <div className="sce33">
-              <button id='sc3' type='button'> <Link to="/Screen1"> <p className='start'>시나리오 3</p></Link></button>
+              <button id='sc3' type='button'> <Link to="/Screen1" className='link'> <p className='start'>시나리오 3</p></Link></button>
             </div>
           </div>
         </div>
