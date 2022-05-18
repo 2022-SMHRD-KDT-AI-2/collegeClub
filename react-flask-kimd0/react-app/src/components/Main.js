@@ -45,7 +45,6 @@ const Main = (props) => {
 
         </div>
       </div>
-<<<<<<< Updated upstream
 
 
 
@@ -53,25 +52,6 @@ const Main = (props) => {
     </>
   );
 };
-=======
-    </div >
-  }
 
-const Main = (props) => { 
-    return ( 
-        <> 
-            <h3>안녕하세요. 메인페이지 입니다.</h3> 
-            <ul> 
-                <Link to="/quiz2">
-                    <li>1번상품</li>
-                </Link> 
-                <Link to="/product/2">
-                    <li>2번상품</li>
-                </Link> 
-            </ul> 
-        </> 
-    ); 
-}; 
->>>>>>> Stashed changes
 export default Main;
 
