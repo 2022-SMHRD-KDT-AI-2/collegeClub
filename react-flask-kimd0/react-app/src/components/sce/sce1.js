@@ -16,12 +16,11 @@ function Order(props) {
     const size = props.len;
     
     const [act, setAct] = useState(0);
-    const result = props.text.map((text) => text[2] === act+1 ? text[1] : null);
+    const result = props.text.map((text) => {if(text[2] === act+1){return text[1]}});
 
     if (props.category[act][3] === 1) {
         return (
             <>
-                <span>{props.category[0]}</span>
                 <Screen1 text={result} />
                 <div className="levelsec">
                     <button type='button' onClick={() => {
