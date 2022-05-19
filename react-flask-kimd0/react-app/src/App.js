@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import Main from './components/Main';
 import Screen1 from './components/Screen1';
+import Screen2 from './components/Screen2';
 import Result from './components/result'
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Main />}></Route>
 
           <Route path="/screen1/" element={<Screen1 />}></Route>
+          <Route path="/screen2/" element={<Screen2 />}></Route>
           <Route path="/result/" element={<Result />}></Route>
 
           <Route path="/quiz1*" element={<Quiz1 />}></Route>
