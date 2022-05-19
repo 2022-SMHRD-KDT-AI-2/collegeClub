@@ -26,6 +26,7 @@ def index():
     
     return json_string
 
+
 @app.route('/result', methods=['GET','POST'])
 def result():
     sql = "select * from t_stat1 where user_id = 'root'"
@@ -36,6 +37,7 @@ def result():
     json_string = json.dumps(result)
     
     return json_string
+
 
 
 if __name__ == '__main__':
