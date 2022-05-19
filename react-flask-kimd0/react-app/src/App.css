@@ -147,9 +147,9 @@
 }
 
 .quizButton {
-  width: 50%;
-  background-position: center;
-
+  width: 90vw;
+  border-radius: 10px;
+  height: 15vh;
 }
 
 .quizLeft {
@@ -177,4 +177,45 @@
   border-radius: 100%;
   background-color: #ffffff;
   border: 10px solid #52B28C;;
+}
+
+.quiz2Left {
+  width : 15vw;
+  height: 10vh;
+  top : 75%;
+  border-radius: 100%;
+  float: left;
+  background-color: #ffffff;
+  border: 5px solid #52B28C;;
+  font-size: 4vh;
+  font-weight: bold;
+  margin-top: 5vh;
+}
+
+.quiz2Center {
+  width : 15vw;
+  height: 10vh;
+  top : 75%;
+  border-radius: 100%;
+  float: left;
+  background-color: #ffffff;
+  border: 5px solid #52B28C;;
+  font-size: 4vh;
+  font-weight: bold;
+  margin-left: 22.5vw;
+  margin-top: 5vh;
+}
+
+.quiz2Right {
+  width : 15vw;
+  height: 10vh;
+  top : 75%;
+  float: left;
+  border-radius: 100%;
+  background-color: #ffffff;
+  border: 5px solid #52B28C;;
+  font-size: 4vh;
+  font-weight: bold;
+  margin-left: 22.5vw;
+  margin-top: 5vh;
 }
