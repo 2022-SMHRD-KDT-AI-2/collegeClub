@@ -1,5 +1,5 @@
 import React from 'react';
-import './Screen2.css';
+import './Screen4.css';
 import bar01 from '../img/meneBar_01.png';
 import bar02 from '../img/menuBar_02.png';
 import bar03 from '../img/menuBar_03.png';
@@ -8,23 +8,23 @@ import bar05 from '../img/menuBar_05.png';
 import { Link } from 'react-router-dom';
 
 
-const Screen2 = (props) => {
+const Screen1 = (props) => {
     return (
         <>
             <div className="wrap">
                 <div className="header">
                     <div className='incam'></div>
                 </div>
-                <div className="sec13"></div>
+                <div className="sec15"></div>
                 <div className="sec2">대사넣는곳</div>
                 <div className="footer">
                     <div className="levelsec">
-                        <div className="pre"> <Link to="/Screen1" className='link'><div className="preText">이전</div></Link></div>
+                        <div className="Skip"> <Link to="/Screen5" className='link'><div className="preText">이전</div></Link></div>
                         <div className="level">
-                            <p className="que">Q2</p>
-                            <p className="que">○ ● ○ ○ ○ ○ ○ ○</p>
+
+                            <p className="que">Quiz</p>
                         </div>
-                        <div className="next"><Link to="/Screen3" className='link'><div className="nextText">다음</div></Link></div>
+                        <div className="Start"><Link to="/Screen5" className='link'><div className="nextText">다음</div></Link></div>
                     </div>
                 </div>
                 <div id="menuBar">
@@ -50,5 +50,5 @@ const Screen2 = (props) => {
         </>
     );
 };
-export default Screen2;
+export default Screen1;
 
