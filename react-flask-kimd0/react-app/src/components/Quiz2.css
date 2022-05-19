@@ -1,4 +1,4 @@
-.quiz1Left{
+.quiz2Left {
     width : 15vw;
     height: 10vh;
     top : 75%;
@@ -9,11 +9,9 @@
     font-size: 4vh;
     font-weight: bold;
     margin-top: 5vh;
-    margin-left: 20vw;
-    margin-right: 10vw;
-}
-
-.quiz1Right{
+  }
+  
+  .quiz2Center {
     width : 15vw;
     height: 10vh;
     top : 75%;
@@ -23,8 +21,21 @@
     border: 5px solid #52B28C;;
     font-size: 4vh;
     font-weight: bold;
+    margin-left: 22.5vw;
     margin-top: 5vh;
-    margin-left: 10vw;
-    margin-right: 20vw;
-    /* margin-left: 12.5vw; */
-}
+  }
+  
+  .quiz2Right {
+    width : 15vw;
+    height: 10vh;
+    top : 75%;
+    float: left;
+    border-radius: 100%;
+    background-color: #ffffff;
+    border: 5px solid #52B28C;;
+    font-size: 4vh;
+    font-weight: bold;
+    margin-left: 22.5vw;
+    margin-top: 5vh;
+  }
+  
