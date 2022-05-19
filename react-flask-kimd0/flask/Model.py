@@ -2,17 +2,22 @@ import pymysql
 import pandas as pd
 import numpy as np
 
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn import metrics
+
 
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',
                      db='yang', charset='utf8')
 
 
 cursor = db.cursor()
-'''
+
 sql = "select * from t_stat1 inner join t_stat2 on t_stat1.user_id = t_stat2.user_id"
+
 '''
 sql = 'select * from t_stat1 left join t_stat2 on t_stat1.user_id = t_stat2.user_id union select * from t_stat1 right join t_stat2 on t_stat1.user_id = t_stat2.user_id;'
-Cursor = cursor.execute(sql)
+'''
+cursor.execute(sql)
 
 
 
@@ -30,7 +35,15 @@ for i in result:
 '''       
 df = pd.DataFrame(list1)
 df = df.fillna(0)
-print(df)
 df.drop(columns=[0, 7, 8, 15],inplace=True)
-print(df)
+
+X_train = df.loc[:,:13]
+y_train = df[14]
+
+knn_model = KNeighborsClassifier(n_neighbors=1)
+knn_model.fit(X_train, y_train)
+pre = knn_model.predict(X_train)
+print(pre)
+
+
 
