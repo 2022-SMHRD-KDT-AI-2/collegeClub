@@ -20,32 +20,46 @@ const Main = (props) => {
     <>
       <div></div>
       <div id="main">
-        <img className='logo' src={logo} width="200px" />
+        <div className='img'>
+          <img className='logo' src={logo} width="200px" /></div>
 
         <div className="sce">
           <div className="sce1">
 
             <div className="sce11">
-              <button id='sc1' type='button'> <Link to="/Screen1" className='link'>  <p className='start'>시나리오 1</p></Link></button>
+              <button id='sc1' type='button'> <Link to="/Screen1" className='link'>  <span className='start'>시나리오 1</span></Link></button>
 
             </div>
           </div>
           <div className="sce2">
             <div className="sce22">
-              <button id='sc2' type='button'>  <Link to="/Screen1" className='link'><p className='start'>시나리오 2</p></Link></button>
+              <button id='sc2' type='button'>  <Link to="/Screen1" className='link'><span className='start'>시나리오 2</span></Link></button>
             </div>
           </div>
           <div className="sce3">
             <div className="sce33">
-              <button id='sc3' type='button'> <Link to="/Screen1" className='link'> <p className='start'>시나리오 3</p></Link></button>
+              <button id='sc3' type='button'> <Link to="/Screen1" className='link'> <span className='start'>시나리오 3</span></Link></button>
             </div>
           </div>
         </div>
         <div id="menuBar">
-
+          <div>
+            <img className='menub' src={bar01} id="menuBarIcon1" />
+          </div>
+          <div>
+            <img className='menub' src={bar02} id="menuBarIcon2" />
+          </div>
+          <div>
+            <img className='menub' src={bar03} id="menuBarIcon3" />
+          </div>
+          <div>
+            <img className='menub' src={bar04} id="menuBarIcon4" />
+          </div>
+          <div>
+            <img className='menub' src={bar05} id="menuBarIcon5" />
+          </div>
         </div>
       </div>
-
 
 
 
