@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
 
     * {
         padding: 0;
@@ -7,8 +7,13 @@
 
     .link {
         text-decoration: none;
+
     }
 
+    .img {
+        width: 90vw;
+        margin-top: 1vh;
+    }
 
     #sc1,
     #sc2,
@@ -37,7 +42,7 @@
     .sce1 {
         position: relative;
         width: 80vw;
-        height: 20vh;
+        height: 21vh;
         font-size: 1.5rem;
         background: rgba(82, 178, 140, 0.25);
         border-radius: 15px;
@@ -50,7 +55,7 @@
     .sce11 {
         position: sticky;
         width: 80vw;
-        height: 20vh;
+        height: 21vh;
         font-size: 1.5rem;
         background: rgba(82, 178, 140, 0.25);
         border-radius: 15px;
@@ -73,11 +78,12 @@
     }
 
 
-    .sce11:hover .start {
-
-        font-size: 20px;
-
+    .start {
+        font-weight: bold;
+        color: white;
+        font-size: 30px;
     }
+
 
 
 
@@ -100,7 +106,7 @@
     .sce2 {
         position: relative;
         width: 80vw;
-        height: 20vh;
+        height: 21vh;
         background: rgba(82, 178, 140, 0.25);
         border-radius: 15px;
         text-align: center;
@@ -112,7 +118,7 @@
     .sce22 {
         position: sticky;
         width: 80vw;
-        height: 20vh;
+        height: 21vh;
         background: rgba(82, 178, 140, 0.25);
         border-radius: 15px;
         background-color: black;
@@ -139,7 +145,7 @@
     .sce3 {
         position: relative;
         width: 80vw;
-        height: 20vh;
+        height: 21vh;
         background: rgba(82, 178, 140, 0.25);
         border-radius: 15px;
         text-align: center;
@@ -149,10 +155,14 @@
 
     }
 
+    .menub {
+        width: 10%;
+    }
+
     .sce33 {
         position: sticky;
         width: 80vw;
-        height: 20vh;
+        height: 21vh;
         background-color: black;
         border-radius: 15px;
         text-align: center;
@@ -176,6 +186,11 @@
         display: block;
     }
 
+    .sce1,
+    .sce2,
+    .sce3 {
+        background-color: white;
+    }
 
     #menuBar {
         position: absolute;

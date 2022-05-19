@@ -1,0 +1,33 @@
+.quiz1Left {
+    width: 15vw;
+    height: 10vh;
+    top: 75%;
+    border-radius: 100%;
+    float: left;
+    background-color: #ffffff;
+    border: 5px solid #52B28C;
+    ;
+    font-size: 4vh;
+    font-weight: bold;
+    margin-top: 5vh;
+    margin-left: 20vw;
+    margin-right: 10vw;
+}
+
+.quiz1Right {
+    width: 15vw;
+    height: 10vh;
+    top: 75%;
+    border-radius: 100%;
+    float: left;
+    background-color: #ffffff;
+    border: 5px solid #52B28C;
+    ;
+    font-size: 4vh;
+    font-weight: bold;
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-right: 20vw;
+    /* margin-left: 12.5vw; */
+
+}
