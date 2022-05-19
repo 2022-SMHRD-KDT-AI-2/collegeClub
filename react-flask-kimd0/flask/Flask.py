@@ -14,11 +14,33 @@ app = Flask(__name__)
 CORS(app)
 
 
+@app.route('/sce', methods=['GET','POST'])
+def sce():
+    sql = "select * from t_sce"
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    for i in result:
+        print(i)
+    json_string = json.dumps(result)
+    print(json_string)
+    
+    return json_string
+
+@app.route('/sceSelect', methods=['GET','POST'])
+def sce_select():
+    sql = "select * from t_screen where sce_num = 1"
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    for i in result:
+        print(i)
+    json_string = json.dumps(result)
+    
+    return json_string
 
 
 @app.route('/screen1/text', methods=['GET','POST'])
 def index():
-    sql = "select text_num, text_text from t_text where screen_num = 1"
+    sql = "select text_num, text_text from t_text where sce_num = 1"
     cursor.execute(sql)
     result = cursor.fetchall()
     print(dict(result))
