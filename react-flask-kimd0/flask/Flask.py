@@ -22,11 +22,10 @@ def sce():
     for i in result:
         print(i)
     json_string = json.dumps(result)
-    print(json_string)
     
     return json_string
 
-@app.route('/sceSelect', methods=['GET','POST'])
+@app.route('/screen', methods=['GET','POST'])
 def sce_select():
     num = request.args["num"]
     sql = "select * from t_screen where sce_num = " + num
@@ -42,10 +41,11 @@ def sce_select():
 @app.route('/screen/text', methods=['GET','POST'])
 def text():
     num = request.args["num"]
-    sql = "select text_num, text_text from t_text where screen_num = " + num
+    sql = "select * from t_text"
     cursor.execute(sql)
     result = cursor.fetchall()
-    print(dict(result))
+    for i in result:
+        print(i)
     json_string = json.dumps(result)
     
     return json_string
