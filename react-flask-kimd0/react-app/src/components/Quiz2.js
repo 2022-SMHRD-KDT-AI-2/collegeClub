@@ -1,6 +1,8 @@
 import React from 'react'; 
+// import { Link } from 'react-router-dom';
+import './Quiz2.css';
 
-//시나리오 선택 화면
+// 퀴즈 3버튼 선택 화면
 
 const Quiz2 = (props) => { 
     return ( 
@@ -21,7 +23,6 @@ const Quiz2 = (props) => {
         <div className="levelsec">
           <div className="pre"><div className="preText">이전</div></div>
           <div className="level">
-            
           </div>
           <div className="next"><div className="nextText">다음</div></div>
         </div>
