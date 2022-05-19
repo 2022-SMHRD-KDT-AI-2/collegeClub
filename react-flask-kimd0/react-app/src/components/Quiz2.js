@@ -16,15 +16,19 @@ const Quiz2 = (props) => {
           <div className='incam'></div>
         </div>
         <div className="sec15"></div>
-        <div className="sec2">대사</div>
+        <div className="sec2">
+          <button className='button' type='Button' name='Hair'>A</button>
+          <button className='button' type='Button' name='Hair'>B</button>
+          <button className='button' type='Button' name='Hair'>C</button>
+        </div>
         <div className="footer">
           <div className="levelsec">
-            <div className="pre"> <Link to="/Screen4" className='link'><div className="preText">이전</div></Link></div>
+            <div className="pre"> <Link to="/Screen5" className='link'><div className="preText">이전</div></Link></div>
             <div className="level">
               <p className="que">Q1</p>
               <p className="que">● ○ ○ ○ ○ ○ ○ ○</p>
             </div>
-            <div className="next"><Link to="/Quiz2" className='link'><div className="nextText">다음</div></Link></div>
+            <div className="next"><Link to="/result" className='link'><div className="nextText">다음</div></Link></div>
           </div>
         </div>
         <div id="menuBar">
