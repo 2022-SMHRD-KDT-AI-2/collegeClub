@@ -21,10 +21,10 @@ const Screen2 = (props) => {
                     <div className="levelsec">
                         <div className="pre"> <Link to="/Screen1" className='link'><div className="preText">이전</div></Link></div>
                         <div className="level">
-                            <p className="que">Q2</p>
-                            <p className="que">○ ● ○ ○ ○ ○ ○ ○</p>
+                            <p className="que">Q1</p>
+                            <p className="que">● ○ ○ ○ ○ ○ ○ ○</p>
                         </div>
-                        <div className="next"><Link to="/Screen3" className='link'><div className="nextText">다음</div></Link></div>
+                        <div className="next"><Link to="/Quiz1" className='link'><div className="nextText">다음</div></Link></div>
                     </div>
                 </div>
                 <div id="menuBar">

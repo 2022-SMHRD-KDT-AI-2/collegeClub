@@ -12,20 +12,43 @@
 .Skip {
     font-size: 3vh;
     height: 6vh;
-    width: 15vw;
+    width: 20vw;
     float: left;
-    border-radius: 20px;
+    padding-top: 2vw;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 20vw;
+    background-color: gray;
+}
+
+.Start {
+    margin-left: 10vw;
+    font-size: 3vh;
+    width: 20vw;
+    height: 6vh;
+    float: left;
+    padding-top: 2vw;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    background-color: gray;
+}
+
+.sec3 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 90vw;
+    border-radius: 10px;
+    height: 10vh;
+    font-size: 5vh;
     text-align: center;
     font-weight: bold;
 }
 
-.Start {
-    font-size: 3vh;
-    width: 15vw;
-    height: 6vh;
+.level2 {
+    width: 90vw;
+    height: 10vh;
     float: left;
-
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
 }

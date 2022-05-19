@@ -16,16 +16,19 @@ const Screen1 = (props) => {
                     <div className='incam'></div>
                 </div>
                 <div className="sec15"></div>
-                <div className="sec2">대사넣는곳</div>
+                <div className="sec3">대사넣는곳</div>
                 <div className="footer">
                     <div className="levelsec">
-                        <div className="Skip"> <Link to="/Screen5" className='link'><div className="preText">이전</div></Link></div>
-                        <div className="level">
+                        <div className="Skip"> <Link to="/Screen5" className='link'><div className="preText">Skip</div></Link></div>
 
-                            <p className="que">Quiz</p>
+                        <div className="Start"><Link to="/Game1" className='link'><div className="nextText">시작</div></Link></div>
+
+                        <div className="level2">
+                            <p className="que">Q1</p>
+                            <p className="que">● ○ ○ ○ ○ ○ ○ ○</p>
                         </div>
-                        <div className="Start"><Link to="/Screen5" className='link'><div className="nextText">다음</div></Link></div>
                     </div>
+
                 </div>
                 <div id="menuBar">
                     <div>

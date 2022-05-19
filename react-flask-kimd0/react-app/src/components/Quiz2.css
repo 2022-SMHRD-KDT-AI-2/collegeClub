@@ -1,41 +1,10 @@
-.quiz2Left {
-    width : 15vw;
-    height: 10vh;
-    top : 75%;
-    border-radius: 100%;
-    float: left;
-    background-color: #ffffff;
-    border: 5px solid #52B28C;;
-    font-size: 4vh;
-    font-weight: bold;
-    margin-top: 5vh;
-  }
-  
-  .quiz2Center {
-    width : 15vw;
-    height: 10vh;
-    top : 75%;
-    border-radius: 100%;
-    float: left;
-    background-color: #ffffff;
-    border: 5px solid #52B28C;;
-    font-size: 4vh;
-    font-weight: bold;
-    margin-left: 22.5vw;
-    margin-top: 5vh;
-  }
-  
-  .quiz2Right {
-    width : 15vw;
-    height: 10vh;
-    top : 75%;
-    float: left;
-    border-radius: 100%;
-    background-color: #ffffff;
-    border: 5px solid #52B28C;;
-    font-size: 4vh;
-    font-weight: bold;
-    margin-left: 22.5vw;
-    margin-top: 5vh;
-  }
-  
+.sec15 {
+  background-image: url(../img/iu2.jpg);
+  width: 90vw;
+  height: 45vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  margin-bottom: 5vh;
+}

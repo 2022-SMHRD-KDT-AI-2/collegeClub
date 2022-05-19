@@ -81,6 +81,10 @@
     float: left;
 }
 
+.link {
+    color: black;
+}
+
 .next {
     font-size: 3vh;
     width: 15vw;
