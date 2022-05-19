@@ -28,7 +28,8 @@ def sce():
 
 @app.route('/sceSelect', methods=['GET','POST'])
 def sce_select():
-    sql = "select * from t_screen where sce_num = 1"
+    num = request.args["num"]
+    sql = "select * from t_screen where sce_num = " + num
     cursor.execute(sql)
     result = cursor.fetchall()
     for i in result:
@@ -38,9 +39,9 @@ def sce_select():
     return json_string
 
 
-@app.route('/screen1/text', methods=['GET','POST'])
+@app.route('/screen/text', methods=['GET','POST'])
 def index():
-    sql = "select text_num, text_text from t_text where sce_num = 1"
+    sql = "select text_num, text_text from t_text = " + num
     cursor.execute(sql)
     result = cursor.fetchall()
     print(dict(result))

@@ -9,7 +9,7 @@ import Screen2 from '../Screen2';
 function Order(props){
     if(props.category == 1){
         return(
-            <Screen1/>
+            <Screen1 text={props.text[0]}/>
         );
     }
     if(props.category == 2){
@@ -24,15 +24,20 @@ function useSce1() {
 
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState(true);
+    const [text, setText] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
-                    `http://220.80.33.51:8083/sceSelect`
+                    `http://220.80.33.51:8083/sceSelect?num=1`
+                );
+                const response2 = await axios.get(
+                    `http://220.80.33.51:8083/screen/text?num=1`
                 );
                 setLoading(false);
                 setData(response.data);
+                setText(response2.data);
                 console.log(data)
             } catch (e) {
                 console.log(e);
@@ -48,7 +53,7 @@ function useSce1() {
             ) : (
                 <>
                     <span>{data.length}</span>
-                    <Order category={data[5][3]}></Order>
+                    <Order text = {text} category={data[0][3]}></Order>
                 </>
             )
             }

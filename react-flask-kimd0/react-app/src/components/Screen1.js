@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 const Screen1 = (props) => {
   return (
     <>
+      <h3>{props.text}</h3>
       <div className="wrap">
         <div className="header">
           <div className='incam'></div>
