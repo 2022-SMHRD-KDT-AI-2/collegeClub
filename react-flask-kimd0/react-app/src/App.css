@@ -1,5 +1,5 @@
 .wrap {
-    margin: 0 auto;
+    background-color: black;
     list-style: none;
     text-decoration: none;
     width: 100%;
@@ -59,44 +59,12 @@
 
 }
 
-.pre {
-    font-size: 3vh;
-    height: 6vh;
-    width: 15vw;
-    float: left;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
 
-}
-
-.levelsec {
-    width: 90vw;
-    height: 15vh;
-}
-
-.level {
-    width: 60vw;
-    height: 10vh;
-    float: left;
-}
 
 .link {
     color: black;
 }
 
-.next {
-    font-size: 3vh;
-    width: 15vw;
-    height: 6vh;
-    float: left;
-
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
-
-
-}
 
 .que {
     text-align: center;

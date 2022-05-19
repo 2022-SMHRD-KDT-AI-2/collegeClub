@@ -40,8 +40,9 @@ def sce_select():
 
 
 @app.route('/screen/text', methods=['GET','POST'])
-def index():
-    sql = "select text_num, text_text from t_text = " + num
+def text():
+    num = request.args["num"]
+    sql = "select text_num, text_text from t_text where screen_num = " + num
     cursor.execute(sql)
     result = cursor.fetchall()
     print(dict(result))

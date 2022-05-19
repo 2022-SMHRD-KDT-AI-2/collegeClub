@@ -6,15 +6,34 @@ import { useState, useEffect } from 'react';
 import Screen1 from '../Screen1';
 import Screen2 from '../Screen2';
 
-function Order(props){
-    if(props.category == 1){
-        return(
-            <Screen1 text={props.text[0]}/>
+function Order(props) {
+    const [size, setSize] = useState(props.len);
+    let act = 0;
+
+    if (props.category[act][3] == 1) {
+        return (
+            <>
+                <Screen1 text={props.text} />
+                <div className="levelsec">
+                    <div className="pre"> <div className="preText">이전</div></div>
+                    <div className="level">
+                        <p className="que">Q1</p>
+                        <p className="que">● ○ ○ ○ ○ ○ ○ ○</p>
+                    </div>
+                    <div className="next"><div className="nextText">다음</div></div>
+                </div>
+            </>
         );
-    }
-    if(props.category == 2){
-        return(
-            <Screen2/>
+    } else if (props.category[act][3] == 2) {
+        return (
+            <>
+                <Screen2 text={props.text} />
+                <button type='button'>12asdasfasfsaf3</button>
+            </>
+        );
+    } else if (props.category[act][3] == 2) {
+        return (
+            <Screen2 />
         );
     }
 }
@@ -52,8 +71,7 @@ function useSce1() {
                 'loading...'
             ) : (
                 <>
-                    <span>{data.length}</span>
-                    <Order text = {text} category={data[0][3]}></Order>
+                    <Order len={data.length} text={text} category={data}></Order>
                 </>
             )
             }
