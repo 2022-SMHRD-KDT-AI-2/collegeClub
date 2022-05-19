@@ -37,9 +37,7 @@ const Screen2 = (props) => {
                         <img className='menub' src={bar05} id="menuBarIcon5" />
                     </div>
                 </div>
-
             </div >
-
         </>
     );
 };
