@@ -76,15 +76,18 @@ function Order(props) {
         </div>;
     }
     function Bottom2() {
-        return <div className="sec2">
-            <button className='button' type='Button' name='Hair' onClick={() => {
+        return <div className='bottom'>
+            <div className='dat'>
+                <a>{data}</a>
+            </div>
+            <button className='next' type='Button' name='Hair' onClick={() => {
                 num = act + 1;
                 if (num === props.len) {
                     num = props.len - 1;
                 }
                 setAct(num);
             } }>A</button>
-            <button className='button' type='Button' name='Hair' onClick={() => {
+            <button className='next' type='Button' name='Hair' onClick={() => {
                 num = act + 1;
                 if (num === props.len) {
                     num = props.len - 1;
