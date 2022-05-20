@@ -1,160 +1,49 @@
-img {
+* {
+    margin: 0 auto;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.wrap {
     width: 100%;
     height: 100%;
-    /* background-color: whitesmoke; */
 }
 
-.logo {
+.Header {
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+}
+
+.title {
+    text-align: center;
+    padding-top: 2vh;
     position: relative;
-    width: 150px;
-    height: 50px;
-    left: 2%;
-    top: 2%;
+    width: 100vw;
+    height: 7.5vh;
 }
 
-@media screen and (min-width: 769px) {
-    .App {
-        position: relative;
-        width: 940px;
-        height: 770px;
+.TypeResult {
+    position: relative;
+    width: 100vw;
+    height: 7.5vh;
+    text-align: center;
 
-        /* width: 360px;
-      height: 640px; */
-        background-color: black;
-    }
 }
 
+.section {
+    position: absolute;
+    width: 100vw;
+    height: 50vh;
 
-@media screen and (max-width: 768px) {
+}
 
-
-    .App {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-    }
-
-    .menubar {
-        position: absolute;
-        width: 100%;
-        height: 10%;
-        bottom: 0px;
-        background: rgba(82, 178, 140, 0.75);
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-        display: flex;
-    }
-
-    .menubarDiv {
-        position: relative;
-        height: 50%;
-    }
-
-    .res {
-        background-color: aqua;
-    }
-
-    .res1 {
-        justify-content: center;
-        display: flex;
-    }
-
-    .res2 {
-        justify-content: center;
-        display: flex;
-    }
-
-    .stat1 {
-        background-color: yellow;
-        position: relative;
-        padding: 5px;
-        width: 30%;
-        height: 15vh;
-    }
-
-    .result1 {
-        background-color: green;
-        position: relative;
-        padding: 5px;
-        width: 30%;
-        height: 15vh;
-    }
-
-    .stat2 {
-        background-color: blue;
-        position: relative;
-        padding: 5px;
-        width: 30%;
-        height: 15vh;
-    }
-
-    .result2 {
-        background-color: red;
-        position: relative;
-        padding: 5px;
-        width: 30%;
-        height: 15vh;
-    }
-
-    .resultText {
-        background-color: black;
-        position: relative;
-        margin: auto;
-        margin-top: 2%;
-        width: 90%;
-        height: 30vh;
-    }
-
-    .btn {
-        background-color: red;
-        position: relative;
-        margin: auto;
-        margin-top: 5%;
-        width: 50%;
-        height: auto;
-    }
-
-    .btn1 {
-        width: 50%;
-    }
-
-    .btn2 {
-        width: 50%;
-    }
-
-    .hexagon {
-        width: 100px;
-        height: 55px;
-        background: pink;
-        position: relative;
-        margin: auto;
-        transform: translate(0, 25%)
-    }
-
-    .hexagon:before {
-        content: "";
-        position: absolute;
-        top: -25px;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        border-bottom: 25px solid pink;
-    }
-
-    .hexagon:after {
-        content: "";
-        position: absolute;
-        bottom: -25px;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        border-top: 25px solid pink;
-    }
-
-
-
+.Hexagon1 {
+    width: 0px;
+    height: 0px;
+    border-right: 200px solid #666666;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    left: -50%;
 }
