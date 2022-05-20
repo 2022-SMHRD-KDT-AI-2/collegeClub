@@ -1,4 +1,12 @@
+.knn{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+}
+
+
 .bottom{
+    background-color: yellow;
     position: absolute;
     bottom: 15%;
     width: 100%;

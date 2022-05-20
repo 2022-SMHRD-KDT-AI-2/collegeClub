@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import Screen1 from '../Screen1';
 import Screen2 from '../Screen2';
 import Screen3 from '../Screen3';
+import { Link } from 'react-router-dom';
 
 let num = 0;
 
@@ -78,6 +79,9 @@ function Order(props) {
                         }} className='pre'>이전</button>
                         <button type='button' onClick={() => {
                             num = act + 1;
+                            if(act === props.category.length){
+                                <Link to='/result'></Link>
+                            }
                             setAct(num);
                         }} className='next'>다음</button>
                     </div>
@@ -106,13 +110,8 @@ function useSce1() {
                 const response = await axios.get(
                     `http://220.80.33.51:8083/screen?num=1`
                 );
-                const response2 = await axios.get(
-                    `http://220.80.33.51:8083/text?num=` + num
-                );
                 setLoading(false);
                 setData(response.data);
-                setText(response2.data);
-
 
             } catch (e) {
                 console.log(e);
