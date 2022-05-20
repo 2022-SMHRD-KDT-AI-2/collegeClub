@@ -40,58 +40,47 @@ function Order(props) {
         return (
             <>
                 <Screen1 />
-                <div className='bottom'>
-                    <div className='dat'>
-                        <a>{data}</a>
-                    </div>
-
-                    <div className='sce1Button'>
-                        <button type='button' onClick={() => {
-                            num = act - 1;
-                            if (num < 0) {
-                                num = 0;
-                            }
-                            setAct(num);
-                        }} className='pre'>이전</button>
-                        <button type='button' onClick={() => {
-                            num = act + 1;
-                            setAct(num);
-                        }} className='next'>다음</button>
-                    </div>
-                </div>
+                {Bottom()}
             </>
         )
     } else if (props.category[act][3] === 2) {
         return (
             <>
                 <Screen2 />
-                <div className='bottom'>
-                    <div className='dat'>
-                        <a>{data}</a>
-                    </div>
-                    <div className='sce1Button'>
-                        <button type='button' onClick={() => {
-                            num = act - 1;
-                            if (num < 0) {
-                                num = 0;
-                            }
-                            setAct(num);
-                        }} className='pre'>이전</button>
-                        <button type='button' onClick={() => {
-                            num = act + 1;
-                            if(act === props.category.length){
-                                <Link to='/result'></Link>
-                            }
-                            setAct(num);
-                        }} className='next'>다음</button>
-                    </div>
-                </div>
+                {Bottom()}
             </>
         );
-    } else if (props.category[act][3] === 2) {
+    } else if (props.category[act][3] === 3) {
         return (
-            <Screen3 />
+            <>
+                <Screen3 />
+                {Bottom()}
+            </>
         );
+    }
+
+    function Bottom() {
+        return <div className='bottom'>
+            <div className='dat'>
+                <a>{data}</a>
+            </div>
+            <div className='sce1Button'>
+                <button type='button' onClick={() => {
+                    num = act - 1;
+                    if (num < 0) {
+                        num = 0;
+                    }
+                    setAct(num);
+                } } className='pre'>이전</button>
+                <button type='button' onClick={() => {
+                    num = act + 1;
+                    if (num === props.len) {
+                        num = props.len - 1;
+                    }
+                    setAct(num);
+                } } className='next'>다음</button>
+            </div>
+        </div>;
     }
 }
 
@@ -119,10 +108,6 @@ function useSce1() {
         };
         fetchData();
     }, []);
-
-
-
-
 
     return (
         <div>
