@@ -38,10 +38,10 @@ def sce_select():
     return json_string
 
 
-@app.route('/screen/text', methods=['GET','POST'])
+@app.route('/text', methods=['GET','POST'])
 def text():
     num = request.args["num"]
-    sql = "select * from t_text"
+    sql = "select * from t_text where screen_num = " + num
     cursor.execute(sql)
     result = cursor.fetchall()
     for i in result:
