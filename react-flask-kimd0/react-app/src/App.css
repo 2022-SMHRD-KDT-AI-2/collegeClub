@@ -70,32 +70,6 @@
 
 }
 
-.pre {
-    font-size: 3vh;
-    height: 6vh;
-    width: 15vw;
-    float: left;
-    padding-top: 2vw;
-    border-radius: 15px;
-    text-align: center;
-    font-weight: bold;
-    background-color: gray;
-}
-
-.next {
-    font-size: 3vh;
-    width: 15vw;
-    height: 6vh;
-    float: right;
-    padding-top: 2vw;
-    border-radius: 15px;
-    text-align: center;
-    font-weight: bold;
-    background-color: gray;
-}
-
-
-
 .link {
     color: black;
 }
