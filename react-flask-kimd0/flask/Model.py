@@ -6,6 +6,17 @@ import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
 
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier 
+from sklearn.model_selection import cross_val_score 
+
+from sklearn.ensemble import VotingClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import AdaBoostClassifier
+
+from sklearn.model_selection import GridSearchCV
+
+
 
 
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',

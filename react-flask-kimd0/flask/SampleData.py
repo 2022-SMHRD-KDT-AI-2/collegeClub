@@ -2,36 +2,41 @@ import pymysql
 import pandas as pd
 import numpy as np
 
+db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',
+                     db='yang', charset='utf8');
+cursor = db.cursor();
 
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn import metrics
+df = pd.read_csv("./project2 설문.csv", encoding='cp949');
+print(df.drop(columns='타임스탬프', inplace = True));
 
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier 
-from sklearn.model_selection import cross_val_score 
-
-from sklearn.ensemble import VotingClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import AdaBoostClassifier
-
-from sklearn.model_selection import GridSearchCV
+num = 0;
 
 
+def insertUser(userId):
+    sql = "insert into t_user values('"+str(userId)+"', '1234', '000-0000-0000', '0000-00-00', 'address1', '0000@00000.000',SYSDATE(), 0)"
+    cursor.execute(sql);
+    db.commit();
 
+for i in df.values:
 
+    stat1 = [50,50,50,50,50,50];
+    stat2 = [50,50,50,50,50,50];
 
+    
+    num = num + 1;
+    print(num);
 
-df = pd.read_csv("./project2 설문.csv", encoding='cp949')
-print(df.drop(columns='타임스탬프'))
-
-
-
+    for j in range(6):
+        if(i[j].split('.')[0] == '1'):
+            stat1[j] = stat1[j] - 25;
+        
+        else:
+            stat1[j] = stat1[j] + 25;
+    print(stat1)
+    
 
 
 '''
-db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',
-                     db='yang', charset='utf8')
-cursor = db.cursor()
 
 
 sql = ""

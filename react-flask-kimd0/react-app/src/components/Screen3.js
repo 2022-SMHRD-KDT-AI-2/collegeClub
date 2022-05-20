@@ -6,7 +6,7 @@ import bar03 from '../img/menuBar_03.png';
 import bar04 from '../img/menuBar_04.png';
 import bar05 from '../img/menuBar_05.png';
 import { Link } from 'react-router-dom';
-import '../game/control.js'
+//import '../game/control.js'
 
 
 const Screen1 = (props) => {

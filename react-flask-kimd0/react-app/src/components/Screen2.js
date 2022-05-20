@@ -13,12 +13,11 @@ const Screen2 = (props) => {
         <>
             <div className="wrap">
                 <div className="header">
-                    <div className='incam'></div>
+                    <Link to='/'><div className='incam'></div></Link>
                 </div>
                 <div className="sec13"></div>
-                <div className="sec2">퀴즈</div>
                 <div className="footer">
-                    
+
                 </div>
                 <div id="menuBar">
                     <div>
@@ -42,4 +41,3 @@ const Screen2 = (props) => {
     );
 };
 export default Screen2;
-

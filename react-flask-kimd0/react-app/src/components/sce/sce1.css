@@ -22,32 +22,18 @@
 
 .sce1Button{
     position: relative;
-    background-color: yellow;
-    margin-top: 16%;
+    top: 50%;
 }
 
-.pre {
-    position: relative;
-    font-size: 3vh;
-    height: 6vh;
-    width: 15vw;
-    float: left;
-    border-radius: 15px;
-    text-align: center;
-    font-weight: bold;
-    margin-left: 15%;
-    background-color: gray;
-}
 
 .next {
     font-size: 3vh;
     width: 15vw;
     height: 6vh;
-    float: right;
     border-radius: 15px;
     text-align: center;
     font-weight: bold;
-    margin-right: 15%;
+    margin-left: 45%;
     background-color: gray;
 }
 

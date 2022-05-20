@@ -36,6 +36,7 @@ function Order(props) {
         fetchData();
     }, [num]);
 
+
     if (props.category[act][3] === 1) {
         return (
             <>
@@ -47,7 +48,7 @@ function Order(props) {
         return (
             <>
                 <Screen2 />
-                {Bottom()}
+                {Bottom2()}
             </>
         );
     } else if (props.category[act][3] === 3) {
@@ -58,7 +59,6 @@ function Order(props) {
             </>
         );
     }
-
     function Bottom() {
         return <div className='bottom'>
             <div className='dat'>
@@ -66,20 +66,31 @@ function Order(props) {
             </div>
             <div className='sce1Button'>
                 <button type='button' onClick={() => {
-                    num = act - 1;
-                    if (num < 0) {
-                        num = 0;
-                    }
-                    setAct(num);
-                } } className='pre'>이전</button>
-                <button type='button' onClick={() => {
                     num = act + 1;
                     if (num === props.len) {
                         num = props.len - 1;
                     }
                     setAct(num);
-                } } className='next'>다음</button>
+                }} className='next'>다음</button>
             </div>
+        </div>;
+    }
+    function Bottom2() {
+        return <div className="sec2">
+            <button className='button' type='Button' name='Hair' onClick={() => {
+                num = act + 1;
+                if (num === props.len) {
+                    num = props.len - 1;
+                }
+                setAct(num);
+            } }>A</button>
+            <button className='button' type='Button' name='Hair' onClick={() => {
+                num = act + 1;
+                if (num === props.len) {
+                    num = props.len - 1;
+                }
+                setAct(num);
+            } }>B</button>
         </div>;
     }
 }
