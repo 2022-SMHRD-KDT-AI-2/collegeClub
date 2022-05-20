@@ -20,3 +20,21 @@
 .text3{
     background-color: yellow;
 }
+
+.sec12 {
+    animation: fadeIn 3s ease forwards;
+}
+
+.dat {
+    animation: fadeIn 3s ease forwards;
+    animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
