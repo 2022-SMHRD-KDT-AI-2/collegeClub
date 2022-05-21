@@ -259,7 +259,7 @@ progress {
 .Buttonsection {
     position: absolute;
     width: 100vw;
-    height: 8vh;
+    height: 10vh;
     top: 72vh;
 }
 
@@ -345,7 +345,8 @@ progress {
 
 .imgdiv {
     position: absolute;
-    margin-top: 90vh;
+    margin-top: 80vh;
+    height: 10vh;
 }
 
 .type {
@@ -440,4 +441,33 @@ progress {
 .Result {
     font-weight: bold;
     color: #52B28C;
+}
+
+.HexaLi {
+    position: relative;
+    float: left;
+    width: 50vw;
+    height: 25vh;
+}
+
+.user-select-none {
+    position: relative;
+    z-index: -100;
+    right: 70px;
+    bottom: 60px;
+
+}
+
+.modebar-container {
+    display: none;
+}
+
+.plot-container {
+    width: 50vw;
+    height: 25vh;
+}
+
+plot-container plotly {
+    width: 50vw;
+    height: 25vh;
 }
