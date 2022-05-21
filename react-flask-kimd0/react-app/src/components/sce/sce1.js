@@ -10,8 +10,7 @@ import Screen4 from '../Screen4';
 import { Link } from 'react-router-dom';
 
 let num = 0;
-
-
+let stat1 = [];
 
 function Order(props) {
 
@@ -55,14 +54,14 @@ function Order(props) {
     } else if (props.category[act][3] === 3) {
         return (
             <>
-                <Screen3 />
+                <Screen2 />
                 {Bottom()}
             </>
         );
-    } else{
-        return(
+    } else {
+        return (
             <>
-                <Screen4 />
+                <button type='button' className='next' onClick={() => PostData()}>ekdma</button>
             </>
         )
     }
@@ -88,25 +87,50 @@ function Order(props) {
                 <a>{data}</a>
             </div>
             <button className='next' type='Button' name='Hair' onClick={() => {
+                stat1.push(1);
+                console.log(stat1)
                 num = act + 1;
                 if (num === props.len) {
                     num = props.len - 1;
                 }
                 setAct(num);
-            } }>A</button>
+            }}>A</button>
             <button className='next' type='Button' name='Hair' onClick={() => {
+                stat1.push(23);
+                console.log(stat1);
                 num = act + 1;
                 if (num === props.len) {
                     num = props.len - 1;
                 }
                 setAct(num);
-            } }>B</button>
+            }}>B</button>
         </div>;
     }
+    
 }
 
 
+async function PostData() {
+    const formData = new FormData();
+    console.log(stat1)
+    formData.append("file" , stat1);
+    formData.append("fileName" , 'fileName');
+
+    try{
+      	const res = await axios.post(
+        	`http://220.80.33.51:8083/postData`, //send file to flask 
+        	formData
+            );
+
+      	console.log(res.data);
+    }catch (error) {
+        //응답 실패
+        console.error(error);
+    }
+}
+
 function useSce1() {
+    stat1 = [];
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState(true);
     const [text, setText] = useState(true);

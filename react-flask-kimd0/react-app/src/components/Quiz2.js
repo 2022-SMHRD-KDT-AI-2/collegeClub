@@ -19,7 +19,6 @@ const Quiz2 = (props) => {
         <div className="sec2">
           <button className='button' type='Button' name='Hair'>A</button>
           <button className='button' type='Button' name='Hair'>B</button>
-          <button className='button' type='Button' name='Hair'>C</button>
         </div>
         <div className="footer">
           <div className="levelsec">

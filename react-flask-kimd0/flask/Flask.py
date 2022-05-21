@@ -62,6 +62,11 @@ def result():
     
     return json_string
 
+@app.route('/postData', methods=['GET','POST'])
+def insertData():
+    print(request.form['file'])
+    return 'scucces'
+
 
 
 if __name__ == '__main__':

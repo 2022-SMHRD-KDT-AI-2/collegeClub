@@ -15,7 +15,7 @@ const Screen1 = (props) => {
     <>
       <div className="wrap">
         <div className="header">
-        <Link to='/'><div className='incam'></div></Link>
+          <Link to='/'><div className='incam'></div></Link>
         </div>
         <div className="sec12"></div>
         <div id="menuBar">
