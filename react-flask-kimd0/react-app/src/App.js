@@ -6,7 +6,6 @@ import Screen1 from './components/Screen1';
 import Screen2 from './components/Screen2';
 import Screen3 from './components/Screen3';
 import Screen4 from './components/Screen4';
-import Screen5 from './components/Screen5';
 import Result from './components/result'
 
 import Sce1 from './components/sce/sce1';
@@ -31,7 +30,6 @@ function App() {
           <Route path="/screen2/" element={<Screen2 />}></Route>
           <Route path="/screen3/" element={<Screen3 />}></Route>
           <Route path="/screen4/" element={<Screen4 />}></Route>
-          <Route path="/screen5/" element={<Screen5 />}></Route>
           <Route path="/result/" element={<Result />}></Route>
 
           <Route path="/quiz1*" element={<Quiz1 />}></Route>

@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import Screen1 from '../Screen1';
 import Screen2 from '../Screen2';
 import Screen3 from '../Screen3';
+import Screen4 from '../Screen4';
 import { Link } from 'react-router-dom';
 
 let num = 0;
@@ -58,6 +59,12 @@ function Order(props) {
                 {Bottom()}
             </>
         );
+    } else{
+        return(
+            <>
+                <Screen4 />
+            </>
+        )
     }
     function Bottom() {
         return <div className='bottom'>
