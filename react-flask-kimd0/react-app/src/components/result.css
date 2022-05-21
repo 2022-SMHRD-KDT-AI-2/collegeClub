@@ -43,129 +43,9 @@
 }
 
 .section1 {
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: 50vh;
-}
-
-.Hexa1 {
-    position: relative;
-    height: 25vh;
-    top: 8vh;
-    float: left;
-    left: 10px;
-}
-
-.Hexagon1 {
-    width: 100px;
-    height: 57.735px;
-    background: #52B28C;
-    position: relative;
-}
-
-.Hexagon1::before {
-    content: "";
-    position: absolute;
-    top: -28.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 28.8675px solid #52B28C;
-}
-
-.Hexagon1::after {
-    content: "";
-    position: absolute;
-    bottom: -28.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 28.8675px solid #52B28C;
-}
-
-.Hexa11 {
-    position: relative;
-    height: 25vh;
-    top: 8.5vh;
-    float: left;
-    right: 75px;
-}
-
-.Hexagon1in {
-    position: relative;
-    width: 71px;
-    height: 50.735px;
-    background: white;
-    position: relative;
-}
-
-.Hexagon1in::before {
-    content: "";
-    position: absolute;
-    top: -14.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 37px solid transparent;
-    border-right: 36px solid transparent;
-    border-bottom: 14.8675px solid white;
-}
-
-.Hexagon1in::after {
-    content: "";
-    position: absolute;
-    bottom: -14.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 36px solid transparent;
-    border-right: 36px solid transparent;
-    border-top: 14.8675px solid white;
-}
-
-
-.Hexa111 {
-    position: relative;
-    height: 25vh;
-    top: 10vh;
-    float: left;
-    right: 132px;
-}
-
-.Hexagon1inin {
-    width: 45px;
-    height: 28.735px;
-    background: #52B28C;
-    position: relative;
-    opacity: 40%;
-}
-
-.Hexagon1inin::before {
-    content: "";
-    position: absolute;
-    top: -14.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 22px solid transparent;
-    border-right: 22px solid transparent;
-    border-bottom: 14.8675px solid #52B28C;
-}
-
-.Hexagon1inin::after {
-    content: "";
-    position: absolute;
-    bottom: -14.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 22px solid transparent;
-    border-right: 22px solid transparent;
-    border-top: 14.8675px solid #52B28C;
 }
 
 .Poi1 {
@@ -189,66 +69,10 @@ progress {
     margin-left: 5vw;
 }
 
-.Hexa2 {
-    position: relative;
-    width: 50vw;
-    height: 166px;
-    top: 47px;
-
-}
-
-.Hexa22 {
-    position: absolute;
-    left: 55px;
-    z-index: 20;
-    top: 6px;
-}
-
-.Hexagon2 {
-    width: 100px;
-    height: 57.735px;
-    background: #52B28C;
-    position: absolute;
-    bottom: 105px;
-    left: 40px;
-}
-
-#Hexagon2in {
-    top: 2%;
-}
-
-#Hexagon2inin {
-    top: 8%;
-}
-
-.Hexagon2::before {
-    content: "";
-    position: absolute;
-    top: -28.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 28.8675px solid #52B28C;
-}
-
-.Hexagon2::after {
-    content: "";
-    position: absolute;
-    bottom: -28.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 28.8675px solid #52B28C;
-}
-
 .result {
     position: absolute;
     width: 90vw;
-    height: 20vh;
+    height: 18vh;
     background-color: white;
     top: 50vh;
     border: 1px solid #52B28C;
@@ -260,7 +84,7 @@ progress {
     position: absolute;
     width: 100vw;
     height: 10vh;
-    top: 72vh;
+    top: 70vh;
 }
 
 .shareButton {
@@ -276,8 +100,8 @@ progress {
 
 .Butt1 {
     height: 8vh;
-    background: #52B28C;
-    border: #52B28C;
+    background: rgba(82, 178, 140, 0.75);;
+    border: rgba(82, 178, 140, 0.75);;
     border-radius: 15px;
     padding: 2vw;
     color: white;
@@ -287,60 +111,13 @@ progress {
 
 .Butt2 {
     height: 8vh;
-    background: #52B28C;
-    border: #52B28C;
+    background: rgba(82, 178, 140, 0.75);;
+    border: rgba(82, 178, 140, 0.75);;
     border-radius: 15px;
     padding: 2vw;
     color: white;
     font-weight: bold;
     margin-left: 5%;
-}
-
-#menuBar1 {
-    position: absolute;
-    width: 100vw;
-    height: 8vh;
-    left: 0px;
-    bottom: 0px;
-    background: rgba(82, 178, 140, 0.75);
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-
-}
-
-#menuBarIcon11 {
-    position: absolute;
-    height: 50%;
-    left: 5%;
-    top: 25%;
-}
-
-#menuBarIcon22 {
-    position: absolute;
-    height: 50%;
-    left: 25%;
-    top: 25%;
-}
-
-#menuBarIcon33 {
-    position: absolute;
-    height: 50%;
-    left: 45%;
-    top: 25%;
-}
-
-#menuBarIcon44 {
-    position: absolute;
-    height: 50%;
-    right: 25%;
-    top: 25%;
-}
-
-#menuBarIcon55 {
-    position: absolute;
-    height: 50%;
-    right: 5%;
-    top: 25%;
 }
 
 .imgdiv {
@@ -353,94 +130,12 @@ progress {
     position: relative;
 }
 
-#Sunbal {
-    left: 65px;
-    bottom: 50px;
-}
-
-#Churon {
-
-    left: -5px;
-    bottom: 30px;
-
-}
-
-#Munhae {
-    top: 15px;
-    left: -5px;
-}
-
-#Gwanchal {
-    top: 30px;
-    left: 65px;
-}
-
-#Tongchal {
-    left: 130px;
-    bottom: 20px;
-}
-
-#amgi {
-    bottom: 110px;
-    left: 130px;
-}
-
-.typetext {}
-
-.innerHexa2 {
-    position: absolute;
+.HexaLi2 {
+    position: relative;
+    float: left;
     width: 50vw;
     height: 25vh;
-    top: 25vh;
-    left: 50vw;
-
-}
-
-.Hexa222 {
-    position: absolute;
-    left: 68px;
-    z-index: 50;
-    top: 10%;
-}
-
-
-
-
-#real {
-    left: 75px;
-    bottom: 45px;
-}
-
-#tamgu {
-
-    left: 5px;
-    bottom: 30px;
-
-}
-
-#art {
-    top: 15px;
-    left: 5px;
-}
-
-#social {
-    top: 30px;
-    left: 75px;
-}
-
-#jinchi {
-    left: 145px;
-    bottom: 20px;
-}
-
-#learn {
-    bottom: 110px;
-    left: 145px;
-}
-
-.Result {
-    font-weight: bold;
-    color: #52B28C;
+    z-index: -999;
 }
 
 .HexaLi {
@@ -448,6 +143,19 @@ progress {
     float: left;
     width: 50vw;
     height: 25vh;
+}
+
+.innerHexa2 {
+    position: absolute;
+    width: 50vw;
+    height: 25vh;
+    top: 25vh;
+    left: 50vw;
+}
+
+.Result {
+    font-weight: bold;
+    color: #52B28C;
 }
 
 .user-select-none {
@@ -458,16 +166,9 @@ progress {
 
 }
 
-.modebar-container {
-    display: none;
-}
-
-.plot-container {
-    width: 50vw;
-    height: 25vh;
-}
-
-plot-container plotly {
-    width: 50vw;
-    height: 25vh;
+#menuBarTop{
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    top: 80vh;
 }

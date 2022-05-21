@@ -22,12 +22,21 @@ function useResult() {
 
     const data2 = [ // 차트에 들어갈 data를 먼저 지정해주고!
         {
-
             type: 'scatterpolar', // chart type
             r: [100, 0, 50, 50, 28, 39, 39], // data
-            theta: ['진실성', 'B', 'C', 'D', 'E', 'F'], // data category
+            theta: ['관습', '탐구', '현실', '예술', '사회', '진취'], // data category
             fill: 'toself', // fill option
             name: 'Group A' // data group name
+        }
+    ]
+
+    const data3 = [ // 차트에 들어갈 data를 먼저 지정해주고!
+        {
+            type: 'scatterpolar', // chart type
+            r: [100, 0, 50, 50, 28, 39, 39], // data
+            theta: ['추론', '암기', '순발', '통찰', '관찰', '문해'], // data category
+            fill: 'toself', // fill option
+            name: 'Group B' // data group name
         }
     ]
 
@@ -74,15 +83,12 @@ function useResult() {
 
                     <div className='section'>
                         <div className='section1'>
-
                             <div className='HexaLi'> <Plot data={data2} layout={layout} debug enableFullPlotly /></div>
-
 
                             <div className='Poi1'><div className='point1'>
                                 <div>
                                     <progress></progress>
                                 </div>
-
                                 <div>
                                     <progress value={i} max="100"></progress>
                                 </div>
@@ -106,8 +112,7 @@ function useResult() {
                                 </div>
                             </div></div>
                             <div className='innerHexa2'>
-                                <div className='HexaLi'> <Plot data={data2} layout={layout} debug enableFullPlotly /></div>
-
+                                <div className='HexaLi2'> <Plot data={data3} layout={layout} debug enableFullPlotly /></div>
                             </div>
 
                         </div>
@@ -116,30 +121,28 @@ function useResult() {
 
                         <div className='Buttonsection'>
                             <div className='shareButton'><button className='Butt1' type='button'>결과 공유하기</button></div>
-                            <div className='restartButton'><button className='Butt2' type='button'>다시하기</button></div>
-
+                            <div className='restartButton'><button className='Butt2' type='button'>다음으로</button></div>
                         </div>
-                        <div className='imgdiv'>
-                            <div id="menuBar1">
-                                <div>
-                                    <img className='menub' src={bar01} id="menuBarIcon11" />
-                                </div>
-                                <div>
-                                    <img className='menub' src={bar02} id="menuBarIcon22" />
-                                </div>
-                                <div>
-                                    <img className='menub' src={bar03} id="menuBarIcon33" />
-                                </div>
-                                <div>
-                                    <img className='menub' src={bar04} id="menuBarIcon44" />
-                                </div>
-                                <div>
-                                    <img className='menub' src={bar05} id="menuBarIcon55" />
-                                </div>
+
+                        <div id="menuBarTop">
+                        <div id="menuBar">
+                            <div>
+                                <img className='menub' src={bar01} id="menuBarIcon1" />
+                            </div>
+                            <div>
+                                <img className='menub' src={bar02} id="menuBarIcon2" />
+                            </div>
+                            <div>
+                                <img className='menub' src={bar03} id="menuBarIcon3" />
+                            </div>
+                            <div>
+                                <img className='menub' src={bar04} id="menuBarIcon4" />
+                            </div>
+                            <div>
+                                <img className='menub' src={bar05} id="menuBarIcon5" />
                             </div>
                         </div>
-
-
+                        </div>
 
 
 
