@@ -248,7 +248,7 @@ progress {
 .result {
     position: absolute;
     width: 90vw;
-    height: 20vh;
+    height: 18vh;
     background-color: white;
     top: 50vh;
     border: 1px solid #52B28C;
@@ -260,7 +260,7 @@ progress {
     position: absolute;
     width: 100vw;
     height: 10vh;
-    top: 72vh;
+    top: 70vh;
 }
 
 .shareButton {
@@ -294,53 +294,6 @@ progress {
     color: white;
     font-weight: bold;
     margin-left: 5%;
-}
-
-#menuBar1 {
-    position: absolute;
-    width: 100vw;
-    height: 8vh;
-    left: 0px;
-    bottom: 0px;
-    background: rgba(82, 178, 140, 0.75);
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-
-}
-
-#menuBarIcon11 {
-    position: absolute;
-    height: 50%;
-    left: 5%;
-    top: 25%;
-}
-
-#menuBarIcon22 {
-    position: absolute;
-    height: 50%;
-    left: 25%;
-    top: 25%;
-}
-
-#menuBarIcon33 {
-    position: absolute;
-    height: 50%;
-    left: 45%;
-    top: 25%;
-}
-
-#menuBarIcon44 {
-    position: absolute;
-    height: 50%;
-    right: 25%;
-    top: 25%;
-}
-
-#menuBarIcon55 {
-    position: absolute;
-    height: 50%;
-    right: 5%;
-    top: 25%;
 }
 
 .imgdiv {
@@ -470,4 +423,11 @@ progress {
 plot-container plotly {
     width: 50vw;
     height: 25vh;
+}
+
+#menuBarTop{
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    top: 80vh;
 }

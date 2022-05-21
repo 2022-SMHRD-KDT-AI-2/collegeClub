@@ -117,29 +117,27 @@ function useResult() {
                         <div className='Buttonsection'>
                             <div className='shareButton'><button className='Butt1' type='button'>결과 공유하기</button></div>
                             <div className='restartButton'><button className='Butt2' type='button'>다시하기</button></div>
-
                         </div>
-                        <div className='imgdiv'>
-                            <div id="menuBar1">
-                                <div>
-                                    <img className='menub' src={bar01} id="menuBarIcon11" />
-                                </div>
-                                <div>
-                                    <img className='menub' src={bar02} id="menuBarIcon22" />
-                                </div>
-                                <div>
-                                    <img className='menub' src={bar03} id="menuBarIcon33" />
-                                </div>
-                                <div>
-                                    <img className='menub' src={bar04} id="menuBarIcon44" />
-                                </div>
-                                <div>
-                                    <img className='menub' src={bar05} id="menuBarIcon55" />
-                                </div>
+
+                        <div id="menuBarTop">
+                        <div id="menuBar">
+                            <div>
+                                <img className='menub' src={bar01} id="menuBarIcon1" />
+                            </div>
+                            <div>
+                                <img className='menub' src={bar02} id="menuBarIcon2" />
+                            </div>
+                            <div>
+                                <img className='menub' src={bar03} id="menuBarIcon3" />
+                            </div>
+                            <div>
+                                <img className='menub' src={bar04} id="menuBarIcon4" />
+                            </div>
+                            <div>
+                                <img className='menub' src={bar05} id="menuBarIcon5" />
                             </div>
                         </div>
-
-
+                        </div>
 
 
 
