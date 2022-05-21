@@ -18,22 +18,28 @@ const Screen1 = (props) => {
           <div className='incam'></div>
         </div>
 
-        <div className="club1"></div>
-        <div className="club2"></div>
-        <div className="club3"></div>
-        <div className="club4"></div>
-
-        <div className="userBox1">
-            <div className="userProfile"></div>
-            <div className="userName"></div>
-            <div className="userProfile"></div>
-            <div className="userName"></div>
+        <div className='club1'>
+            <div className='clubImage1'></div>
+            <div className='userProfile1'></div>
+            <div className='userName1'></div>
         </div>
-        <div className="userBox2">
-            <div className="userProfile"></div>
-            <div className="userName"></div>
-            <div className="userProfile"></div>
-            <div className="userName"></div>
+
+        <div className='club2'>
+            <div className='clubImage2'></div>
+            <div className='userProfile2'></div>
+            <div className='userName2'></div>
+        </div>
+
+        <div className='club3'>
+            <div className='clubImage3'></div>
+            <div className='userProfile3'></div>
+            <div className='userName3'></div>
+        </div>
+
+        <div className='club4'>
+            <div className='clubImage4'></div>
+            <div className='userProfile4'></div>
+            <div className='userName4'></div>
         </div>
 
         <div className='Buttonsection2'>
