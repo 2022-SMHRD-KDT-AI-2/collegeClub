@@ -1,5 +1,5 @@
-.sec13 {
-    background-image: url(../img/map.jpg);
+.sec12 {
+    background-image: url(../../img/blossom.jpg);
     width: 90vw;
     height: 45vh;
     background-position: center;
@@ -9,12 +9,25 @@
     margin-bottom: 5vh;
 }
 
-.sec13 {
+.text1{
+    background-color: gray;
+}
+
+.text2{
+    background-color: green;
+}
+
+.text3{
+    background-color: yellow;
+}
+
+.sec12 {
     animation: fadeIn 3s ease forwards;
 }
 
 .dat {
     animation: fadeIn 3s ease forwards;
+    animation-delay: 3s;
 }
 
 @keyframes fadeIn {

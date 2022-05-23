@@ -64,7 +64,7 @@
         margin-top: 4vh;
         background-color: black;
         opacity: 70%;
-        background-image: url(../img/jin01.jpeg);
+        background-image: url(../../img/jin01.jpeg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -73,7 +73,7 @@
     .sce11:hover {
 
         transition: 2s;
-        background-image: url(../img/son.jpeg);
+        background-image: url(../../img/son.jpeg);
 
     }
 
@@ -126,7 +126,7 @@
         font-size: 3em;
         margin-top: 5vh;
         opacity: 70%;
-        background-image: url(../img/jing02.jpg);
+        background-image: url(../../img/jing02.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -134,7 +134,7 @@
 
     .sce22:hover {
         transition: 2s;
-        background-image: url(../img/son.jpeg);
+        background-image: url(../../img/son.jpeg);
 
     }
 
@@ -155,9 +155,7 @@
 
     }
 
-    .menub {
-        width: 10%;
-    }
+    
 
     .sce33 {
         position: sticky;
@@ -169,7 +167,7 @@
         font-size: 3em;
         margin-top: 5vh;
         opacity: 70%;
-        background-image: url(../img/son.jpeg);
+        background-image: url(../../img/son.jpeg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -178,7 +176,7 @@
 
     .sce33:hover {
         transition: 2s;
-        background-image: url(../img/jin01.jpeg);
+        background-image: url(../../img/jin01.jpeg);
     }
 
     .sce33:hover #sc3 {
@@ -192,51 +190,6 @@
         background-color: white;
     }
 
-    #menuBar {
-        position: absolute;
-        width: 100vw;
-        height: 10vh;
-        left: 0px;
-        bottom: 0px;
-        background: rgba(82, 178, 140, 0.75);
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-    }
-
-    #menuBarIcon1 {
-        position: absolute;
-        height: 50%;
-        left: 5%;
-        top: 25%;
-    }
-
-    #menuBarIcon2 {
-        position: absolute;
-        height: 50%;
-        left: 25%;
-        top: 25%;
-    }
-
-    #menuBarIcon3 {
-        position: absolute;
-        height: 50%;
-        left: 45%;
-        top: 25%;
-    }
-
-    #menuBarIcon4 {
-        position: absolute;
-        height: 50%;
-        right: 25%;
-        top: 25%;
-    }
-
-    #menuBarIcon5 {
-        position: absolute;
-        height: 50%;
-        right: 5%;
-        top: 25%;
-    }
 
     /* #bar{
 position: absolute;

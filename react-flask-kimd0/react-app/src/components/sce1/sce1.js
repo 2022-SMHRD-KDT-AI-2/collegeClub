@@ -3,11 +3,12 @@ import './sce1.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-import Screen1 from '../Screen1';
-import Screen2 from '../Screen2';
-import Screen3 from '../Screen3';
-import Screen4 from '../Screen4';
-import { Link } from 'react-router-dom';
+import Menubar from '../header/Header'
+import Header from '../menubar/Menubar';
+import Screen1 from '../body/Screen1';
+import Screen2 from '../body/Screen2';
+import Screen3 from '../body/Screen3';
+import Screen4 from '../body/Screen4';
 
 let num = 0;
 let stat1 = [];
@@ -40,7 +41,7 @@ function Order(props) {
     if (props.category[act][3] === 1) {
         return (
             <>
-                <Screen1 />
+                <Screen1 data = {data}/>
                 {Bottom()}
             </>
         )
@@ -61,69 +62,76 @@ function Order(props) {
     } else {
         return (
             <>
+                <Screen4></Screen4>
                 <button type='button' className='next' onClick={() => PostData()}>ekdma</button>
             </>
         )
     }
     function Bottom() {
-        return <div className='bottom'>
-            <div className='dat'>
-                <a>{data}</a>
+        return (
+            <div className='bottom'>
+                <div className='dat'>
+                    <a>{data}</a>
+                </div>
+                <div className='sce1Button'>
+                    <button type='button' onClick={() => {
+                        num = act + 1;
+                        if (num === props.len) {
+                            num = props.len - 1;
+                        }
+                        setAct(num);
+                    }} className='next1'>다음</button>
+                </div>
             </div>
-            <div className='sce1Button'>
-                <button type='button' onClick={() => {
-                    num = act + 1;
-                    if (num === props.len) {
-                        num = props.len - 1;
-                    }
-                    setAct(num);
-                }} className='next'>다음</button>
-            </div>
-        </div>;
+        );
     }
     function Bottom2() {
-        return <div className='bottom'>
-            <div className='dat'>
-                <a>{data}</a>
+        return (
+            <div className='bottom'>
+                <div className='dat'>
+                    <a>{data}</a>
+                </div>
+                <div className='sce1Button'>
+                    <button className='pre' type='Button' name='Hair' onClick={() => {
+                        stat1.push(1);
+                        console.log(stat1)
+                        num = act + 1;
+                        if (num === props.len) {
+                            num = props.len - 1;
+                        }
+                        setAct(num);
+                    }}>A</button>
+                    <button className='next' type='Button' name='Hair' onClick={() => {
+                        stat1.push(23);
+                        console.log(stat1);
+                        num = act + 1;
+                        if (num === props.len) {
+                            num = props.len - 1;
+                        }
+                        setAct(num);
+                    }}>B</button>
+                </div>
             </div>
-            <button className='next' type='Button' name='Hair' onClick={() => {
-                stat1.push(1);
-                console.log(stat1)
-                num = act + 1;
-                if (num === props.len) {
-                    num = props.len - 1;
-                }
-                setAct(num);
-            }}>A</button>
-            <button className='next' type='Button' name='Hair' onClick={() => {
-                stat1.push(23);
-                console.log(stat1);
-                num = act + 1;
-                if (num === props.len) {
-                    num = props.len - 1;
-                }
-                setAct(num);
-            }}>B</button>
-        </div>;
+        )
     }
-    
+
 }
 
 
 async function PostData() {
     const formData = new FormData();
     console.log(stat1)
-    formData.append("file" , stat1);
-    formData.append("fileName" , 'fileName');
+    formData.append("file", stat1);
+    formData.append("fileName", 'fileName');
 
-    try{
-      	const res = await axios.post(
-        	`http://220.80.33.51:8083/postData`, //send file to flask 
-        	formData
-            );
+    try {
+        const res = await axios.post(
+            `http://220.80.33.51:8083/postData`, //send file to flask 
+            formData
+        );
 
-      	console.log(res.data);
-    }catch (error) {
+        console.log(res.data);
+    } catch (error) {
         //응답 실패
         console.error(error);
     }
@@ -160,7 +168,9 @@ function useSce1() {
                 'loading...'
             ) : (
                 <>
+                    <Header></Header>
                     <Order text={text} len={data.length} category={data}></Order>
+                    <Menubar></Menubar>
                 </>
             )
             }

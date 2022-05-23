@@ -1,0 +1,45 @@
+#menuBar {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    left: 0px;
+    bottom: 0%;
+    background: rgba(82, 178, 140, 0.75);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+#menuBarIcon1 {
+    position: absolute;
+    height: 50%;
+    left: 5%;
+    top: 25%;
+}
+
+#menuBarIcon2 {
+    position: absolute;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+}
+
+#menuBarIcon3 {
+    position: absolute;
+    height: 50%;
+    left: 45%;
+    top: 25%;
+}
+
+#menuBarIcon4 {
+    position: absolute;
+    height: 50%;
+    right: 25%;
+    top: 25%;
+}
+
+#menuBarIcon5 {
+    position: absolute;
+    height: 50%;
+    right: 5%;
+    top: 25%;
+}

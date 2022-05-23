@@ -19,19 +19,22 @@ const Screen1 = (props) => {
         </div>
 
         <div className="club1"></div>
-        <div className="club2"></div>
-        <div className="club3"></div>
-        <div className="club4"></div>
-
         <div className="userBox1">
             <div className="userProfile"></div>
             <div className="userName"></div>
+        </div>
+        <div className="club2"></div>
+        <div className="userBox1">
             <div className="userProfile"></div>
             <div className="userName"></div>
         </div>
-        <div className="userBox2">
+        <div className="club3"></div>
+        <div className="userBox1">
             <div className="userProfile"></div>
             <div className="userName"></div>
+        </div>
+        <div className="club4"></div>
+        <div className="userBox1">
             <div className="userProfile"></div>
             <div className="userName"></div>
         </div>
@@ -40,25 +43,6 @@ const Screen1 = (props) => {
             <div className='shareButton'><button className='Butt1' type='button'>결과 공유하기</button></div>
             <div className='restartButton'><button className='Butt2' type='button'>다시하기</button></div>
         </div>
-
-        <div id="menuBar">
-          <div>
-            <img className='menub' src={bar01} id="menuBarIcon1" />
-          </div>
-          <div>
-            <img className='menub' src={bar02} id="menuBarIcon2" />
-          </div>
-          <div>
-            <img className='menub' src={bar03} id="menuBarIcon3" />
-          </div>
-          <div>
-            <img className='menub' src={bar04} id="menuBarIcon4" />
-          </div>
-          <div>
-            <img className='menub' src={bar05} id="menuBarIcon5" />
-          </div>
-        </div>
-
       </div>
 
     </>

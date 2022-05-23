@@ -118,54 +118,12 @@ function useResult() {
                         </div>
                         <div className='result'></div>
 
-
                         <div className='Buttonsection'>
                             <div className='shareButton'><button className='Butt1' type='button'>결과 공유하기</button></div>
                             <div className='restartButton'><button className='Butt2' type='button'>다음으로</button></div>
                         </div>
-
-                        <div id="menuBarTop">
-                        <div id="menuBar">
-                            <div>
-                                <img className='menub' src={bar01} id="menuBarIcon1" />
-                            </div>
-                            <div>
-                                <img className='menub' src={bar02} id="menuBarIcon2" />
-                            </div>
-                            <div>
-                                <img className='menub' src={bar03} id="menuBarIcon3" />
-                            </div>
-                            <div>
-                                <img className='menub' src={bar04} id="menuBarIcon4" />
-                            </div>
-                            <div>
-                                <img className='menub' src={bar05} id="menuBarIcon5" />
-                            </div>
-                        </div>
-                        </div>
-
-
-
-
-
                     </div>
-
-
-
-
-
-
-
                 </div>
-
-
-
-
-
-
-
-
-
             )
             }
 
