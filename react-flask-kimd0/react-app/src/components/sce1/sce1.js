@@ -53,7 +53,7 @@ function Order(props) {
     } else if (props.category[act][3] === 3) {
         return (
             <>
-                <Screen2 data = {data}/>
+                <Screen3 data = {data}/>
                 {Bottom()}
             </>
         );
