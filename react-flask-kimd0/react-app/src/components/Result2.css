@@ -1,4 +1,149 @@
+
 .club1{
+    width: 42.5vw;
+    height: 30vh;
+    margin-bottom: 3vh;
+    margin-left: 5vw;
+    float: left;
+}
+
+.club2{
+    width: 42.5vw;
+    height: 30vh;
+    margin-bottom: 3vh;
+    margin-left: 5vw;
+    float: left;
+
+}
+
+.club3{
+    width: 42.5vw;
+    height: 30vh;
+    margin-bottom: 3vh;
+    margin-left: 5vw;
+    float: left;
+
+}
+
+.club4{
+    width: 42.5vw;
+    height: 30vh;
+    margin-bottom: 3vh;
+    margin-left: 5vw;
+    float: left;
+
+}
+
+.clubImage1{
+    width: 42.5vw;
+    height: 24vh;
+    margin-bottom: 1vh;
+    background-color: red;
+    border-radius: 25px;
+}
+
+.clubImage2{
+    width: 42.5vw;
+    height: 24vh;
+    margin-bottom: 1vh;
+    background-color: blue;
+    border-radius: 25px;
+}
+
+.clubImage3{
+    width: 42.5vw;
+    height: 24vh;
+    margin-bottom: 1vh;
+    background-color: green;
+    border-radius: 25px;
+}
+
+.clubImage4{
+    width: 42.5vw;
+    height: 24vh;
+    margin-bottom: 1vh;
+    background-color: grey;
+    border-radius: 25px;
+}
+
+.userProfile1{
+    width: 9vw;
+    height: 5vh;
+    margin-bottom: 0.5vh;
+    margin-right : 0.9vw;
+    background-image: url(../img/son.jpeg);
+    background-size: cover;
+    float: left;
+    border-radius: 10px;
+
+}
+
+.userName1{
+    width: 32.6vw;
+    height: 5vh;
+    margin-bottom: 0.5vh;
+    background-color: whitesmoke;
+    float: right;
+}
+
+.userProfile2{
+    width: 9vw;
+    height: 5vh;
+    margin-bottom: 0.5vh;
+    margin-right : 0.9vw;
+    background-image: url(../img/son.jpeg);
+    background-size: cover;
+    float: left;
+    border-radius: 10px;
+}
+
+.userName2{
+    width: 32.6vw;
+    height: 5vh;
+    margin-bottom: 0.5vh;
+    background-color: whitesmoke;
+    float: right;
+}
+
+.userProfile3{
+    width: 9vw;
+    height: 5vh;
+    margin-bottom: 0.5vh;
+    margin-right : 0.9vw;
+    background-image: url(../img/son.jpeg);
+    background-size: cover;
+    float: left;
+    border-radius: 10px;
+}
+
+.userName3{
+    width: 32.6vw;
+    height: 5vh;
+    margin-bottom: 0.5vh;
+    background-color: whitesmoke;
+    float: right;
+}
+
+.userProfile4{
+    width: 9vw;
+    height: 5vh;
+    margin-bottom: 0.5vh;
+    margin-right : 0.9vw;
+    background-image: url(../img/son.jpeg);
+    background-size: cover;
+    float: left;
+    border-radius: 10px;
+}
+
+.userName4{
+    width: 32.6vw;
+    height: 5vh;
+    margin-bottom: 0.5vh;
+    background-color: whitesmoke;
+    float: right;
+}
+
+/* .club1{
     width: 42.5vw;
     height: 24vh;
     border-radius: 25px;
@@ -58,23 +203,14 @@
 .club4:hover {
     transition: 2s;
     background-color: slategrey;
-}
+} */
 
 .userBox1{
     margin-top: 2.8vh;
     margin-left: 5vw;
     margin-right: 2.5vw;
     width: 42.5vw;
-    height: 22vh;
-    float: left;
-}
-
-.userBox2{
-    margin-top: 2.8vh;
-    margin-left: 2.5vw;
-    margin-right: 5vw;
-    width: 42.5vw;
-    height: 22vh;
+    height: 11vh;
     float: left;
 }
 

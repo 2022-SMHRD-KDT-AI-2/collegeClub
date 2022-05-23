@@ -1,11 +1,5 @@
 import React from 'react';
 import './Result2.css';
-import bar01 from '../img/meneBar_01.png';
-import bar02 from '../img/menuBar_02.png';
-import bar03 from '../img/menuBar_03.png';
-import bar04 from '../img/menuBar_04.png';
-import bar05 from '../img/menuBar_05.png';
-import { Link } from 'react-router-dom';
 
 
 
