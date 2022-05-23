@@ -6,11 +6,11 @@ import './Header.css'
 function Header() {
     return (
         <>
-            <div className="header">
-                <Link to='/'>
-                    <div className='incam'></div>
-                </Link>
-            </div>
+            <Link to='/'>
+                <div className='incam'>
+                </div>
+            </Link>
+            
         </>
     )
 }

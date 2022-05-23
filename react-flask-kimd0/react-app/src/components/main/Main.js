@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom';
 import './Main.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+
 import Header from '../header/Header'
+import Menubar from '../menubar/Menubar'
 
 function useMain() {
 
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(true);
 
-  useEffect(() => {
+  useEffect((data) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
@@ -55,6 +57,7 @@ function useMain() {
               </div>
             </div>
           </div>
+        <Menubar></Menubar>
         </>
       )
       }

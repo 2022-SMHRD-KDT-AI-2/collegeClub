@@ -5,7 +5,6 @@ const Screen1 = (props) => {
 
   return (
     <>
-
       <div className="wrap">
         <div className="sec12"></div>
         <div>{props.data}</div>

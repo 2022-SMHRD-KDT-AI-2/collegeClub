@@ -1,4 +1,5 @@
 .sec12 {
+    position: relative;
     background-image: url(../../img/blossom.jpg);
     width: 90vw;
     height: 45vh;

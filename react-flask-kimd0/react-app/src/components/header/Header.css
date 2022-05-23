@@ -1,6 +1,5 @@
-
-
 .incam {
+    position: relative;
     width: 200px;
     height: 50px;
     background-size: cover;

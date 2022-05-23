@@ -15,7 +15,7 @@ let stat1 = [];
 
 function Order(props) {
 
-    const [loading, setLoading] = useState(true);
+    
     const [data, setData] = useState(true);
     const [act, setAct] = useState(0);
 
@@ -26,7 +26,6 @@ function Order(props) {
                 const response2 = await axios.get(
                     `http://220.80.33.51:8083/text?num=` + (num + 1)
                 );
-                setLoading(false);
                 setData(response2.data);
 
 
@@ -63,16 +62,15 @@ function Order(props) {
         return (
             <>
                 <Screen4></Screen4>
-                <button type='button' className='next' onClick={() => PostData()}>ekdma</button>
+                <div className='bottom'>
+                    <button type='button' className='next1' onClick={() => PostData()}>ekdma</button>
+                </div>
             </>
         )
     }
     function Bottom() {
         return (
             <div className='bottom'>
-                <div className='dat'>
-                    <a>{data}</a>
-                </div>
                 <div className='sce1Button'>
                     <button type='button' onClick={() => {
                         num = act + 1;
@@ -88,9 +86,6 @@ function Order(props) {
     function Bottom2() {
         return (
             <div className='bottom'>
-                <div className='dat'>
-                    <a>{data}</a>
-                </div>
                 <div className='sce1Button'>
                     <button className='pre' type='Button' name='Hair' onClick={() => {
                         stat1.push(1);

@@ -1,194 +1,192 @@
-@media screen and (max-width: 1200px) {
+ *{
+    padding: 0;
+    margin: 0 auto;
+}
 
-    * {
-        padding: 0;
-        margin: 0 auto;
-    }
+.link {
+    text-decoration: none;
 
-    .link {
-        text-decoration: none;
+}
 
-    }
+.img {
+    width: 90vw;
+    margin-top: 1vh;
+}
 
-    .img {
-        width: 90vw;
-        margin-top: 1vh;
-    }
+#sc1,
+#sc2,
+#sc3 {
+    display: none;
 
-    #sc1,
-    #sc2,
-    #sc3 {
-        display: none;
+}
 
-    }
+html {
+    font-size: 14px;
+}
 
-    html {
-        font-size: 14px;
-    }
+#main {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    position: relative;
 
-    #main {
-        width: 100%;
-        height: 100%;
-        background: #ffffff;
-        position: inherit;
+}
 
-    }
+.sce {
+    width: 100%;
 
-    .sce {
-        width: 100%;
+}
 
-    }
+.sce1 {
+    position: relative;
+    width: 80vw;
+    height: 21vh;
+    font-size: 1.5rem;
+    background: rgba(82, 178, 140, 0.25);
+    border-radius: 15px;
 
-    .sce1 {
-        position: relative;
-        width: 80vw;
-        height: 21vh;
-        font-size: 1.5rem;
-        background: rgba(82, 178, 140, 0.25);
-        border-radius: 15px;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 4vh;
+}
 
-        text-align: center;
-        font-size: 3em;
-        margin-top: 4vh;
-    }
+.sce11 {
+    position: sticky;
+    width: 80vw;
+    height: 21vh;
+    font-size: 1.5rem;
+    background: rgba(82, 178, 140, 0.25);
+    border-radius: 15px;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 4vh;
+    background-color: black;
+    opacity: 70%;
+    background-image: url(../../img/jin01.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-    .sce11 {
-        position: sticky;
-        width: 80vw;
-        height: 21vh;
-        font-size: 1.5rem;
-        background: rgba(82, 178, 140, 0.25);
-        border-radius: 15px;
-        text-align: center;
-        font-size: 3em;
-        margin-top: 4vh;
-        background-color: black;
-        opacity: 70%;
-        background-image: url(../../img/jin01.jpeg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+.sce11:hover {
 
-    .sce11:hover {
+    transition: 2s;
+    background-image: url(../../img/son.jpeg);
 
-        transition: 2s;
-        background-image: url(../../img/son.jpeg);
-
-    }
+}
 
 
-    .start {
-        font-weight: bold;
-        color: white;
-        font-size: 30px;
-    }
+.start {
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+}
 
 
 
 
-    #sc1,
-    #sc2,
-    #sc3 {
-        background: none;
-        color: deeppink;
-        font-size: 20px;
-        width: 80vw;
-        height: 20vh;
-        border: none
-    }
+#sc1,
+#sc2,
+#sc3 {
+    background: none;
+    color: deeppink;
+    font-size: 20px;
+    width: 80vw;
+    height: 20vh;
+    border: none
+}
 
-    .sce11:hover #sc1 {
-        display: block;
-    }
-
-
-    .sce2 {
-        position: relative;
-        width: 80vw;
-        height: 21vh;
-        background: rgba(82, 178, 140, 0.25);
-        border-radius: 15px;
-        text-align: center;
-        font-size: 3em;
-        margin-top: 5vh;
-
-    }
-
-    .sce22 {
-        position: sticky;
-        width: 80vw;
-        height: 21vh;
-        background: rgba(82, 178, 140, 0.25);
-        border-radius: 15px;
-        background-color: black;
-        text-align: center;
-        font-size: 3em;
-        margin-top: 5vh;
-        opacity: 70%;
-        background-image: url(../../img/jing02.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    .sce22:hover {
-        transition: 2s;
-        background-image: url(../../img/son.jpeg);
-
-    }
-
-    .sce22:hover #sc2 {
-        display: block;
-    }
-
-    .sce3 {
-        position: relative;
-        width: 80vw;
-        height: 21vh;
-        background: rgba(82, 178, 140, 0.25);
-        border-radius: 15px;
-        text-align: center;
-        font-size: 3em;
-        margin-top: 5vh;
+.sce11:hover #sc1 {
+    display: block;
+}
 
 
-    }
+.sce2 {
+    position: relative;
+    width: 80vw;
+    height: 21vh;
+    background: rgba(82, 178, 140, 0.25);
+    border-radius: 15px;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 5vh;
 
-    
+}
 
-    .sce33 {
-        position: sticky;
-        width: 80vw;
-        height: 21vh;
-        background-color: black;
-        border-radius: 15px;
-        text-align: center;
-        font-size: 3em;
-        margin-top: 5vh;
-        opacity: 70%;
-        background-image: url(../../img/son.jpeg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+.sce22 {
+    position: sticky;
+    width: 80vw;
+    height: 21vh;
+    background: rgba(82, 178, 140, 0.25);
+    border-radius: 15px;
+    background-color: black;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 5vh;
+    opacity: 70%;
+    background-image: url(../../img/jing02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sce22:hover {
+    transition: 2s;
+    background-image: url(../../img/son.jpeg);
+
+}
+
+.sce22:hover #sc2 {
+    display: block;
+}
+
+.sce3 {
+    position: relative;
+    width: 80vw;
+    height: 21vh;
+    background: rgba(82, 178, 140, 0.25);
+    border-radius: 15px;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 5vh;
 
 
-    .sce33:hover {
-        transition: 2s;
-        background-image: url(../../img/jin01.jpeg);
-    }
+}
 
-    .sce33:hover #sc3 {
 
-        display: block;
-    }
 
-    .sce1,
-    .sce2,
-    .sce3 {
-        background-color: white;
-    }
+.sce33 {
+    position: sticky;
+    width: 80vw;
+    height: 21vh;
+    background-color: black;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 5vh;
+    opacity: 70%;
+    background-image: url(../../img/son.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.sce33:hover {
+    transition: 2s;
+    background-image: url(../../img/jin01.jpeg);
+}
+
+.sce33:hover #sc3 {
+
+    display: block;
+}
+
+.sce1,
+.sce2,
+.sce3 {
+    background-color: white;
+}
 
 
     /* #bar{
@@ -197,4 +195,3 @@ left: 0px;
 top: 802px;
 }
 */
-}
