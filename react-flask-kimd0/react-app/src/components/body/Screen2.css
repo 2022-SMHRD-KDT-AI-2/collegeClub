@@ -1,7 +1,9 @@
 .sec13 {
-    background-image: url(../../img/map.jpg);
+    position: relative;
+    background: green;
     width: 90vw;
     height: 45vh;
+    left: 5%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,7 +20,12 @@
 }
 
 .datGroup{
+    position: absolute;
+    width: 90vw;
     padding-top: 20vh;
+    left: 5vw;
+    z-index: 99;
+    color: white;
 }
 
 @keyframes fadeIn {
