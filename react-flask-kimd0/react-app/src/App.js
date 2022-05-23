@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import Main from './components/main/Main';
@@ -7,10 +7,7 @@ import Result from './components/result'
 import Result2 from './components/Result2'
 
 
-import axios from 'axios';
 import Header from './components/header/Header'
-
-import logo from './logo.svg';
 import './App.css';
 
 

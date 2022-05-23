@@ -7,7 +7,7 @@ const Screen1 = (props) => {
     <>
       <div className="wrap">
         <div className="sec12"></div>
-        <div>{props.data}</div>
+        <div className='dat'>{props.data}</div>
       </div>
     </>
   );

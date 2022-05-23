@@ -23,11 +23,10 @@ function Order(props) {
         const fetchData = async () => {
             try {
                 console.log(num)
-                const response2 = await axios.get(
+                const response = await axios.get(
                     `http://220.80.33.51:8083/text?num=` + (num + 1)
                 );
-                setData(response2.data);
-
+                setData(response.data);
 
             } catch (e) {
                 console.log(e);
@@ -47,14 +46,14 @@ function Order(props) {
     } else if (props.category[act][3] === 2) {
         return (
             <>
-                <Screen2 />
+                <Screen2 data = {data}/>
                 {Bottom2()}
             </>
         );
     } else if (props.category[act][3] === 3) {
         return (
             <>
-                <Screen2 />
+                <Screen2 data = {data}/>
                 {Bottom()}
             </>
         );

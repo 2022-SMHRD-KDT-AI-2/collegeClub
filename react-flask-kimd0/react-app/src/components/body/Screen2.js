@@ -6,6 +6,7 @@ const Screen2 = (props) => {
     return (
         <>
             <div className="wrap">
+                <div className='dat'>{props.data}</div>
                 <div className="sec13"></div>
             </div >
         </>

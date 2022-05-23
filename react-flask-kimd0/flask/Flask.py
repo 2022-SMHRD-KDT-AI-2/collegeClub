@@ -5,7 +5,7 @@ import pymysql
 import json
 
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',
-                     db='yang', charset='utf8')
+                     db='db', charset='utf8')
 
 
 cursor = db.cursor()
@@ -41,7 +41,7 @@ def sce_select():
 @app.route('/text', methods=['GET','POST'])
 def text():
     num = request.args["num"]
-    sql = "select * from t_text where screen_num = " + num
+    sql = "select text_text from t_text where screen_num = " + num
     cursor.execute(sql)
     result = cursor.fetchall()
     for i in result:
