@@ -6,8 +6,12 @@ const Screen2 = (props) => {
     return (
         <>
             <div className="wrap">
-                <div className='dat'>{props.data}</div>
-                <div className="sec13"></div>
+                <div className="sec13">
+                    <div className='datGroup'>
+                        <div className='dat'>{props.data[0]}</div>
+                        <div className='dat'>{props.data[1]}</div>
+                    </div>
+                </div>
             </div >
         </>
     );

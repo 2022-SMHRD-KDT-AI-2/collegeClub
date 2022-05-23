@@ -17,6 +17,10 @@
     animation: fadeIn 3s ease forwards;
 }
 
+.datGroup{
+    padding-top: 20vh;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
