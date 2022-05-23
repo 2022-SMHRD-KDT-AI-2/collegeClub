@@ -1,8 +1,9 @@
 .sec12 {
     position: relative;
-    background-image: url(../../img/blossom.jpg);
+    background: green;
     width: 90vw;
     height: 45vh;
+    left: 5%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

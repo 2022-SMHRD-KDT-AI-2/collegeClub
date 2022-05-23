@@ -6,12 +6,11 @@ const Screen2 = (props) => {
     return (
         <>
             <div className="wrap">
-                <div className="sec13">
-                    <div className='datGroup'>
-                        <div className='dat'>{props.data[0]}</div>
-                        <div className='dat'>{props.data[1]}</div>
-                    </div>
+                <div className='datGroup'>
+                    <div className='dat'>{props.data[0]}</div>
+                    <div className='dat'>{props.data[1]}</div>
                 </div>
+                <img className='sec13' alt='이미지1' src={props.img}></img>
             </div >
         </>
     );

@@ -18,6 +18,7 @@ function Order(props) {
 
     
     const [data, setData] = useState(true);
+    const [img, setImg] = useState(true);
     const [act, setAct] = useState(0);
 
     useEffect((data) => {
@@ -27,7 +28,11 @@ function Order(props) {
                 const response = await axios.get(
                     `http://220.80.33.51:8083/text?num=` + (num + 1)
                 );
+                const response2 = await axios.get(
+                    `http://220.80.33.51:8083/img?num=` + (num + 1)
+                );
                 setData(response.data);
+                setImg(response2.data);
 
             } catch (e) {
                 console.log(e);
@@ -40,21 +45,21 @@ function Order(props) {
     if (props.category[act][3] === 1) {
         return (
             <>
-                <Screen1 data = {data}/>
+                <Screen1 data = {data} img = {img}/>
                 {Bottom()}
             </>
         )
     } else if (props.category[act][3] === 2) {
         return (
             <>
-                <Screen2 data = {data}/>
+                <Screen2 data = {data} img = {img}/>
                 {Bottom2()}
             </>
         );
     } else if (props.category[act][3] === 3) {
         return (
             <>
-                <Screen3C data = {data}/>
+                <Screen3C data = {data} img = {img}/>
                 {Bottom()}
             </>
         );

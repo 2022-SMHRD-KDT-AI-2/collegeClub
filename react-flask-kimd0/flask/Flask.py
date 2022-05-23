@@ -5,7 +5,7 @@ import pymysql
 import json
 
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',
-                     db='db', charset='utf8')
+                     db='testdb', charset='utf8')
 
 
 cursor = db.cursor()
@@ -42,6 +42,19 @@ def sce_select():
 def text():
     num = request.args["num"]
     sql = "select text_text from t_text where screen_num = " + num
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    for i in result:
+        print(i)
+    json_string = json.dumps(result)
+    
+    return json_string
+
+
+@app.route('/img', methods=['GET','POST'])
+def img():
+    num = request.args["num"]
+    sql = "select img_path from t_img where screen_num = " + num
     cursor.execute(sql)
     result = cursor.fetchall()
     for i in result:
