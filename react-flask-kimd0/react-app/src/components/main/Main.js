@@ -8,11 +8,11 @@ import Header from '../header/Header'
 import Menubar from '../menubar/Menubar'
 
 function useMain() {
-
+  let bo = true;
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(true);
 
-  useEffect((data) => {
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
@@ -26,10 +26,9 @@ function useMain() {
       }
     };
     fetchData();
-  }, []);
+  }, [bo]);
 
   return (
-
     <div>
       {loading ? (
         'loading...'
@@ -65,12 +64,6 @@ function useMain() {
     </div>
   );
 }
-
-
-
-
-
-
 
 
 export default useMain;
