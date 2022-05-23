@@ -15,7 +15,7 @@ let num = 0;
 let stat1 = [];
 
 function Order(props) {
-
+    let data1;
 
     const [data, setData] = useState(true);
     const [img, setImg] = useState(true);
@@ -28,23 +28,11 @@ function Order(props) {
                 const response = await axios.get(
                     `http://220.80.33.51:8083/text?num=` + (num + 1)
                 );
-                setData(response.data);
-            } catch (e) {
-                console.log(e);
-            }
-        };
-        fetchData();
-    }, [num]);
-
-    useEffect((data) => {
-        const fetchData = async () => {
-            try {
-
                 const response2 = await axios.get(
                     `http://220.80.33.51:8083/img?num=` + (num + 1)
                 );
                 setImg(response2.data);
-
+                setData(response.data);
             } catch (e) {
                 console.log(e);
             }
