@@ -62,7 +62,7 @@ html {
     margin-top: 4vh;
     background-color: black;
     opacity: 70%;
-    background-image: url(../../img/jin01.jpeg);
+    background-image: url(../../img/blossom.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -71,7 +71,7 @@ html {
 .sce11:hover {
 
     transition: 2s;
-    background-image: url(../../img/son.jpeg);
+    background-image: url(../../img/jin01.jpeg);
 
 }
 
@@ -124,7 +124,7 @@ html {
     font-size: 3em;
     margin-top: 5vh;
     opacity: 70%;
-    background-image: url(../../img/jing02.jpg);
+    background-image: url(../../img/blossom.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -165,7 +165,7 @@ html {
     font-size: 3em;
     margin-top: 5vh;
     opacity: 70%;
-    background-image: url(../../img/son.jpeg);
+    background-image: url(../../img/blossom.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
