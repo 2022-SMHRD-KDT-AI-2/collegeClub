@@ -8,6 +8,7 @@ import Header from '../menubar/Menubar';
 import Screen1 from '../body/Screen1';
 import Screen2 from '../body/Screen2';
 import Screen3 from '../body/Screen3';
+import Screen3C from '../body/Screen3 copy';
 import Screen4 from '../body/Screen4';
 
 let num = 0;
@@ -53,7 +54,7 @@ function Order(props) {
     } else if (props.category[act][3] === 3) {
         return (
             <>
-                <Screen3 data = {data}/>
+                <Screen3C data = {data}/>
                 {Bottom()}
             </>
         );
