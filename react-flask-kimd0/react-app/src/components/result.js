@@ -5,51 +5,44 @@ import axios from 'axios';
 import Plot from 'react-plotly.js';
 import { Link } from 'react-router-dom';
 
-
-
-
-
-
-
-
-
-
-
+import Menubar from './menubar/Menubar'
 
 
 
 
 import './result.css';
-let data2;
-let data3;
-let layout;
-let i = 50;
 
 function Data(props) {
     const data = [
         {
             subject: '관습',
-            A: props.data[0]
+            A: props.data[0],
+            B: 100
         },
         {
             subject: '현실',
-            A: props.data[1]
+            A: props.data[1],
+            B: 100
         },
         {
             subject: '사회',
-            A: props.data[2]
+            A: props.data[2],
+            B: 100
         },
         {
             subject: '탐구',
-            A: props.data[3]
+            A: props.data[3],
+            B: 100
         },
         {
             subject: '예술',
-            A: props.data[4]
+            A: props.data[4],
+            B: 100
         },
         {
             subject: '진취',
-            A: props.data[5]
+            A: props.data[5],
+            B: 100
         },
     ];
 
@@ -63,15 +56,14 @@ function Data(props) {
             </div>
 
 
-
-
             <div className='section'>
                 <div className='section1'>
                     <div className='HexaLi'>
-                        <ResponsiveContainer width="90%" height="70%">
+                        <ResponsiveContainer width="90%" height="90%">
                             <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
                                 <PolarGrid />
                                 <PolarAngleAxis dataKey="subject" />
+                                <PolarRadiusAxis angle={30} domain={[0, 100]} />
                                 <PolarRadiusAxis />
                                 <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
                             </RadarChart>
@@ -83,7 +75,7 @@ function Data(props) {
                             <progress></progress>
                         </div>
                         <div>
-                            <progress value={i} max="100"></progress>
+                            <progress value={50} max="100"></progress>
                         </div>
 
                         <div>
@@ -106,10 +98,11 @@ function Data(props) {
                     </div></div>
                     <div className='innerHexa2'>
                         <div className='HexaLi2'>
-                            <ResponsiveContainer width="90%" height="70%">
+                            <ResponsiveContainer width="90%" height="90%">
                                 <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
                                     <PolarGrid />
                                     <PolarAngleAxis dataKey="subject" />
+                                    <PolarRadiusAxis angle={30} domain={[0, 100]} />
                                     <PolarRadiusAxis />
                                     <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
                                 </RadarChart>
@@ -127,6 +120,7 @@ function Data(props) {
                     </Link>
                 </div>
             </div>
+            <Menubar></Menubar>
         </div>
     )
 

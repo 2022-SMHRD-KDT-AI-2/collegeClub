@@ -103,6 +103,12 @@ result_Ada = cross_val_score(ada_model, X_train, y_train, cv=3)
 print("Ada : ", result_Ada.mean())
 
 
+param_knn = {}
+GS_knn = GridSearchCV(KNeighborsClassifier(n_neighbors=6), param_knn, cv = 10)
+GS_knn.fit(X_train, y_train)
+print('최적 파라미터값 : ', GS_knn.best_params_)
+print('최고 교차검증 점수 : ', GS_knn.best_score_)
+print('최고 교차검증 점수 : ', GS_knn.best_estimator_)
 
 
 param_tree = {}

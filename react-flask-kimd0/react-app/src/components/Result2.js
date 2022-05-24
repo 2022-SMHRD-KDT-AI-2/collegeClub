@@ -1,6 +1,7 @@
 import React from 'react';
 import './Result2.css';
 import Header from './header/Header';
+import Menubar from './menubar/Menubar'
 
 
 const Screen1 = (props) => {
@@ -31,6 +32,7 @@ const Screen1 = (props) => {
             <div className="userName"></div>
         </div>
       </div>
+      <Menubar></Menubar>
 
     </>
   );
