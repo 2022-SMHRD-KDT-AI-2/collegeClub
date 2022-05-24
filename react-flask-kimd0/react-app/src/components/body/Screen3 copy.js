@@ -2,10 +2,10 @@ import React,{useEffect} from 'react';
 import './Screen3 copy.css'
 
 const Screen1 = (props) => {
-    const container = document.querySelector(".image-container")
-    const startButton = document.querySelector(".start-button")
-    const gameText = document.querySelector(".game-text")
-    const playTime = document.querySelector(".play-time")
+    const container = document.querySelector(".image-container");
+    const startButton = document.querySelector(".start-button");
+    const gameText = document.querySelector(".game-text");
+    const playTime = document.querySelector(".play-time");
     const tileCount = 16;
 
     let tiles = [];
@@ -26,7 +26,7 @@ const Screen1 = (props) => {
             gameText.style.display = "block";
             isPlaying = false;
             clearInterval(timeInterval)
-            startButton.style.display='block';
+            startButton.style.display='none'
         }
     }
     function setGame(){
@@ -102,11 +102,9 @@ const Screen1 = (props) => {
             checkStatus();
         })
         });
-        useEffect(()=>{
-            document.addEventListener('click',()=>{
+        function start(){
             setGame()
-        })
-        });
+        }
     return (
         <>
         
@@ -115,7 +113,7 @@ const Screen1 = (props) => {
         <ul className="image-container">
             
         </ul>
-        <button className="start-button">Start</button>
+        <button className="start-button" onClick={start}>Start</button>
         <p className="game-text">Complete</p>
         </div>
         </>

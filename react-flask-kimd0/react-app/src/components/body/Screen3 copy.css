@@ -29,9 +29,9 @@ ul{
 li{
     width: 100px;
     height: 100px;
-    border: 1px solid red;
+    border: 1px;
     clear: #fff;
-    background: url("https://seoulforest.or.kr/wp-content/uploads/2018/04/IMG_3512-400x400.jpg");
+    background: url("../../img/iu1.jpg");
 }
 .start-button{
     background: var(--facebook);
