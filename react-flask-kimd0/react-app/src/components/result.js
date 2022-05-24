@@ -1,8 +1,7 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Plot from 'react-plotly.js';
 import { Link } from 'react-router-dom';
 
 import Menubar from './menubar/Menubar'
@@ -16,33 +15,54 @@ function Data(props) {
     const data = [
         {
             subject: '관습',
-            A: props.data[0],
-            B: 100
+            A: props.data[0]
         },
         {
             subject: '현실',
-            A: props.data[1],
-            B: 100
+            A: props.data[1]
         },
         {
             subject: '사회',
-            A: props.data[2],
-            B: 100
+            A: props.data[2]
         },
         {
             subject: '탐구',
-            A: props.data[3],
-            B: 100
+            A: props.data[3]
         },
         {
             subject: '예술',
-            A: props.data[4],
-            B: 100
+            A: props.data[4]
         },
         {
             subject: '진취',
-            A: props.data[5],
-            B: 100
+            A: props.data[5]
+        },
+    ];
+
+    const data2 = [
+        {
+            subject: '추론',
+            A: 80
+        },
+        {
+            subject: '암기',
+            A: 80
+        },
+        {
+            subject: '순발',
+            A: 80
+        },
+        {
+            subject: '통찰',
+            A: 80
+        },
+        {
+            subject: '관찰',
+            A: 80
+        },
+        {
+            subject: '문해',
+            A: 80
         },
     ];
 
@@ -64,7 +84,6 @@ function Data(props) {
                                 <PolarGrid />
                                 <PolarAngleAxis dataKey="subject" />
                                 <PolarRadiusAxis angle={30} domain={[0, 100]} />
-                                <PolarRadiusAxis />
                                 <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
                             </RadarChart>
                         </ResponsiveContainer>
@@ -99,11 +118,10 @@ function Data(props) {
                     <div className='innerHexa2'>
                         <div className='HexaLi2'>
                             <ResponsiveContainer width="90%" height="90%">
-                                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+                                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data2}>
                                     <PolarGrid />
                                     <PolarAngleAxis dataKey="subject" />
                                     <PolarRadiusAxis angle={30} domain={[0, 100]} />
-                                    <PolarRadiusAxis />
                                     <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
                                 </RadarChart>
                             </ResponsiveContainer>
@@ -131,7 +149,7 @@ function useResult() {
     const [data, setData] = useState(true);
 
 
-    useEffect(() => {
+    useEffect((data) => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
@@ -139,8 +157,6 @@ function useResult() {
                 );
                 setLoading(false);
                 setData(response.data[0]);
-                Data(data);
-                console.log(data);
             } catch (e) {
                 console.log(e);
             }
