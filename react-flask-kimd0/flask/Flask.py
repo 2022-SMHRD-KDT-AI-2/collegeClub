@@ -83,10 +83,6 @@ def insertData():
     
     stat1 = request.form['stat1'].split(",")
     print(stat1)
-    cursor = db.cursor()
-    sql = "insert into t_stat1 values"
-    cursor.execute(sql)
-    db.cummit()
     return 'scucces'
 
 

@@ -101,8 +101,7 @@ function Order(props) {
             <div className='bottom'>
                 <div className='sce2Button'>
                     <button className='pre' type='Button' name='Hair' onClick={() => {
-                        stat1[stat1_num] = stat1[stat1_num] + 10;
-                        stat1_num += 1;
+                        stat11();
                         console.log(stat1)
                         num = act + 1;
                         if (num === props.len) {
@@ -112,8 +111,7 @@ function Order(props) {
                     }}>A</button>
                     <div className='buttonBar'></div>
                     <button className='next' type='Button' name='Hair' onClick={() => {
-                        stat1[stat1_num] = stat1[stat1_num] - 10;
-                        stat1_num += 1;
+                        stat12();
                         console.log(stat1)
                         num = act + 1;
                         if (num === props.len) {
@@ -126,6 +124,121 @@ function Order(props) {
         )
     }
 
+}
+
+
+function stat11() {
+    if (stat1_num === 0) {
+        stat1[4] = stat1[4] + 15;
+        stat1[5] = stat1[5] - 15;
+        stat1[0] = stat1[0] - 5;
+        stat1[1] = stat1[1] + 5;
+        stat1[2] = stat1[2] + 5;
+        stat1[3] = stat1[3] - 5;
+        stat1_num += 1;
+    }
+    if (stat1_num === 1) {
+        stat1[2] = stat1[2] + 15;
+        stat1[3] = stat1[3] - 15;
+        stat1[0] = stat1[0] + 5;
+        stat1[1] = stat1[1] - 5;
+        stat1[4] = stat1[4] + 5;
+        stat1[5] = stat1[5] - 5;
+        stat1_num += 1;
+    }
+    if (stat1_num === 2) {
+        stat1[0] = stat1[0] + 15;
+        stat1[1] = stat1[1] - 15;
+        stat1[2] = stat1[2] + 5;
+        stat1[3] = stat1[3] - 5;
+        stat1[4] = stat1[4] - 5;
+        stat1[5] = stat1[5] + 5;
+        stat1_num += 1;
+    }
+    if (stat1_num === 3) {
+        stat1[2] = stat1[2] + 15;
+        stat1[3] = stat1[3] - 15;
+        stat1[0] = stat1[0] + 5;
+        stat1[1] = stat1[1] - 5;
+        stat1[4] = stat1[4] + 5;
+        stat1[5] = stat1[5] - 5;
+        stat1_num += 1;
+    }
+    if (stat1_num === 4) {
+        stat1[0] = stat1[0] + 15;
+        stat1[1] = stat1[1] - 15;
+        stat1[2] = stat1[2] + 5;
+        stat1[3] = stat1[3] - 5;
+        stat1[4] = stat1[4] - 5;
+        stat1[5] = stat1[5] + 5;
+        stat1_num += 1;
+    }
+    if (stat1_num === 5) {
+        stat1[4] = stat1[4] + 15;
+        stat1[5] = stat1[5] - 15;
+        stat1[0] = stat1[0] - 5;
+        stat1[1] = stat1[1] + 5;
+        stat1[2] = stat1[2] + 5;
+        stat1[3] = stat1[3] - 5;
+        stat1_num += 1;
+    }
+}
+
+function stat12() {
+    if (stat1_num === 0) {
+        stat1[4] = stat1[4] - 15;
+        stat1[5] = stat1[5] + 15;
+        stat1[0] = stat1[0] + 5;
+        stat1[1] = stat1[1] - 5;
+        stat1[2] = stat1[2] - 5;
+        stat1[3] = stat1[3] + 5;
+        stat1_num += 1;
+    }
+    if (stat1_num === 1) {
+        stat1[2] = stat1[2] - 15;
+        stat1[3] = stat1[3] + 15;
+        stat1[0] = stat1[0] - 5;
+        stat1[1] = stat1[1] + 5;
+        stat1[4] = stat1[4] - 5;
+        stat1[5] = stat1[5] + 5;
+        stat1_num += 1;
+    }
+    if (stat1_num === 2) {
+        stat1[0] = stat1[0] - 15;
+        stat1[1] = stat1[1] + 15;
+        stat1[2] = stat1[2] - 5;
+        stat1[3] = stat1[3] + 5;
+        stat1[4] = stat1[4] + 5;
+        stat1[5] = stat1[5] - 5;
+        stat1_num += 1;
+    }
+    if (stat1_num === 3) {
+        stat1[2] = stat1[2] - 15;
+        stat1[3] = stat1[3] + 15;
+        stat1[0] = stat1[0] - 5;
+        stat1[1] = stat1[1] + 5;
+        stat1[4] = stat1[4] - 5;
+        stat1[5] = stat1[5] + 5;
+        stat1_num += 1;
+    }
+    if (stat1_num === 4) {
+        stat1[0] = stat1[0] - 15;
+        stat1[1] = stat1[1] + 15;
+        stat1[2] = stat1[2] - 5;
+        stat1[3] = stat1[3] + 5;
+        stat1[4] = stat1[4] + 5;
+        stat1[5] = stat1[5] - 5;
+        stat1_num += 1;
+    }
+    if (stat1_num === 5) {
+        stat1[4] = stat1[4] - 15;
+        stat1[5] = stat1[5] + 15;
+        stat1[0] = stat1[0] + 5;
+        stat1[1] = stat1[1] - 5;
+        stat1[2] = stat1[2] - 5;
+        stat1[3] = stat1[3] + 5;
+        stat1_num += 1;
+    }
 }
 
 
