@@ -1,0 +1,54 @@
+.sec15 {
+    background-image: url(../../img/iu1.jpg);
+    width: 90vw;
+    height: 45vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    margin-bottom: 5vh;
+}
+
+.Skip {
+    font-size: 3vh;
+    height: 6vh;
+    width: 20vw;
+    float: left;
+    padding-top: 2vw;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 20vw;
+    background-color: gray;
+}
+
+.Start {
+    margin-left: 10vw;
+    font-size: 3vh;
+    width: 20vw;
+    height: 6vh;
+    float: left;
+    padding-top: 2vw;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    background-color: gray;
+}
+
+.sec3 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 90vw;
+    border-radius: 10px;
+    height: 10vh;
+    font-size: 5vh;
+    text-align: center;
+    font-weight: bold;
+}
+
+.level2 {
+    width: 90vw;
+    height: 10vh;
+    float: left;
+}

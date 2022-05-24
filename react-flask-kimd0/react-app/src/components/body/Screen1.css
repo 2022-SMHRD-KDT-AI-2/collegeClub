@@ -1,0 +1,61 @@
+.sec12 {
+    position: relative;
+    background: green;
+    width: 90vw;
+    height: 45vh;
+    left: 5%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    margin-bottom: 5vh;
+}
+
+.text1{
+    background-color: gray;
+}
+
+.text2{
+    background-color: green;
+}
+
+.text3{
+    background-color: yellow;
+}
+
+.sec12 {
+    animation: fadeIn 2s ease forwards;
+}
+
+.dat {
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 2s;
+}
+
+.datGroup2{
+    position: absolute;
+    width: 90vw;
+    padding-top: 2vh;
+    left: 5vw;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+}

@@ -1,0 +1,50 @@
+.sec13 {
+    position: relative;
+    background: green;
+    width: 90vw;
+    height: 45vh;
+    left: 5%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    margin-bottom: 5vh;
+}
+
+.sec13 {
+    animation: fadeIn 2s ease forwards;
+}
+
+.dat {
+    animation: fadeIn 2s ease forwards;
+}
+
+.datGroup{
+    position: absolute;
+    width: 90vw;
+    padding-top: 20vh;
+    left: 5vw;
+    z-index: 99;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+}

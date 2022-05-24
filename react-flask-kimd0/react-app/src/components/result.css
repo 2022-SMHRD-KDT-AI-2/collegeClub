@@ -1,160 +1,174 @@
-img {
+* {
+    margin: 0 auto;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.wrap {
     width: 100%;
     height: 100%;
-    /* background-color: whitesmoke; */
+    position: absolute;
 }
 
-.logo {
+.Header {
+    width: 100vw;
+    height: 10vh;
     position: relative;
-    width: 150px;
+    font-size: 15px;
+}
+
+.title {
+    text-align: center;
+    padding-top: 1vh;
+    position: relative;
+    width: 100vw;
+    height: 5vh;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.TypeResult {
+    position: relative;
+    width: 100vw;
+    height: 7.5vh;
+    text-align: center;
+
+}
+
+.section {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+}
+
+.section1 {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+}
+
+.Poi1 {
+    position: absolute;
+    width: 45vw;
+    height: 25vh;
+    left: 50vw;
+    margin-right: 5vw;
+}
+
+progress {
+    width: 100%;
     height: 50px;
-    left: 2%;
-    top: 2%;
 }
 
-@media screen and (min-width: 769px) {
-    .App {
-        position: relative;
-        width: 940px;
-        height: 770px;
-
-        /* width: 360px;
-      height: 640px; */
-        background-color: black;
-    }
+.Poi2 {
+    position: absolute;
+    width: 45vw;
+    height: 25vh;
+    top: 25vh;
+    margin-left: 5vw;
 }
 
+.result {
+    position: absolute;
+    width: 90vw;
+    height: 18vh;
+    background-color: white;
+    top: 50vh;
+    border: 1px solid #52B28C;
+    left: 5vw;
+    border-radius: 10px;
+}
 
-@media screen and (max-width: 768px) {
+.Buttonsection {
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    top: 70vh;
+}
 
+.shareButton {
+    width: 50vw;
+    height: 8vh;
+    float: left;
+}
 
-    .App {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-    }
+.restartButton {
+    width: 50vw;
+    height: 8vh;
+}
 
-    .menubar {
-        position: absolute;
-        width: 100%;
-        height: 10%;
-        bottom: 0px;
-        background: rgba(82, 178, 140, 0.75);
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-        display: flex;
-    }
+.Butt1 {
+    height: 8vh;
+    background: rgba(82, 178, 140, 0.75);;
+    border: rgba(82, 178, 140, 0.75);;
+    border-radius: 15px;
+    padding: 2vw;
+    color: white;
+    font-weight: bold;
+    margin-left: 45%;
+}
 
-    .menubarDiv {
-        position: relative;
-        height: 50%;
-    }
+.Butt2 {
+    height: 8vh;
+    background: rgba(82, 178, 140, 0.75);;
+    border: rgba(82, 178, 140, 0.75);;
+    border-radius: 15px;
+    padding: 2vw;
+    color: white;
+    font-weight: bold;
+    margin-left: 5%;
+}
 
-    .res {
-        background-color: aqua;
-    }
+.imgdiv {
+    position: absolute;
+    margin-top: 80vh;
+    height: 10vh;
+}
 
-    .res1 {
-        justify-content: center;
-        display: flex;
-    }
+.type {
+    position: relative;
+}
 
-    .res2 {
-        justify-content: center;
-        display: flex;
-    }
+.HexaLi2 {
+    position: relative;
+    float: left;
+    width: 50vw;
+    height: 25vh;
+    z-index: -999;
+}
 
-    .stat1 {
-        background-color: yellow;
-        position: relative;
-        padding: 5px;
-        width: 30%;
-        height: 15vh;
-    }
+.HexaLi {
+    position: relative;
+    float: left;
+    width: 50vw;
+    height: 25vh;
+}
 
-    .result1 {
-        background-color: green;
-        position: relative;
-        padding: 5px;
-        width: 30%;
-        height: 15vh;
-    }
+.innerHexa2 {
+    position: absolute;
+    width: 50vw;
+    height: 25vh;
+    top: 25vh;
+    left: 50vw;
+}
 
-    .stat2 {
-        background-color: blue;
-        position: relative;
-        padding: 5px;
-        width: 30%;
-        height: 15vh;
-    }
+.Result {
+    font-weight: bold;
+    color: #52B28C;
+}
 
-    .result2 {
-        background-color: red;
-        position: relative;
-        padding: 5px;
-        width: 30%;
-        height: 15vh;
-    }
+.user-select-none {
+    position: relative;
+    z-index: -100;
+    right: 70px;
+    bottom: 60px;
 
-    .resultText {
-        background-color: black;
-        position: relative;
-        margin: auto;
-        margin-top: 2%;
-        width: 90%;
-        height: 30vh;
-    }
+}
 
-    .btn {
-        background-color: red;
-        position: relative;
-        margin: auto;
-        margin-top: 5%;
-        width: 50%;
-        height: auto;
-    }
-
-    .btn1 {
-        width: 50%;
-    }
-
-    .btn2 {
-        width: 50%;
-    }
-
-    .hexagon {
-        width: 100px;
-        height: 55px;
-        background: pink;
-        position: relative;
-        margin: auto;
-        transform: translate(0, 25%)
-    }
-
-    .hexagon:before {
-        content: "";
-        position: absolute;
-        top: -25px;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        border-bottom: 25px solid pink;
-    }
-
-    .hexagon:after {
-        content: "";
-        position: absolute;
-        bottom: -25px;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        border-top: 25px solid pink;
-    }
-
-
-
+#menuBarTop{
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    top: 80vh;
 }
