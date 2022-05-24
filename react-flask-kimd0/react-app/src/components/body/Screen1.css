@@ -1,13 +1,14 @@
 .sec12 {
     position: relative;
-    background-image: url(../../img/blossom.jpg);
+    background: green;
     width: 90vw;
     height: 45vh;
+    left: 5%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 40px;
-    margin-bottom: 5vh;
+    /* margin-bottom: 5vh; */
 }
 
 .text1{
@@ -23,12 +24,19 @@
 }
 
 .sec12 {
-    animation: fadeIn 3s ease forwards;
+    animation: fadeIn 2s ease forwards;
 }
 
 .dat {
-    animation: fadeIn 3s ease forwards;
-    animation-delay: 3s;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 2s;
+}
+
+.datGroup2{
+    position: absolute;
+    width: 90vw;
+    padding-top: 2vh;
+    left: 5vw;
 }
 
 @keyframes fadeIn {
@@ -40,3 +48,14 @@
     }
 }
 
+@keyframes typing {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+}

@@ -121,7 +121,15 @@ const Screen1 = (props) => {
         <button className="start-button">Start</button>
         <p className="game-text">Complete</p>
         </div>
-        
+            <div className="wrap">
+                <div>
+                    <div className="main">
+                        <canvas id="canvas" width="300" height="300"></canvas>
+                        <p className="timer1"></p>
+                        <button className="send">버튼</button>
+                    </div>
+                </div>
+            </div>
         </>
     );
 };

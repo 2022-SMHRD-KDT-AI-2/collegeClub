@@ -8,7 +8,7 @@ import Header from '../header/Header'
 import Menubar from '../menubar/Menubar'
 
 function useMain() {
-
+  let bo = true;
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(true);
 
@@ -29,7 +29,6 @@ function useMain() {
   }, []);
 
   return (
-
     <div>
       {loading ? (
         'loading...'
@@ -65,12 +64,6 @@ function useMain() {
     </div>
   );
 }
-
-
-
-
-
-
 
 
 export default useMain;

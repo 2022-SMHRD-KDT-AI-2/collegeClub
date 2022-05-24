@@ -1,7 +1,9 @@
 .sec13 {
-    background-image: url(../../img/map.jpg);
+    position: relative;
+    background: green;
     width: 90vw;
     height: 45vh;
+    left: 5%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,11 +12,20 @@
 }
 
 .sec13 {
-    animation: fadeIn 3s ease forwards;
+    animation: fadeIn 2s ease forwards;
 }
 
 .dat {
-    animation: fadeIn 3s ease forwards;
+    animation: fadeIn 2s ease forwards;
+}
+
+.datGroup{
+    position: absolute;
+    width: 90vw;
+    left: 5vw;
+    top: 30vh;
+    z-index: 99;
+    color: white;
 }
 
 @keyframes fadeIn {
@@ -23,5 +34,17 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes typing {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
     }
 }

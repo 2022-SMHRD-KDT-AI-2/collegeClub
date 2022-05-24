@@ -7,14 +7,18 @@
 .dat{
     position: relative;
     width: 90%;
-    height: 30%;
+    /* height: 30%; */
     text-align: center;
     font-size: 1.5em;
 }
 
 .sce1Button{
     position: relative;
-    top: 50%;
+    top: 70%;
+}
+
+.sce2Button{
+    position: relative;
 }
 
 .bottom{
@@ -24,39 +28,71 @@
     height: 20%;
 }
 
-.pre {
+.pre1 {
     position: relative;
-    font-size: 3vh;
-    width: 15vw;
-    height: 6vh;
+    font-size: 2vh;
+    width: 20vw;
+    height: 7vh;
     border-radius: 15px;
     text-align: center;
     font-weight: bold;
-    margin-left: 30%;
-    background-color: gray;
+    margin-left: 10vw;
+    background-color: #C4C4C4;
+    float: left;
+    border: none;
 }
 
 .next1 {
     position: relative;
-    font-size: 3vh;
-    width: 15vw;
-    height: 6vh;
+    font-size: 2vh;
+    width: 20vw;
+    height: 7vh;
     border-radius: 15px;
     text-align: center;
     font-weight: bold;
-    margin-left: 45%;
-    background-color: gray;
+    margin-left: 40vw;
+    background-color: #C4C4C4;
+    float: left;
+    border: none;
+}
+
+.pre {
+    position: relative;
+    font-size: 3vh;
+    width: 25vw;
+    height: 13.5vh;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 17.5vw;
+    margin-top: 3vh;
+    background-color: white;
+    border: 5px solid #52B28C;
+    float: left;
 }
 
 .next {
     position: relative;
     font-size: 3vh;
-    width: 15vw;
-    height: 6vh;
-    border-radius: 15px;
+    width: 25vw;
+    height: 13.5vh;
+    border-radius: 50%;
     text-align: center;
     font-weight: bold;
-    margin-left: 10%;
-    background-color: gray;
+    margin-left: 15vw;
+    margin-top: 3vh;
+    background-color: white;
+    border: 5px solid #52B28C;
+    float: left;
 }
 
+.buttonBar {
+    position: absolute;
+    width: 40vw;
+    height: 13.5vh;
+    margin-top: 3vh;
+    left: 30vw;
+    float: left;
+    background: rgba(82, 178, 140, 0.5);
+    z-index: -99;
+}

@@ -1,57 +1,135 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Plot from 'react-plotly.js';
+import { Link } from 'react-router-dom';
+
+import Menubar from './menubar/Menubar'
+
+
 
 
 import './result.css';
-import Img1 from '../img/jin01.jpeg'
-import bar01 from '../img/meneBar_01.png';
-import bar02 from '../img/menuBar_02.png';
-import bar03 from '../img/menuBar_03.png';
-import bar04 from '../img/menuBar_04.png';
-import bar05 from '../img/menuBar_05.png';
+
+function Data(props) {
+    const data = [
+        {
+            subject: '관습',
+            A: props.data[0],
+            B: 100
+        },
+        {
+            subject: '현실',
+            A: props.data[1],
+            B: 100
+        },
+        {
+            subject: '사회',
+            A: props.data[2],
+            B: 100
+        },
+        {
+            subject: '탐구',
+            A: props.data[3],
+            B: 100
+        },
+        {
+            subject: '예술',
+            A: props.data[4],
+            B: 100
+        },
+        {
+            subject: '진취',
+            A: props.data[5],
+            B: 100
+        },
+    ];
 
 
+    return (
+        <div className='wrap'>
+            <div className='Header'>
+                <div className='title'>테스트 결과</div>
+                <div className='TypeResult'>당신은 <span className='Result'></span> 유형입니다</div>
 
-var i = 50;
+            </div>
+
+
+            <div className='section'>
+                <div className='section1'>
+                    <div className='HexaLi'>
+                        <ResponsiveContainer width="90%" height="90%">
+                            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+                                <PolarGrid />
+                                <PolarAngleAxis dataKey="subject" />
+                                <PolarRadiusAxis angle={30} domain={[0, 100]} />
+                                <PolarRadiusAxis />
+                                <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                            </RadarChart>
+                        </ResponsiveContainer>
+                    </div>
+
+                    <div className='Poi1'><div className='point1'>
+                        <div>
+                            <progress></progress>
+                        </div>
+                        <div>
+                            <progress value={50} max="100"></progress>
+                        </div>
+
+                        <div>
+                            <progress value="20" max="200"></progress>
+                        </div>
+                    </div></div>
+
+                    <div className='Poi2'> <div className='point2'>
+                        <div>
+                            <progress></progress>
+                        </div>
+
+                        <div>
+                            <progress value="20" max="100"></progress>
+                        </div>
+
+                        <div>
+                            <progress value="20" max="200"></progress>
+                        </div>
+                    </div></div>
+                    <div className='innerHexa2'>
+                        <div className='HexaLi2'>
+                            <ResponsiveContainer width="90%" height="90%">
+                                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+                                    <PolarGrid />
+                                    <PolarAngleAxis dataKey="subject" />
+                                    <PolarRadiusAxis angle={30} domain={[0, 100]} />
+                                    <PolarRadiusAxis />
+                                    <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                                </RadarChart>
+                            </ResponsiveContainer>
+                        </div>
+                    </div>
+
+                </div>
+                <div className='result'></div>
+
+                <div className='Buttonsection'>
+                    <div className='shareButton'><button className='Butt1' type='button'>결과 공유하기</button></div>
+                    <Link to='/result2'>
+                        <div className='restartButton'><button className='Butt2' type='button'>다음으로</button></div>
+                    </Link>
+                </div>
+            </div>
+            <Menubar></Menubar>
+        </div>
+    )
+
+}
 function useResult() {
 
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState(true);
 
-    const data2 = [ // 차트에 들어갈 data를 먼저 지정해주고!
-        {
-            type: 'scatterpolar', // chart type
-            r: [100, 0, 50, 50, 28, 39, 39], // data
-            theta: ['관습', '탐구', '현실', '예술', '사회', '진취'], // data category
-            fill: 'toself', // fill option
-            name: 'Group A' // data group name
-        }
-    ]
-
-    const data3 = [ // 차트에 들어갈 data를 먼저 지정해주고!
-        {
-            type: 'scatterpolar', // chart type
-            r: [100, 0, 50, 50, 28, 39, 39], // data
-            theta: ['추론', '암기', '순발', '통찰', '관찰', '문해'], // data category
-            fill: 'toself', // fill option
-            name: 'Group B' // data group name
-        }
-    ]
-
-    const layout = { // data를 꾸며주는 layout을 지정!
-        width: 320,
-        height: 250,
-
-        polar: {
-            radialaxis: { // 방사축이라는 의미인데 아래 그림에서 파란색으로 표시된 부분을 말한다!
-                visible: false, // 방사축 display
-                range: [100, 0] // 방사축의 시작값, 끝 값
-            }
-        }
-
-    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -61,6 +139,8 @@ function useResult() {
                 );
                 setLoading(false);
                 setData(response.data[0]);
+                Data(data);
+                console.log(data);
             } catch (e) {
                 console.log(e);
             }
@@ -74,56 +154,7 @@ function useResult() {
             {loading ? (
                 'loading...'
             ) : (
-                <div className='wrap'>
-                    <div className='Header'>
-                        <div className='title'>테스트 결과</div>
-                        <div className='TypeResult'>당신은 <span className='Result'>{data}</span> 유형입니다</div>
-                    </div>
-
-
-                    <div className='section'>
-                        <div className='section1'>
-                            <div className='HexaLi'> <Plot data={data2} layout={layout} debug enableFullPlotly /></div>
-
-                            <div className='Poi1'><div className='point1'>
-                                <div>
-                                    <progress></progress>
-                                </div>
-                                <div>
-                                    <progress value={i} max="100"></progress>
-                                </div>
-
-                                <div>
-                                    <progress value="20" max="200"></progress>
-                                </div>
-                            </div></div>
-
-                            <div className='Poi2'> <div className='point2'>
-                                <div>
-                                    <progress></progress>
-                                </div>
-
-                                <div>
-                                    <progress value="20" max="100"></progress>
-                                </div>
-
-                                <div>
-                                    <progress value="20" max="200"></progress>
-                                </div>
-                            </div></div>
-                            <div className='innerHexa2'>
-                                <div className='HexaLi2'> <Plot data={data3} layout={layout} debug enableFullPlotly /></div>
-                            </div>
-
-                        </div>
-                        <div className='result'></div>
-
-                        <div className='Buttonsection'>
-                            <div className='shareButton'><button className='Butt1' type='button'>결과 공유하기</button></div>
-                            <div className='restartButton'><button className='Butt2' type='button'>다음으로</button></div>
-                        </div>
-                    </div>
-                </div>
+                <Data data={data}></Data>
             )
             }
 
