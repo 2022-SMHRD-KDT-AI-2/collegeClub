@@ -1,8 +1,5 @@
 import React,{useEffect} from 'react';
 import './Screen3 copy.css'
-import '../../game/main.js'
-
-
 
 const Screen1 = (props) => {
     const container = document.querySelector(".image-container")
@@ -79,12 +76,12 @@ const Screen1 = (props) => {
             dragged.class=obj.className;
             dragged.index= [...obj.parentNode.children].indexOf(e.target)
         })
-        },[]);
+        });
         useEffect(()=>{
             document.addEventListener("dragover",e=>{
             e.preventDefault()
         })
-        },[]);
+        });
         useEffect(()=>{
             document.addEventListener("drop",e=>{
             if (!isPlaying) return;
@@ -104,32 +101,23 @@ const Screen1 = (props) => {
             }
             checkStatus();
         })
-        },[]);
+        });
         useEffect(()=>{
             document.addEventListener('click',()=>{
             setGame()
         })
-        },[]);
+        });
     return (
         <>
         
         <div className="wrap-all">
         <p className="play-time">0</p>
         <ul className="image-container">
-           
+            
         </ul>
         <button className="start-button">Start</button>
         <p className="game-text">Complete</p>
         </div>
-            <div className="wrap">
-                <div>
-                    <div className="main">
-                        <canvas id="canvas" width="300" height="300"></canvas>
-                        <p className="timer1"></p>
-                        <button className="send">버튼</button>
-                    </div>
-                </div>
-            </div>
         </>
     );
 };
