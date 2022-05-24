@@ -18,7 +18,7 @@ function Order(props) {
     let data1;
 
     const [data, setData] = useState(true);
-    const [img, setImg] = useState(true);
+    const [img, setImg] = useState("");
     const [act, setAct] = useState(0);
 
     useEffect((data) => {
