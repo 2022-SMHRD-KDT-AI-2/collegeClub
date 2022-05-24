@@ -108,6 +108,7 @@ function Order(props) {
                         }
                         setAct(num);
                     }}>A</button>
+                    <div className='buttonBar'></div>
                     <button className='next' type='Button' name='Hair' onClick={() => {
                         stat1.push(23);
                         num = act + 1;
