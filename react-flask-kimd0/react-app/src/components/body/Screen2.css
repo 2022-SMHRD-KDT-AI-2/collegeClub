@@ -23,6 +23,8 @@
     position: absolute;
     width: 90vw;
     left: 5vw;
+    top: 30vh;
+    z-index: 99;
     color: white;
 }
 

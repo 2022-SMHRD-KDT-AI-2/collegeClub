@@ -7,7 +7,7 @@ const Screen2 = (props) => {
         <>
             <div className="wrap">
             <Header></Header>
-            <div className='datGroup'>
+                <div className='datGroup'>
                     <div className='dat'>{props.data[0]}</div>
                     <div className='dat'>{props.data[1]}</div>
                 </div>
