@@ -22,9 +22,7 @@
 .datGroup{
     position: absolute;
     width: 90vw;
-    padding-top: 20vh;
     left: 5vw;
-    z-index: 99;
     color: white;
 }
 

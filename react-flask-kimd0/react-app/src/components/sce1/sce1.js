@@ -4,8 +4,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import Menubar from '../header/Header'
-import Header from '../menubar/Menubar';
+import Menubar from '../menubar/Menubar';
 import Screen1 from '../body/Screen1';
 import Screen2 from '../body/Screen2';
 import Screen3 from '../body/Screen3';
@@ -16,7 +15,6 @@ let num = 0;
 let stat1 = [];
 
 function Order(props) {
-    let data1;
 
     const [data, setData] = useState(true);
     const [img, setImg] = useState("");
@@ -141,7 +139,6 @@ function useSce1() {
     stat1 = [];
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState(true);
-    const [text, setText] = useState(true);
 
     num = 0;
 
@@ -168,8 +165,7 @@ function useSce1() {
                 'loading...'
             ) : (
                 <>
-                    <Header></Header>
-                    <Order text={text} len={data.length} category={data}></Order>
+                    <Order len={data.length} category={data}></Order>
                     <Menubar></Menubar>
                 </>
             )

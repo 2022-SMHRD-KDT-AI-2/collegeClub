@@ -3,14 +3,10 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Plot from 'react-plotly.js';
 
+import Header from './header/Header';
+
 
 import './result.css';
-import Img1 from '../img/jin01.jpeg'
-import bar01 from '../img/meneBar_01.png';
-import bar02 from '../img/menuBar_02.png';
-import bar03 from '../img/menuBar_03.png';
-import bar04 from '../img/menuBar_04.png';
-import bar05 from '../img/menuBar_05.png';
 
 
 
@@ -23,8 +19,8 @@ function useResult() {
     const data2 = [ // 차트에 들어갈 data를 먼저 지정해주고!
         {
             type: 'scatterpolar', // chart type
-            r: [100, 0, 50, 50, 28, 39, 39], // data
-            theta: ['관습', '탐구', '현실', '예술', '사회', '진취'], // data category
+            r: [0, 50, 50, 50, 28, 50, 0], // data
+            theta: ['관습', '탐구', '현실', '예술', '사회', '진취', '관습'], // data category
             fill: 'toself', // fill option
             name: 'Group A' // data group name
         }
@@ -33,7 +29,7 @@ function useResult() {
     const data3 = [ // 차트에 들어갈 data를 먼저 지정해주고!
         {
             type: 'scatterpolar', // chart type
-            r: [100, 0, 50, 50, 28, 39, 39], // data
+            r: [100, 0, 50, 50, 28, 39, 100], // data
             theta: ['추론', '암기', '순발', '통찰', '관찰', '문해'], // data category
             fill: 'toself', // fill option
             name: 'Group B' // data group name
@@ -74,7 +70,9 @@ function useResult() {
             {loading ? (
                 'loading...'
             ) : (
+                
                 <div className='wrap'>
+                    <Header></Header>
                     <div className='Header'>
                         <div className='title'>테스트 결과</div>
                         <div className='TypeResult'>당신은 <span className='Result'>{data}</span> 유형입니다</div>
