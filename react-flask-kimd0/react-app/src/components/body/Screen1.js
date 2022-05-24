@@ -8,8 +8,11 @@ const Screen1 = (props) => {
     <>
       <div className="wrap">
         <img className='sec12' alt='이미지1' src={props.img}></img>
-        <div className='dat'>{props.data[0]}</div>
-        <div className='dat'>{props.data[1]}</div>
+        <div className='datGroup2'>
+          <div className='dat'>{props.data[0]}</div>
+          <div className='dat'>{props.data[1]}</div>
+        </div>
+        
       </div>
     </>
   );

@@ -8,14 +8,13 @@ const Screen1 = (props) => {
         <>
             <div className="wrap">
                 <div>
-                    <div class="main">
+                    <div className="main">
                         <canvas id="canvas" width="300" height="300"></canvas>
-                        <p class="timer1"></p>
-                        <button class="send">버튼</button>
+                        <p className="timer1"></p>
+                        <button className="send">버튼</button>
                     </div>
                 </div>
-            </div >
-
+            </div>
         </>
     );
 };

@@ -32,6 +32,13 @@
     animation-delay: 2s;
 }
 
+.datGroup2{
+    position: absolute;
+    width: 90vw;
+    padding-top: 2vh;
+    left: 5vw;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -41,3 +48,14 @@
     }
 }
 
+@keyframes typing {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+}
