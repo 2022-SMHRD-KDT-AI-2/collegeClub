@@ -2,6 +2,7 @@ import React from 'react';
 import './sce1.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import Menubar from '../header/Header'
 import Header from '../menubar/Menubar';
@@ -67,7 +68,9 @@ function Order(props) {
             <>
                 <Screen4></Screen4>
                 <div className='bottom'>
-                    <button type='button' className='next1' onClick={() => PostData()}>ekdma</button>
+                    <Link to="/result">
+                        <button type='button' className='next1' onClick={() => PostData()}>ekdma</button>
+                    </Link>
                 </div>
             </>
         )
@@ -90,10 +93,9 @@ function Order(props) {
     function Bottom2() {
         return (
             <div className='bottom'>
-                <div className='sce1Button'>
+                <div className='sce2Button'>
                     <button className='pre' type='Button' name='Hair' onClick={() => {
                         stat1.push(1);
-                        console.log(stat1)
                         num = act + 1;
                         if (num === props.len) {
                             num = props.len - 1;
@@ -102,7 +104,6 @@ function Order(props) {
                     }}>A</button>
                     <button className='next' type='Button' name='Hair' onClick={() => {
                         stat1.push(23);
-                        console.log(stat1);
                         num = act + 1;
                         if (num === props.len) {
                             num = props.len - 1;

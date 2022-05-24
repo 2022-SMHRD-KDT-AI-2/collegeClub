@@ -17,6 +17,10 @@
     top: 70%;
 }
 
+.sce2Button{
+    position: relative;
+}
+
 .bottom{
     position: absolute;
     bottom: 15%;
