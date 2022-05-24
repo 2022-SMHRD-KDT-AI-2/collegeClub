@@ -24,12 +24,12 @@
 }
 
 .sec12 {
-    animation: fadeIn 3s ease forwards;
+    animation: fadeIn 2s ease forwards;
 }
 
 .dat {
-    animation: fadeIn 3s ease forwards;
-    animation-delay: 3s;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 2s;
 }
 
 @keyframes fadeIn {

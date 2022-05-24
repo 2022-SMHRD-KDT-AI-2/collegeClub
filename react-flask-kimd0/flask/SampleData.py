@@ -3,13 +3,14 @@ import pandas as pd
 import numpy as np
 
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',
-                     db='yang', charset='utf8');
+                     db='testdb', charset='utf8');
 cursor = db.cursor();
 
 df = pd.read_csv("./project2 설문.csv", encoding='cp949');
 print(df.drop(columns='타임스탬프', inplace = True));
 
 num = 0;
+user = [[50 for j in range(6)]for i in range(len(df.values))];
 
 
 def insertUser(userId):
@@ -17,22 +18,106 @@ def insertUser(userId):
     cursor.execute(sql);
     db.commit();
 
-for i in df.values:
-
-    stat1 = [50,50,50,50,50,50];
-    stat2 = [50,50,50,50,50,50];
-
+for i in range(len(df.values)):
     
-    num = num + 1;
-    print(num);
-
-    for j in range(6):
-        if(i[j].split('.')[0] == '1'):
-            stat1[j] = stat1[j] - 25;
+    if(df.values[i][0].split('.')[0] == '1'):
+        user[i][4] = user[i][4] + 15;
+        user[i][5] = user[i][5] - 15;
+        user[i][0] = user[i][0] - 5;
+        user[i][1] = user[i][1] + 5;
+        user[i][2] = user[i][2] + 5;
+        user[i][3] = user[i][3] - 5;
+    else:
+        user[i][4] = user[i][4] - 15;
+        user[i][5] = user[i][5] + 15;
+        user[i][0] = user[i][0] + 5;
+        user[i][1] = user[i][1] - 5;
+        user[i][2] = user[i][2] - 5;
+        user[i][3] = user[i][3] + 5;
         
-        else:
-            stat1[j] = stat1[j] + 25;
-    print(stat1)
+
+
+    if(df.values[i][1].split('.')[0] == '1'):
+        user[i][2] = user[i][2] + 15;
+        user[i][3] = user[i][3] - 15;
+        user[i][0] = user[i][0] + 5;
+        user[i][1] = user[i][1] - 5;
+        user[i][4] = user[i][4] + 5;
+        user[i][5] = user[i][5] - 5;
+    else:
+        user[i][2] = user[i][2] - 15;
+        user[i][3] = user[i][3] + 15;
+        user[i][0] = user[i][0] - 5;
+        user[i][1] = user[i][1] + 5;
+        user[i][4] = user[i][4] - 5;
+        user[i][5] = user[i][5] + 5;
+
+
+    if(df.values[i][2].split('.')[0] == '1'):
+        user[i][0] = user[i][0] + 15;
+        user[i][1] = user[i][1] - 15;
+        user[i][2] = user[i][2] + 5;
+        user[i][3] = user[i][3] - 5;
+        user[i][4] = user[i][4] - 5;
+        user[i][5] = user[i][5] + 5;
+    else:
+        user[i][0] = user[i][0] - 15;
+        user[i][1] = user[i][1] + 15;
+        user[i][2] = user[i][2] - 5;
+        user[i][3] = user[i][3] + 5;
+        user[i][4] = user[i][4] + 5;
+        user[i][5] = user[i][5] - 5;
+    
+
+    if(df.values[i][3].split('.')[0] == '1'):
+        user[i][2] = user[i][2] + 15;
+        user[i][3] = user[i][3] - 15;
+        user[i][0] = user[i][0] + 5;
+        user[i][1] = user[i][1] - 5;
+        user[i][4] = user[i][4] + 5;
+        user[i][5] = user[i][5] - 5;
+    else:
+        user[i][2] = user[i][2] - 15;
+        user[i][3] = user[i][3] + 15;
+        user[i][0] = user[i][0] - 5;
+        user[i][1] = user[i][1] + 5;
+        user[i][4] = user[i][4] - 5;
+        user[i][5] = user[i][5] + 5;
+
+
+    if(df.values[i][4].split('.')[0] == '1'):
+        user[i][0] = user[i][0] + 15;
+        user[i][1] = user[i][1] - 15;
+        user[i][2] = user[i][2] + 5;
+        user[i][3] = user[i][3] - 5;
+        user[i][4] = user[i][4] - 5;
+        user[i][5] = user[i][5] + 5;
+    else:
+        user[i][0] = user[i][0] - 15;
+        user[i][1] = user[i][1] + 15;
+        user[i][2] = user[i][2] - 5;
+        user[i][3] = user[i][3] + 5;
+        user[i][4] = user[i][4] + 5;
+        user[i][5] = user[i][5] - 5;
+
+
+    if(df.values[i][5].split('.')[0] == '1'):
+        user[i][4] = user[i][4] + 15;
+        user[i][5] = user[i][5] - 15;
+        user[i][0] = user[i][0] - 5;
+        user[i][1] = user[i][1] + 5;
+        user[i][2] = user[i][2] + 5;
+        user[i][3] = user[i][3] - 5;
+    else:
+        user[i][4] = user[i][4] - 15;
+        user[i][5] = user[i][5] + 15;
+        user[i][0] = user[i][0] + 5;
+        user[i][1] = user[i][1] - 5;
+        user[i][2] = user[i][2] - 5;
+        user[i][3] = user[i][3] + 5;
+
+            
+print(user)
     
 
 
@@ -45,7 +130,26 @@ cursor.execute(sql)
 
 list1 = []
 
+1. A 지나가는 사람에게 물어본다 B 지도어플을 킨다
 
+for j in range(0, 6, 2):
+        if(i[j].split('.')[0] == '1'):
+            stat1[j] = stat1[j] + 20;
+            stat1[j+1] = stat1[j+1] - 20;
+        
+        else:
+            stat1[j] = stat1[j] - 20;
+            stat1[j+1] = stat1[j+1] + 20;
+
+            
+    for j in range(1, 6, 2):
+        if(i[j].split('.')[0] == '1'):
+            stat1[j] = stat1[j] + 20;
+            stat1[j-1] = stat1[j-1] - 20;
+        
+        else:
+            stat1[j] = stat1[j] - 20;
+            stat1[j-1] = stat1[j-1] + 20;
 
 
 
