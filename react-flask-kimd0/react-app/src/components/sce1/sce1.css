@@ -28,6 +28,34 @@
     height: 20%;
 }
 
+.pre1 {
+    position: relative;
+    font-size: 2vh;
+    width: 20vw;
+    height: 6vh;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 25vw;
+    background-color: #C4C4C4;
+    float: left;
+    border: none;
+}
+
+.next1 {
+    position: relative;
+    font-size: 2vh;
+    width: 20vw;
+    height: 6vh;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 10vw;
+    background-color: #C4C4C4;
+    float: left;
+    border: none;
+}
+
 .pre {
     position: relative;
     font-size: 3vh;
@@ -36,19 +64,7 @@
     border-radius: 15px;
     text-align: center;
     font-weight: bold;
-    margin-left: 30%;
-    background-color: gray;
-}
-
-.next1 {
-    position: relative;
-    font-size: 3vh;
-    width: 15vw;
-    height: 6vh;
-    border-radius: 15px;
-    text-align: center;
-    font-weight: bold;
-    margin-left: 42.5%;
+    margin-left: 10%;
     background-color: gray;
 }
 
