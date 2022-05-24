@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Plot from 'react-plotly.js';
+import { Link } from 'react-router-dom';
 
 import Header from './header/Header';
 
@@ -118,7 +119,9 @@ function useResult() {
 
                         <div className='Buttonsection'>
                             <div className='shareButton'><button className='Butt1' type='button'>결과 공유하기</button></div>
-                            <div className='restartButton'><button className='Butt2' type='button'>다음으로</button></div>
+                            <Link to='/result2'>
+                                <div className='restartButton'><button className='Butt2' type='button'>다음으로</button></div>
+                            </Link>
                         </div>
                     </div>
                 </div>

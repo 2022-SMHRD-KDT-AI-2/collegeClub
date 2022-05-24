@@ -115,9 +115,10 @@ for i in range(len(df.values)):
         user[i][1] = user[i][1] - 5;
         user[i][2] = user[i][2] - 5;
         user[i][3] = user[i][3] + 5;
-
+        
+    print(user[i])
             
-print(user)
+
     
 
 

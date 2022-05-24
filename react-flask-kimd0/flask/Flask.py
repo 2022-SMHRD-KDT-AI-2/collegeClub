@@ -69,7 +69,7 @@ def img():
 @app.route('/result', methods=['GET','POST'])
 def result():
     cursor = db.cursor()
-    sql = "select * from t_stat1 where user_id = 'root'"
+    sql = "select * from t_stat1 where user_id = 'root1'"
     cursor.execute(sql)
     result = cursor.fetchall()
     for i in result:

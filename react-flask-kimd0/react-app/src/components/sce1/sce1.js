@@ -78,6 +78,14 @@ function Order(props) {
             <div className='bottom'>
                 <div className='sce1Button'>
                     <button type='button' onClick={() => {
+                        num = act - 1;
+                        if (num < 1) {
+                            num = 0;
+                        }
+                        setAct(num);
+                    }} className='pre1'>이전</button>
+
+                    <button type='button' onClick={() => {
                         num = act + 1;
                         if (num === props.len) {
                             num = props.len - 1;
