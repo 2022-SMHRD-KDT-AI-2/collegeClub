@@ -14,7 +14,17 @@ user = [[50 for j in range(6)]for i in range(len(df.values))];
 
 
 def insertUser(userId):
-    sql = "insert into t_user values('"+str(userId)+"', '1234', '000-0000-0000', '0000-00-00', 'address1', '0000@00000.000',SYSDATE(), 0)"
+    sql = "insert into t_user values('sampleroot"+str(i)+"', '1234', '000-0000-0000', '0000-00-00', 'address1', '0000@00000.000',SYSDATE(), 0)"
+    cursor.execute(sql);
+    db.commit();
+
+def insertstat1(data, num):
+    sql = "insert into t_stat1 values(null, "+str(data[0])+", "+str(data[1])+", "+str(data[2])+", "+str(data[3])+", "+str(data[4])+", "+str(data[5])+", 'sampleroot"+str(num)+"')"
+    cursor.execute(sql);
+    db.commit();
+
+def insertclub(data):
+    sql = "insert into t_user_club values(null, 'sampleroot"+str(i)+"', "+str(data)+")"
     cursor.execute(sql);
     db.commit();
 
@@ -115,11 +125,13 @@ for i in range(len(df.values)):
         user[i][1] = user[i][1] - 5;
         user[i][2] = user[i][2] - 5;
         user[i][3] = user[i][3] + 5;
-        
-    print(user[i])
-            
 
     
+        
+    
+    
+
+
 
 
 '''

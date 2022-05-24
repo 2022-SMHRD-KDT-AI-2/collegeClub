@@ -69,7 +69,7 @@ def img():
 @app.route('/result', methods=['GET','POST'])
 def result():
     cursor = db.cursor()
-    sql = "select * from t_stat1 where user_id = 'root1'"
+    sql = "select * from t_stat1 where user_id = 'sampleroot1'"
     cursor.execute(sql)
     result = cursor.fetchall()
     for i in result:
@@ -80,7 +80,13 @@ def result():
 
 @app.route('/postData', methods=['GET','POST'])
 def insertData():
-    print(request.form['file'])
+    
+    stat1 = request.form['stat1'].split(",")
+    print(stat1)
+    cursor = db.cursor()
+    sql = "insert into t_stat1 values"
+    cursor.execute(sql)
+    db.cummit()
     return 'scucces'
 
 

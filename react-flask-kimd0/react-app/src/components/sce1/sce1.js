@@ -11,11 +11,11 @@ import Screen3 from '../body/Screen3';
 import Screen3C from '../body/Screen3 copy';
 import Screen4 from '../body/Screen4';
 
-let num = 0;
-let stat1 = [];
+let num;
+let stat1_num;
+let stat1;
 
 function Order(props) {
-
     const [data, setData] = useState(true);
     const [img, setImg] = useState("");
     const [act, setAct] = useState(0);
@@ -101,7 +101,9 @@ function Order(props) {
             <div className='bottom'>
                 <div className='sce2Button'>
                     <button className='pre' type='Button' name='Hair' onClick={() => {
-                        stat1.push(1);
+                        stat1[stat1_num] = stat1[stat1_num] + 10;
+                        stat1_num += 1;
+                        console.log(stat1)
                         num = act + 1;
                         if (num === props.len) {
                             num = props.len - 1;
@@ -110,7 +112,9 @@ function Order(props) {
                     }}>A</button>
                     <div className='buttonBar'></div>
                     <button className='next' type='Button' name='Hair' onClick={() => {
-                        stat1.push(23);
+                        stat1[stat1_num] = stat1[stat1_num] - 10;
+                        stat1_num += 1;
+                        console.log(stat1)
                         num = act + 1;
                         if (num === props.len) {
                             num = props.len - 1;
@@ -128,8 +132,7 @@ function Order(props) {
 async function PostData() {
     const formData = new FormData();
     console.log(stat1)
-    formData.append("file", stat1);
-    formData.append("fileName", 'fileName');
+    formData.append("stat1", stat1);
 
     try {
         const res = await axios.post(
@@ -150,6 +153,8 @@ function useSce1() {
     const [data, setData] = useState(true);
 
     num = 0;
+    stat1 = [50, 50, 50, 50, 50, 50];
+    stat1_num = 0;
 
     useEffect((data) => {
         const fetchData = async () => {
