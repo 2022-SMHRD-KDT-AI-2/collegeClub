@@ -32,19 +32,21 @@ df_club_member = df_club_member.drop_duplicates(['user_id']);
 
 df_mbti = pd.read_csv("./mbti.csv");
 print(df_mbti);
-
 df_left = pd.merge(df_mbti, df_club_member, on = "user_id", how = "left")
-
 df_left.dropna(inplace = True)
 print(df_left)
 
+df_cate = pd.read_csv("./category.csv", encoding='euc-kr');
+print(df_cate[['club_id', 'mcc_category']])
 
-X_train = df_left.iloc[:,3:-2];
+df_last = pd.merge(df_left, df_cate[['club_id', 'mcc_category']], on = "club_id", how = "left")
+df_last.dropna(inplace = True)
+print(df_last)
+
+X_train = df_last.iloc[:,1:-2]
+y_train = df_last.iloc[:,-1]
 print(X_train)
-y_train = pd.get_dummies(df_left.iloc[:,-2]);
 print(y_train)
-
-print(df_left["club_type_id"].unique())
 
 param_knn = {}
 GS_knn = GridSearchCV(KNeighborsClassifier(), param_knn, cv = 3)
@@ -53,43 +55,9 @@ print('최적 파라미터값 : ', GS_knn.best_params_)
 print('최고 교차검증 점수 : ', GS_knn.best_score_)
 print('최고 교차검증 점수 : ', GS_knn.best_estimator_)
 
-param_tree = {}
-GS_tree = GridSearchCV(DecisionTreeClassifier(), param_tree, cv = 3)
-GS_tree.fit(X_train, y_train)
-print('최적 파라미터값 : ', GS_tree.best_params_)
-print('최고 교차검증 점수 : ', GS_tree.best_score_)
-print('최고 교차검증 점수 : ', GS_tree.best_estimator_)
-
-param_for = {}
-GS_for = GridSearchCV(RandomForestClassifier(),param_for, cv = 3)
-GS_for.fit(X_train, y_train)
-print('최적 파라미터값 : ', GS_for.best_params_)
-print('최고 교차검증 점수 : ', GS_for.best_score_)
-print('최고 교차검증 점수 : ', GS_for.best_estimator_)
-
-
-
-model = Sequential()
-
-model.add(Dense(300, input_dim = 24, activation = "sigmoid"))
-
-model.add(Dense(500, activation = "relu"))
-model.add(Dense(1000, activation = "relu"))
-model.add(Dense(500, activation = "relu"))
-
-model.add(Dense(4, activation = "softmax"))
-
-model.compile(loss = "categorical_crossentropy", optimizer = 'ADAM', metrics = ['acc'])
-h = model.fit(X_train, y_train, validation_split=0.3, epochs = 10)
-
-plt.figure(figsize = (15,5))
-plt.plot(h.history['acc'], label = 'acc')
-plt.plot(h.history['val_acc'], label = "val_acc")
-plt.legend()
-
-plt.show()
 
 '''
+
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',
                      db='testdb', charset='utf8');
 cursor = db.cursor();
@@ -152,6 +120,27 @@ GS_for.fit(X_train, y_train)
 print('최적 파라미터값 : ', GS_for.best_params_)
 print('최고 교차검증 점수 : ', GS_for.best_score_)
 print('최고 교차검증 점수 : ', GS_for.best_estimator_)
+
+
+model = Sequential()
+
+model.add(Dense(300, input_dim = 24, activation = "sigmoid"))
+
+model.add(Dense(500, activation = "relu"))
+model.add(Dense(1000, activation = "relu"))
+model.add(Dense(500, activation = "relu"))
+
+model.add(Dense(4, activation = "softmax"))
+
+model.compile(loss = "categorical_crossentropy", optimizer = 'ADAM', metrics = ['acc'])
+h = model.fit(X_train, y_train, validation_split=0.3, epochs = 10)
+
+plt.figure(figsize = (15,5))
+plt.plot(h.history['acc'], label = 'acc')
+plt.plot(h.history['val_acc'], label = "val_acc")
+plt.legend()
+
+plt.show()
 '''
 '''
 for i in range(len(df.values)):

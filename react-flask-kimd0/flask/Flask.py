@@ -5,7 +5,7 @@ import pymysql
 import json
 
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',
-                     db='yang', charset='utf8')
+                     db='yangdb', charset='utf8')
 
 
 app = Flask(__name__)
