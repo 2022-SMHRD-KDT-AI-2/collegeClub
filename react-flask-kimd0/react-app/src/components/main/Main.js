@@ -12,7 +12,7 @@ function useMain() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(true);
 
-  useEffect(() => {
+  useEffect((data) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
@@ -26,7 +26,7 @@ function useMain() {
       }
     };
     fetchData();
-  }, [bo]);
+  }, []);
 
   return (
     <div>

@@ -4,20 +4,18 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import Menubar from '../header/Header'
-import Header from '../menubar/Menubar';
+import Menubar from '../menubar/Menubar';
 import Screen1 from '../body/Screen1';
 import Screen2 from '../body/Screen2';
 import Screen3 from '../body/Screen3';
 import Screen3C from '../body/Screen3 copy';
 import Screen4 from '../body/Screen4';
 
-let num = 0;
-let stat1 = [];
+let num;
+let stat1_num;
+let stat1;
 
 function Order(props) {
-    let data1;
-
     const [data, setData] = useState(true);
     const [img, setImg] = useState("");
     const [act, setAct] = useState(0);
@@ -66,10 +64,10 @@ function Order(props) {
     } else {
         return (
             <>
-                <Screen4></Screen4>
+                <Screen4 stat1 = {stat1}></Screen4>
                 <div className='bottom'>
                     <Link to="/result">
-                        <button type='button' className='next1' onClick={() => PostData()}>ekdma</button>
+                        <button type='button' className='next1'>ekdma</button>
                     </Link>
                 </div>
             </>
@@ -80,10 +78,17 @@ function Order(props) {
             <div className='bottom'>
                 <div className='sce1Button'>
                     <button type='button' onClick={() => {
-                        num = act + 1;
-                        if (num === props.len) {
-                            num = props.len - 1;
+                        num = act - 1;
+                        if (num < 1) {
+                            num = 0;
                         }
+                        setAct(num);
+                    }} className='pre1'>이전</button>
+
+                    <button type='button' onClick={() => {
+                        if (num === props.len-1) {
+                        }
+                        num = act + 1;
                         setAct(num);
                     }} className='next1'>다음</button>
                 </div>
@@ -95,15 +100,18 @@ function Order(props) {
             <div className='bottom'>
                 <div className='sce2Button'>
                     <button className='pre' type='Button' name='Hair' onClick={() => {
-                        stat1.push(1);
+                        stat11();
+                        console.log(stat1)
                         num = act + 1;
                         if (num === props.len) {
                             num = props.len - 1;
                         }
                         setAct(num);
                     }}>A</button>
+                    <div className='buttonBar'></div>
                     <button className='next' type='Button' name='Hair' onClick={() => {
-                        stat1.push(23);
+                        stat12();
+                        console.log(stat1)
                         num = act + 1;
                         if (num === props.len) {
                             num = props.len - 1;
@@ -118,32 +126,122 @@ function Order(props) {
 }
 
 
-async function PostData() {
-    const formData = new FormData();
-    console.log(stat1)
-    formData.append("file", stat1);
-    formData.append("fileName", 'fileName');
-
-    try {
-        const res = await axios.post(
-            `http://220.80.33.51:8083/postData`, //send file to flask 
-            formData
-        );
-
-        console.log(res.data);
-    } catch (error) {
-        //응답 실패
-        console.error(error);
+function stat11() {
+    if (stat1_num === 0) {
+        stat1[4] = stat1[4] + 15;
+        stat1[5] = stat1[5] - 15;
+        stat1[0] = stat1[0] - 5;
+        stat1[1] = stat1[1] + 5;
+        stat1[2] = stat1[2] + 5;
+        stat1[3] = stat1[3] - 5;
     }
+    if (stat1_num === 1) {
+        stat1[2] = stat1[2] + 15;
+        stat1[3] = stat1[3] - 15;
+        stat1[0] = stat1[0] + 5;
+        stat1[1] = stat1[1] - 5;
+        stat1[4] = stat1[4] + 5;
+        stat1[5] = stat1[5] - 5;
+    }
+    if (stat1_num === 2) {
+        stat1[0] = stat1[0] + 15;
+        stat1[1] = stat1[1] - 15;
+        stat1[2] = stat1[2] + 5;
+        stat1[3] = stat1[3] - 5;
+        stat1[4] = stat1[4] - 5;
+        stat1[5] = stat1[5] + 5;
+    }
+    if (stat1_num === 3) {
+        stat1[2] = stat1[2] + 15;
+        stat1[3] = stat1[3] - 15;
+        stat1[0] = stat1[0] + 5;
+        stat1[1] = stat1[1] - 5;
+        stat1[4] = stat1[4] + 5;
+        stat1[5] = stat1[5] - 5;
+    }
+    if (stat1_num === 4) {
+        stat1[0] = stat1[0] + 15;
+        stat1[1] = stat1[1] - 15;
+        stat1[2] = stat1[2] + 5;
+        stat1[3] = stat1[3] - 5;
+        stat1[4] = stat1[4] - 5;
+        stat1[5] = stat1[5] + 5;
+    }
+    if (stat1_num === 5) {
+        stat1[4] = stat1[4] + 15;
+        stat1[5] = stat1[5] - 15;
+        stat1[0] = stat1[0] - 5;
+        stat1[1] = stat1[1] + 5;
+        stat1[2] = stat1[2] + 5;
+        stat1[3] = stat1[3] - 5;
+    }
+    stat1_num += 1;
 }
 
+function stat12() {
+    if (stat1_num === 0) {
+        stat1[4] = stat1[4] - 15;
+        stat1[5] = stat1[5] + 15;
+        stat1[0] = stat1[0] + 5;
+        stat1[1] = stat1[1] - 5;
+        stat1[2] = stat1[2] - 5;
+        stat1[3] = stat1[3] + 5;
+    }
+    if (stat1_num === 1) {
+        stat1[2] = stat1[2] - 15;
+        stat1[3] = stat1[3] + 15;
+        stat1[0] = stat1[0] - 5;
+        stat1[1] = stat1[1] + 5;
+        stat1[4] = stat1[4] - 5;
+        stat1[5] = stat1[5] + 5;
+    }
+    if (stat1_num === 2) {
+        stat1[0] = stat1[0] - 15;
+        stat1[1] = stat1[1] + 15;
+        stat1[2] = stat1[2] - 5;
+        stat1[3] = stat1[3] + 5;
+        stat1[4] = stat1[4] + 5;
+        stat1[5] = stat1[5] - 5;
+    }
+    if (stat1_num === 3) {
+        stat1[2] = stat1[2] - 15;
+        stat1[3] = stat1[3] + 15;
+        stat1[0] = stat1[0] - 5;
+        stat1[1] = stat1[1] + 5;
+        stat1[4] = stat1[4] - 5;
+        stat1[5] = stat1[5] + 5;
+    }
+    if (stat1_num === 4) {
+        stat1[0] = stat1[0] - 15;
+        stat1[1] = stat1[1] + 15;
+        stat1[2] = stat1[2] - 5;
+        stat1[3] = stat1[3] + 5;
+        stat1[4] = stat1[4] + 5;
+        stat1[5] = stat1[5] - 5;
+    }
+    if (stat1_num === 5) {
+        stat1[4] = stat1[4] - 15;
+        stat1[5] = stat1[5] + 15;
+        stat1[0] = stat1[0] + 5;
+        stat1[1] = stat1[1] - 5;
+        stat1[2] = stat1[2] - 5;
+        stat1[3] = stat1[3] + 5;
+    }
+    stat1_num += 1;
+}
+
+
+
+
 function useSce1() {
-    stat1 = [];
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState(true);
-    const [text, setText] = useState(true);
 
     num = 0;
+    stat1 = [50, 50, 50, 50, 50, 50];
+    stat1_num = 0;
+    console.log(stat1);
+
 
     useEffect((data) => {
         const fetchData = async () => {
@@ -168,8 +266,7 @@ function useSce1() {
                 'loading...'
             ) : (
                 <>
-                    <Header></Header>
-                    <Order text={text} len={data.length} category={data}></Order>
+                    <Order len={data.length} category={data}></Order>
                     <Menubar></Menubar>
                 </>
             )

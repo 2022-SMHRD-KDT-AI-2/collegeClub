@@ -1,12 +1,13 @@
 import React from 'react';
 import './Screen2.css';
-
+import Header from '../header/Header';
 
 const Screen2 = (props) => {
     return (
         <>
             <div className="wrap">
-            <div className='datGroup'>
+            <Header></Header>
+                <div className='datGroup'>
                     <div className='dat'>{props.data[0]}</div>
                     <div className='dat'>{props.data[1]}</div>
                 </div>
