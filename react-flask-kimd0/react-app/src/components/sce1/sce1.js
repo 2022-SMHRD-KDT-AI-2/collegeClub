@@ -64,10 +64,10 @@ function Order(props) {
     } else {
         return (
             <>
-                <Screen4></Screen4>
+                <Screen4 stat1 = {stat1}></Screen4>
                 <div className='bottom'>
                     <Link to="/result">
-                        <button type='button' className='next1' onClick={() => PostData()}>ekdma</button>
+                        <button type='button' className='next1'>ekdma</button>
                     </Link>
                 </div>
             </>
@@ -86,10 +86,9 @@ function Order(props) {
                     }} className='pre1'>이전</button>
 
                     <button type='button' onClick={() => {
-                        num = act + 1;
-                        if (num === props.len) {
-                            num = props.len - 1;
+                        if (num === props.len-1) {
                         }
+                        num = act + 1;
                         setAct(num);
                     }} className='next1'>다음</button>
                 </div>
@@ -135,7 +134,6 @@ function stat11() {
         stat1[1] = stat1[1] + 5;
         stat1[2] = stat1[2] + 5;
         stat1[3] = stat1[3] - 5;
-        stat1_num += 1;
     }
     if (stat1_num === 1) {
         stat1[2] = stat1[2] + 15;
@@ -144,7 +142,6 @@ function stat11() {
         stat1[1] = stat1[1] - 5;
         stat1[4] = stat1[4] + 5;
         stat1[5] = stat1[5] - 5;
-        stat1_num += 1;
     }
     if (stat1_num === 2) {
         stat1[0] = stat1[0] + 15;
@@ -153,7 +150,6 @@ function stat11() {
         stat1[3] = stat1[3] - 5;
         stat1[4] = stat1[4] - 5;
         stat1[5] = stat1[5] + 5;
-        stat1_num += 1;
     }
     if (stat1_num === 3) {
         stat1[2] = stat1[2] + 15;
@@ -162,7 +158,6 @@ function stat11() {
         stat1[1] = stat1[1] - 5;
         stat1[4] = stat1[4] + 5;
         stat1[5] = stat1[5] - 5;
-        stat1_num += 1;
     }
     if (stat1_num === 4) {
         stat1[0] = stat1[0] + 15;
@@ -171,7 +166,6 @@ function stat11() {
         stat1[3] = stat1[3] - 5;
         stat1[4] = stat1[4] - 5;
         stat1[5] = stat1[5] + 5;
-        stat1_num += 1;
     }
     if (stat1_num === 5) {
         stat1[4] = stat1[4] + 15;
@@ -180,8 +174,8 @@ function stat11() {
         stat1[1] = stat1[1] + 5;
         stat1[2] = stat1[2] + 5;
         stat1[3] = stat1[3] - 5;
-        stat1_num += 1;
     }
+    stat1_num += 1;
 }
 
 function stat12() {
@@ -192,7 +186,6 @@ function stat12() {
         stat1[1] = stat1[1] - 5;
         stat1[2] = stat1[2] - 5;
         stat1[3] = stat1[3] + 5;
-        stat1_num += 1;
     }
     if (stat1_num === 1) {
         stat1[2] = stat1[2] - 15;
@@ -201,7 +194,6 @@ function stat12() {
         stat1[1] = stat1[1] + 5;
         stat1[4] = stat1[4] - 5;
         stat1[5] = stat1[5] + 5;
-        stat1_num += 1;
     }
     if (stat1_num === 2) {
         stat1[0] = stat1[0] - 15;
@@ -210,7 +202,6 @@ function stat12() {
         stat1[3] = stat1[3] + 5;
         stat1[4] = stat1[4] + 5;
         stat1[5] = stat1[5] - 5;
-        stat1_num += 1;
     }
     if (stat1_num === 3) {
         stat1[2] = stat1[2] - 15;
@@ -219,7 +210,6 @@ function stat12() {
         stat1[1] = stat1[1] + 5;
         stat1[4] = stat1[4] - 5;
         stat1[5] = stat1[5] + 5;
-        stat1_num += 1;
     }
     if (stat1_num === 4) {
         stat1[0] = stat1[0] - 15;
@@ -228,7 +218,6 @@ function stat12() {
         stat1[3] = stat1[3] + 5;
         stat1[4] = stat1[4] + 5;
         stat1[5] = stat1[5] - 5;
-        stat1_num += 1;
     }
     if (stat1_num === 5) {
         stat1[4] = stat1[4] - 15;
@@ -237,37 +226,22 @@ function stat12() {
         stat1[1] = stat1[1] - 5;
         stat1[2] = stat1[2] - 5;
         stat1[3] = stat1[3] + 5;
-        stat1_num += 1;
     }
+    stat1_num += 1;
 }
 
 
-async function PostData() {
-    const formData = new FormData();
-    console.log(stat1)
-    formData.append("stat1", stat1);
 
-    try {
-        const res = await axios.post(
-            `http://220.80.33.51:8083/postData`, //send file to flask 
-            formData
-        );
-
-        console.log(res.data);
-    } catch (error) {
-        //응답 실패
-        console.error(error);
-    }
-}
 
 function useSce1() {
-    stat1 = [];
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState(true);
 
     num = 0;
     stat1 = [50, 50, 50, 50, 50, 50];
     stat1_num = 0;
+    console.log(stat1);
+
 
     useEffect((data) => {
         const fetchData = async () => {

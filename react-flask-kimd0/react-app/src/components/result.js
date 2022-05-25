@@ -12,6 +12,11 @@ import Menubar from './menubar/Menubar'
 import './result.css';
 
 function Data(props) {
+    let top1 = 0;
+    let top2 = 0;
+    let top1Name = '';
+    let top2Name = '';
+    
     const data = [
         {
             subject: '관습',
@@ -39,6 +44,14 @@ function Data(props) {
         },
     ];
 
+    console.log(props.data);
+    for(let i = 0; i < 6; i++){
+        if(top1 < props.data[i]){
+            top1 = props.data[i];
+            top1Name = data[0]
+        }
+    }
+
     const data2 = [
         {
             subject: '추론',
@@ -65,17 +78,20 @@ function Data(props) {
             A: 80
         },
     ];
+    for(let i = 0; i < 6; i++){
+        if(top2 < props.data[i]){
+            top2 = props.data[i];
+            top2Name = data2[0]
+        }
+    }
 
 
     return (
         <div className='wrap'>
             <div className='Header'>
                 <div className='title'>테스트 결과</div>
-                <div className='TypeResult'>당신은 <span className='Result'></span> 유형입니다</div>
-
+                <div className='TypeResult'>당신은 <span className='Result'>{top1Name['subject']} {top2Name['subject']}</span> 유형입니다</div>
             </div>
-
-
             <div className='section'>
                 <div className='section1'>
                     <div className='HexaLi'>

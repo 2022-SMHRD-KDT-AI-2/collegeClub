@@ -64,23 +64,18 @@ print(df)
 
 
 X_train = df.iloc[:,:6]
-X_val = df.iloc[:40,:6]
+'''
+y_train = pd.get_dummies(df.iloc[:,-1])
+'''
 y_train = df.iloc[:,-1]
-y_val = df.iloc[:40,-1]
 
-
-sc = StandardScaler()
-sc.fit(X_train)
-tf_X_train = sc.transform(X_train)
-print(X_train)
-print(y_train)
-
+'''
 extended_X_train = X_train.copy()
 for col1 in X_train.columns:
     for col2 in X_train.columns:
         extended_X_train[str(col1)+'x'+str(col2)] = X_train[col1] * X_train[col2]
 print(extended_X_train)
-
+'''
 
 
 tree_model = KNeighborsClassifier()
@@ -89,7 +84,7 @@ print("knn : ", result_knn.mean())
 
 
 tree_model = DecisionTreeClassifier(max_depth = 3)
-result_tree = cross_val_score(tree_model, extended_X_train, y_train, cv = 3)
+result_tree = cross_val_score(tree_model, X_train, y_train, cv = 3)
 print("tree : ", result_tree.mean())
 
 
@@ -98,13 +93,8 @@ result_RF = cross_val_score(forest_model, X_train, y_train, cv=3)
 print("RandomForest : ", result_RF.mean())
 
 
-ada_model = AdaBoostClassifier()
-result_Ada = cross_val_score(ada_model, X_train, y_train, cv=3)
-print("Ada : ", result_Ada.mean())
-
-
-param_knn = {}
-GS_knn = GridSearchCV(KNeighborsClassifier(n_neighbors=6), param_knn, cv = 10)
+param_knn = {'n_neighbors':range(1,60)}
+GS_knn = GridSearchCV(KNeighborsClassifier(), param_knn, cv = 3)
 GS_knn.fit(X_train, y_train)
 print('최적 파라미터값 : ', GS_knn.best_params_)
 print('최고 교차검증 점수 : ', GS_knn.best_score_)
