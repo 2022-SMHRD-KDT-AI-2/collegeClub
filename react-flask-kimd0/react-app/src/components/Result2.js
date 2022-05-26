@@ -12,21 +12,16 @@ const Screen1 = (props) => {
         <Header></Header>
 
         <div className="club1"></div>
+        <div className="userBox1">
+            <div className="userProfile"></div>
+            <div className="userName"></div>
+        </div>
         <div className="club2"></div>
         <div className="userBox1">
             <div className="userProfile"></div>
             <div className="userName"></div>
         </div>
-        <div className="userBox1">
-            <div className="userProfile"></div>
-            <div className="userName"></div>
-        </div>
         <div className="club3"></div>
-        <div className="club4"></div>
-        <div className="userBox1">
-            <div className="userProfile"></div>
-            <div className="userName"></div>
-        </div>
         <div className="userBox1">
             <div className="userProfile"></div>
             <div className="userName"></div>
