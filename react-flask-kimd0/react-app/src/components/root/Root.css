@@ -1,3 +1,8 @@
+.render {
+    height: 100vw;
+}
+
+
 .Buttonset {
     background: none;
     border: none;
@@ -48,6 +53,12 @@
     padding: 2vh;
     width: 18vw;
     text-align: center;
+    border: 1px solid rgba(82, 178, 140, 0.75);
+    border-radius: 25px;
+}
+
+.Buttondiv:hover {
+    border-style: none;
 }
 
 .Check {
@@ -61,13 +72,9 @@
 .Checkdiv {
     position: relative;
     text-align: center;
-    top: 58vh;
 
 }
 
-.render {
-    margin-top: 4vw;
-}
 
 #Buttondiv0 {
 
@@ -123,19 +130,18 @@
     border: none;
     transition: all 0.3s ease;
     overflow: hidden;
-    background-image: linear-gradient(315deg, #ffffff 0%, #d7d3d3 74%);
-    border-top-right-radius: 50px;
+    background-image: linear-gradient(315deg, rgba(87, 151, 126, 0.75) 45%, rgba(82, 178, 140, 0.75) 74%);
+    border-top-right-radius: 0px;
 }
 
 .Checkinner2 {
     border: none;
     transition: all 0.3s ease;
     overflow: hidden;
-    background-image: linear-gradient(315deg, #ffffff 0%, #cccaca 74%);
-    border-bottom-left-radius: 50px;
+    background-image: linear-gradient(315deg, rgba(82, 178, 140, 0.75) 40%, rgba(82, 178, 140, 0.75) 74%);
+    border-bottom-left-radius: 20px;
 }
 
-.clublist {}
 
 @-webkit-keyframes shiny-btn1 {
     0% {
