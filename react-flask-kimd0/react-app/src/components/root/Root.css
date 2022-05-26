@@ -70,43 +70,47 @@
 }
 
 #Buttondiv0 {
-    left: 10%;
-    animation: div0 30s linear Infinite Alternate;
+    left: 15%;
+    animation: div0 20s linear Infinite Alternate;
+
 }
 
 #Buttondiv1 {
     top: 30%;
-    animation: div1 30s linear Infinite Alternate;
+    animation: div1 20s linear Infinite Alternate;
 }
 
 #Buttondiv2 {
-    top: 50%;
-    left: 10%;
-    animation: div2 30s linear Infinite Alternate;
+    top: 31%;
+    left: 35%;
+
 }
 
 #Buttondiv3 {
-    top: 60%;
-    left: 40%;
-    animation: div3 30s linear Infinite Alternate;
+    top: 50%;
+    left: 20%;
+    animation: div3 20s linear Infinite Alternate;
+
 }
 
 #Buttondiv4 {
     top: 50%;
-    left: 70%;
-    animation: div4 30s linear Infinite Alternate;
+    left: 50%;
+    animation: div4 20s linear Infinite Alternate;
 }
 
 #Buttondiv5 {
     top: 30%;
     left: 70%;
-    animation: div5 30s linear Infinite Alternate;
+    animation: div5 20s linear Infinite Alternate;
+
 }
 
 
 #Buttondiv6 {
     left: 50%;
-    animation: div6 30s linear Infinite Alternate;
+    animation: div6 20s linear Infinite Alternate;
+
 }
 
 .Checkinner {
@@ -152,29 +156,24 @@
 
 @keyframes div0 {
     0% {
-        top: 20%;
-        left: 10%;
+        top: 12%;
+        left: 15%;
 
     }
 
-    15% {
-        left: 5%;
+    20% {
+        left: 0%;
         top: 30%;
     }
 
-    30% {
+    40% {
         top: 50%;
-        left: 10%;
-    }
-
-    45% {
-        top: 60%;
-        left: 40%;
+        left: 20%;
     }
 
     60% {
         top: 50%;
-        left: 70%;
+        left: 50%;
     }
 
     80% {
@@ -183,31 +182,26 @@
     }
 
     100% {
-        top: 15%;
+        top: 12%;
         left: 50%;
     }
 }
 
 @keyframes div1 {
     0% {
-        left: 5%;
+        left: 0%;
         top: 30%;
 
     }
 
-    15% {
+    20% {
         top: 50%;
-        left: 10%;
+        left: 20%;
     }
 
-    30% {
-        top: 60%;
-        left: 40%;
-    }
-
-    45% {
+    40% {
         top: 50%;
-        left: 70%;
+        left: 50%;
     }
 
     60% {
@@ -216,129 +210,79 @@
     }
 
     80% {
-        top: 15%;
+        top: 12%;
         left: 50%;
     }
 
     100% {
-        top: 15%;
+        top: 12%;
         left: 15%;
-    }
-}
-
-@keyframes div2 {
-    0% {
-        top: 50%;
-        left: 10%;
-
-    }
-
-    15% {
-        top: 60%;
-        left: 40%;
-    }
-
-    30% {
-        top: 50%;
-        left: 70%;
-    }
-
-    45% {
-        top: 30%;
-        left: 70%;
-    }
-
-    60% {
-        top: 15%;
-        left: 50%;
-    }
-
-    80% {
-        top: 15%;
-        left: 15%;
-    }
-
-    100% {
-        top: 30%;
-        left: 5%;
     }
 }
 
 @keyframes div3 {
     0% {
-        top: 60%;
-        left: 40%;
-
-    }
-
-    15% {
         top: 50%;
-        left: 70%;
+        left: 20%;
+
     }
 
-    30% {
-        top: 30%;
-        left: 70%;
-    }
-
-    45% {
-        top: 15%;
+    20% {
+        top: 50%;
         left: 50%;
     }
 
+    40% {
+        top: 30%;
+        left: 70%;
+    }
+
     60% {
-        top: 15%;
-        left: 15%;
+        top: 12%;
+        left: 50%;
     }
 
     80% {
-        top: 30%;
-        left: 5%;
+        top: 12%;
+        left: 15%;
     }
 
     100% {
-        top: 50%;
-        left: 10%;
-
+        left: 0%;
+        top: 30%;
     }
 }
 
 @keyframes div4 {
     0% {
         top: 50%;
-        left: 70%;
+        left: 50%;
 
     }
 
-    15% {
+    20% {
         top: 30%;
         left: 70%;
     }
 
-    30% {
-        top: 15%;
+    40% {
+        top: 12%;
         left: 50%;
     }
 
-    45% {
-        top: 15%;
+    60% {
+        top: 12%;
         left: 15%;
     }
 
-    60% {
-        top: 30%;
-        left: 5%;
-    }
-
     80% {
-        top: 50%;
-        left: 10%;
+        left: 0%;
+        top: 30%;
     }
 
     100% {
-        top: 60%;
-        left: 40%;
-
+        top: 50%;
+        left: 20%;
     }
 }
 
@@ -349,68 +293,57 @@
 
     }
 
-    15% {
-        top: 15%;
+    20% {
+        top: 12%;
         left: 50%;
     }
 
-    30% {
-        top: 15%;
+    40% {
+        top: 12%;
         left: 15%;
     }
 
-    45% {
-        top: 30%;
-        left: 5%;
-    }
-
     60% {
-        top: 50%;
-        left: 10%;
+        left: 0%;
+        top: 30%;
     }
 
     80% {
-        top: 60%;
-        left: 40%;
+        top: 50%;
+        left: 20%;
     }
 
     100% {
         top: 50%;
-        left: 70%;
-
+        left: 50%;
     }
 }
 
 @keyframes div6 {
     0% {
-        top: 15%;
+        top: 12%;
         left: 50%;
 
     }
 
-    15% {
-        top: 15%;
+    20% {
+        top: 12%;
         left: 15%;
     }
 
-    30% {
+    40% {
+        left: 0%;
         top: 30%;
-        left: 5%;
-    }
-
-    45% {
-        top: 50%;
-        left: 15%;
     }
 
     60% {
-        top: 60%;
-        left: 40%;
+        top: 50%;
+        left: 20%;
     }
 
     80% {
         top: 50%;
-        left: 70%;
+        left: 50%;
     }
 
     100% {
