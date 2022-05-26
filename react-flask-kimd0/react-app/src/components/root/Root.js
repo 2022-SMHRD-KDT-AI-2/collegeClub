@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Root.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { Helmet } from "react-helmet";
 
 import Header from '../header/Header'
 import Menubar from '../menubar/Menubar'
