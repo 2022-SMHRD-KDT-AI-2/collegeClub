@@ -72,7 +72,7 @@
 #Buttondiv0 {
 
     left: 15%;
-    animation: div0 20s linear Infinite Alternate;
+    animation: div0 300s linear Infinite Alternate;
 
 
 }
@@ -80,7 +80,7 @@
 #Buttondiv1 {
     top: 30%;
 
-    animation: div1 20s linear Infinite Alternate;
+    animation: div1 300s linear Infinite Alternate;
 }
 
 #Buttondiv2 {
@@ -92,7 +92,7 @@
 #Buttondiv3 {
     top: 50%;
     left: 20%;
-    animation: div3 20s linear Infinite Alternate;
+    animation: div3 300s linear Infinite Alternate;
 
 }
 
@@ -100,14 +100,14 @@
     top: 50%;
 
     left: 50%;
-    animation: div4 20s linear Infinite Alternate;
+    animation: div4 300s linear Infinite Alternate;
 }
 
 #Buttondiv5 {
     top: 30%;
     left: 70%;
 
-    animation: div5 20s linear Infinite Alternate;
+    animation: div5 300s linear Infinite Alternate;
 
 }
 
@@ -115,7 +115,7 @@
 #Buttondiv6 {
     left: 50%;
 
-    animation: div6 20s linear Infinite Alternate;
+    animation: div6 300s linear Infinite Alternate;
 
 }
 

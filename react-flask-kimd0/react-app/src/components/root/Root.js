@@ -32,11 +32,9 @@ function Root() {
   const rendering = () => {
     const result = [];
     for (let i = 0; i < data.length; i++) {
-
-      result.push(<div className='Buttondiv' id={"Buttondiv" + i}><button className='Buttonset' id={"Buttonset" + i} key={i}>{data[i].club_name + "  "}</button></div>);
-
       let str = "/club/"+i
-      result.push(<Link key={i} to={str}><button key={i}>{data[i].club_name + "  "}</button></Link>);
+      result.push(<div className='Buttondiv' id={"Buttondiv" + i}><Link key={i} to={str}><button className='Buttonset' id={"Buttonset" + i} key={i}>{data[i].club_name + "  "}</button></Link></div>);
+
 
     }
     return result;
