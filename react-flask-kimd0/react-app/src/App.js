@@ -5,9 +5,10 @@ import Main from './components/main/Main';
 import Sce1 from './components/sce1/sce1';
 import Result from './components/result'
 import Result2 from './components/Result2'
+import Root from './components/root/Root'
 
+import Screen3 from './components/body/Screen3'
 
-import Header from './components/header/Header'
 import './App.css';
 
 
@@ -16,8 +17,10 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main />}></Route>
-          <Route path="header" element={<Header />}></Route>
+        <Route path="/" element={<Root />}></Route>
+          <Route path="/main" element={<Main />}></Route>
+
+          <Route path="/screen3" element={<Screen3 />}></Route>
 
           <Route path="/sce1" element={<Sce1 />}></Route>
           <Route path="/result/" element={<Result />}></Route>

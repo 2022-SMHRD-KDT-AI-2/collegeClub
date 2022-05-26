@@ -8,7 +8,7 @@ import Menubar from '../menubar/Menubar';
 import Screen1 from '../body/Screen1';
 import Screen2 from '../body/Screen2';
 import Screen3 from '../body/Screen3';
-import Screen3C from '../body/Screen3 copy';
+import Screen3C from '../body/Screen3';
 import Screen4 from '../body/Screen4';
 
 let num;
@@ -67,7 +67,7 @@ function Order(props) {
                 <Screen4 stat1 = {stat1}></Screen4>
                 <div className='bottom'>
                     <Link to="/result">
-                        <button type='button' className='next1'>ekdma</button>
+                        <button type='button' className='next1'>결과보기</button>
                     </Link>
                 </div>
             </>

@@ -10,7 +10,6 @@ const Screen1 = (props) => {
         async function PostData() {
             const formData = new FormData();
             console.log(props.stat1)
-            console.log("123");
             formData.append("stat1", props.stat1);
         
             try {
