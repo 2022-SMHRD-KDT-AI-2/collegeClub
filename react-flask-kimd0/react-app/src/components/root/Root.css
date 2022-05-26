@@ -1,0 +1,421 @@
+.Buttonset {
+    background: none;
+    border: none;
+    text-align: center;
+    width: 18vw;
+    font-weight: bold;
+
+}
+
+.Buttonset:hover {
+    color: #f0094a;
+    background: transparent;
+    box-shadow: none;
+}
+
+.Buttonset:before,
+.Buttonset:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #f0094a;
+    box-shadow:
+        -1px -1px 5px 0px #fff,
+        7px 7px 20px 0px #0003,
+        4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.Buttonset:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.Buttonset:hover:before,
+.Buttonset:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+
+.Buttondiv {
+    position: absolute;
+    padding: 2vh;
+    width: 18vw;
+    text-align: center;
+}
+
+.Check {
+    background: none;
+    border: none;
+    padding: 3vw;
+
+
+}
+
+.Checkdiv {
+    position: relative;
+    text-align: center;
+    top: 58vh;
+
+}
+
+.render {
+    margin-top: 4vw;
+}
+
+#Buttondiv0 {
+    left: 10%;
+    animation: div0 30s linear Infinite Alternate;
+}
+
+#Buttondiv1 {
+    top: 30%;
+    animation: div1 30s linear Infinite Alternate;
+}
+
+#Buttondiv2 {
+    top: 50%;
+    left: 10%;
+    animation: div2 30s linear Infinite Alternate;
+}
+
+#Buttondiv3 {
+    top: 60%;
+    left: 40%;
+    animation: div3 30s linear Infinite Alternate;
+}
+
+#Buttondiv4 {
+    top: 50%;
+    left: 70%;
+    animation: div4 30s linear Infinite Alternate;
+}
+
+#Buttondiv5 {
+    top: 30%;
+    left: 70%;
+    animation: div5 30s linear Infinite Alternate;
+}
+
+
+#Buttondiv6 {
+    left: 50%;
+    animation: div6 30s linear Infinite Alternate;
+}
+
+.Checkinner {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7d3d3 74%);
+    border-top-right-radius: 50px;
+}
+
+.Checkinner2 {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background-image: linear-gradient(315deg, #ffffff 0%, #cccaca 74%);
+    border-bottom-left-radius: 50px;
+}
+
+.clublist {}
+
+@-webkit-keyframes shiny-btn1 {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+
+    80% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+    }
+
+    81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+
+@keyframes div0 {
+    0% {
+        top: 20%;
+        left: 10%;
+
+    }
+
+    15% {
+        left: 5%;
+        top: 30%;
+    }
+
+    30% {
+        top: 50%;
+        left: 10%;
+    }
+
+    45% {
+        top: 60%;
+        left: 40%;
+    }
+
+    60% {
+        top: 50%;
+        left: 70%;
+    }
+
+    80% {
+        top: 30%;
+        left: 70%;
+    }
+
+    100% {
+        top: 15%;
+        left: 50%;
+    }
+}
+
+@keyframes div1 {
+    0% {
+        left: 5%;
+        top: 30%;
+
+    }
+
+    15% {
+        top: 50%;
+        left: 10%;
+    }
+
+    30% {
+        top: 60%;
+        left: 40%;
+    }
+
+    45% {
+        top: 50%;
+        left: 70%;
+    }
+
+    60% {
+        top: 30%;
+        left: 70%;
+    }
+
+    80% {
+        top: 15%;
+        left: 50%;
+    }
+
+    100% {
+        top: 15%;
+        left: 15%;
+    }
+}
+
+@keyframes div2 {
+    0% {
+        top: 50%;
+        left: 10%;
+
+    }
+
+    15% {
+        top: 60%;
+        left: 40%;
+    }
+
+    30% {
+        top: 50%;
+        left: 70%;
+    }
+
+    45% {
+        top: 30%;
+        left: 70%;
+    }
+
+    60% {
+        top: 15%;
+        left: 50%;
+    }
+
+    80% {
+        top: 15%;
+        left: 15%;
+    }
+
+    100% {
+        top: 30%;
+        left: 5%;
+    }
+}
+
+@keyframes div3 {
+    0% {
+        top: 60%;
+        left: 40%;
+
+    }
+
+    15% {
+        top: 50%;
+        left: 70%;
+    }
+
+    30% {
+        top: 30%;
+        left: 70%;
+    }
+
+    45% {
+        top: 15%;
+        left: 50%;
+    }
+
+    60% {
+        top: 15%;
+        left: 15%;
+    }
+
+    80% {
+        top: 30%;
+        left: 5%;
+    }
+
+    100% {
+        top: 50%;
+        left: 10%;
+
+    }
+}
+
+@keyframes div4 {
+    0% {
+        top: 50%;
+        left: 70%;
+
+    }
+
+    15% {
+        top: 30%;
+        left: 70%;
+    }
+
+    30% {
+        top: 15%;
+        left: 50%;
+    }
+
+    45% {
+        top: 15%;
+        left: 15%;
+    }
+
+    60% {
+        top: 30%;
+        left: 5%;
+    }
+
+    80% {
+        top: 50%;
+        left: 10%;
+    }
+
+    100% {
+        top: 60%;
+        left: 40%;
+
+    }
+}
+
+@keyframes div5 {
+    0% {
+        top: 30%;
+        left: 70%;
+
+    }
+
+    15% {
+        top: 15%;
+        left: 50%;
+    }
+
+    30% {
+        top: 15%;
+        left: 15%;
+    }
+
+    45% {
+        top: 30%;
+        left: 5%;
+    }
+
+    60% {
+        top: 50%;
+        left: 10%;
+    }
+
+    80% {
+        top: 60%;
+        left: 40%;
+    }
+
+    100% {
+        top: 50%;
+        left: 70%;
+
+    }
+}
+
+@keyframes div6 {
+    0% {
+        top: 15%;
+        left: 50%;
+
+    }
+
+    15% {
+        top: 15%;
+        left: 15%;
+    }
+
+    30% {
+        top: 30%;
+        left: 5%;
+    }
+
+    45% {
+        top: 50%;
+        left: 15%;
+    }
+
+    60% {
+        top: 60%;
+        left: 40%;
+    }
+
+    80% {
+        top: 50%;
+        left: 70%;
+    }
+
+    100% {
+        top: 30%;
+        left: 70%;
+
+    }
+}

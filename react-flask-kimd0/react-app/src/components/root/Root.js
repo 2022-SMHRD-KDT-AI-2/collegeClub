@@ -14,7 +14,7 @@ function Root() {
 
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(true);
-  
+
   useEffect((data) => {
     const fetchData = async () => {
       try {
@@ -32,7 +32,7 @@ function Root() {
   const rendering = () => {
     const result = [];
     for (let i = 0; i < data.length; i++) {
-      result.push(<button key={i}>{data[i].club_name + "  "}</button>);
+      result.push(<div className='Buttondiv' id={"Buttondiv" + i}><button className='Buttonset' id={"Buttonset" + i} key={i}>{data[i].club_name + "  "}</button></div>);
     }
     return result;
   };
@@ -41,15 +41,17 @@ function Root() {
   return (
     <>
       <Header></Header>
-      <div>
-        동아리 리스트 바로가기
-        <div>{rendering()}</div>
+      <div className='clublist'>
+
+        <div className='render'>{rendering()}</div>
       </div>
-      <div>
-        <Link to="/main"><button type='button'>성향검사하기</button></Link>
-      </div>
-      <div>
-        <Link to="/result"><button type='button'>자신의 성향 보기</button></Link>
+      <div className='Checkdiv'>
+        <div className='Checkinner'>
+          <Link to="/main"><button className='Check' type='button'>성향검사하기</button></Link>
+        </div>
+        <div className='Checkinner2'>
+          <Link to="/result"><button className='Check' type='button'>자신의 성향 보기</button></Link>
+        </div>
       </div>
       <Menubar></Menubar>
     </>
