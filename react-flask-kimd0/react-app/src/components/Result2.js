@@ -36,21 +36,31 @@ const useResult2 = (props) => {
       <div className="wrap">
         <Header></Header>
 
-        <div className="club1"></div>
-        <div className="userBox1">
-          <div className="userProfile"></div>
-          <div className="userName"></div>
+        <div className='clubWrap1'>
+          <div className='clubTitle'></div>
+          <div className='clubWrap2'>
+            <div className='clubLogo'></div>
+            <div className='clubName'></div>
+            <div className='clubContents'></div>
+          </div>
         </div>
-        <div className="club2"></div>
-        <div className="userBox1">
-          <div className="userProfile"></div>
-          <div className="userName"></div>
+        <div className='clubWrap1'>
+          <div className='clubTitle'></div>
+          <div className='clubWrap2'>
+            <div className='clubLogo'></div>
+            <div className='clubName'></div>
+            <div className='clubContents'></div>
+          </div>
         </div>
-        <div className="club3"></div>
-        <div className="userBox1">
-          <div className="userProfile"></div>
-          <div className="userName"></div>
+        <div className='clubWrap1'>
+          <div className='clubTitle'></div>
+          <div className='clubWrap2'>
+            <div className='clubLogo'></div>
+            <div className='clubName'></div>
+            <div className='clubContents'></div>
+          </div>
         </div>
+        
       </div>
       <Menubar></Menubar>
     </>
