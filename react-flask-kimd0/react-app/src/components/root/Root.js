@@ -30,13 +30,11 @@ function Root() {
   console.log(data)
   const rendering = () => {
     const result = [];
+    result.push(<div className='Buttonwrap'><div className='Buttonimg' id='Buttonimg7'></div><div className='Buttondiv' id="Buttondiv7"><button className='Buttonset' id="Buttonset7">전체</button></div></div>)
     for (let i = 0; i < data.length; i++) {
       let str = "/club/"+i
-      result.push(<div className='Buttondiv' id={"Buttondiv" + i}><Link key={i} to={str}><button className='Buttonset' id={"Buttonset" + i} key={i}>{data[i].club_name + "  "}</button></Link></div>);
-
-
+      result.push(<div className='Buttonwrap'><Link key={i} to={str}><button className='Buttonimg' id={"Buttonimg" + i}></button></Link><div className='Buttondiv' id={"Buttondiv" + i}><Link key={i} to={str}><button className='Buttonset' id={"Buttonset" + i} key={i}>{data[i].club_name + "  "}</button></Link></div></div>);
     }
-    result.push(<div className='Buttondiv' id="Buttondiv7"><button className='Buttonset' id="Buttonset7">ㅎㅇㅇ</button></div>)
     return result;
   };
 
@@ -45,17 +43,29 @@ function Root() {
   return (
     <>
       <Header></Header>
-      <div className='Clublistgo'>★동아리 리스트 바로가기</div>
+      <div className='Clublistgo'>⭐️ 동아리 리스트 바로가기</div>
 
 
       <div className='render'>{rendering()}</div>
 
       <div className='Checkdiv'>
         <div className='Checkinner'>
-          <Link to="/main"><button className='Check1' id='Checkid1' type='button'>성향검사하기</button><button className='Check1' id='Checkid2' type='button'>></button></Link>
+          <Link to="/main">
+            <button className='Check1' id='Checkid1' type='button'>
+              <div> 내 동아리 성향 </div><div> 분석해보기 </div>
+            </button>
+            <button className='Check1' id='Checkid2' type='button'>
+              <div className='nextBtnImg'></div>
+            </button></Link>
         </div>
         <div className='Checkinner2'>
-          <Link to="/result"><button className='Check2' id='Checkid3' type='button'>자신의 성향 보기</button><button className='Check2' id='Checkid4'>></button></Link>
+          <Link to="/result">
+            <button className='Check2' id='Checkid3' type='button'>
+            <div> 내 테스트 결과 </div><div> 보러가기 </div>
+          </button>
+          <button className='Check2' id='Checkid4'>
+            <div className='nextBtnImg'></div>
+          </button></Link>
         </div>
       </div>
       <Menubar></Menubar>
