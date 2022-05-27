@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Root.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-
 import Header from '../header/Header'
 import Menubar from '../menubar/Menubar'
 
@@ -31,7 +30,7 @@ function Root() {
   const rendering = () => {
     const result = [];
     for (let i = 0; i < data.length; i++) {
-      let str = "/club/"+(i+1)
+      let str = "/club/" + (i + 1)
       result.push(<div className='Buttondiv' id={"Buttondiv" + i}><Link key={i} to={str}><button className='Buttonset' id={"Buttonset" + i} key={i}>{data[i].club_name + "  "}</button></Link></div>);
 
 
@@ -58,7 +57,8 @@ function Root() {
           <Link to="/result"><button className='Check2' id='Checkid3' type='button'>자신의 성향 보기</button><button className='Check2' id='Checkid4'>></button></Link>
         </div>
       </div>
-      <Menubar></Menubar>
+
+
     </>
   )
 }
