@@ -5,223 +5,37 @@
     height: 80%;
 }
 
-.club1{
+.clubWrap1{
+    position: relative;
+    margin-bottom: 2vh;
     width: 90vw;
-    height: 35vh;
-    margin-bottom: 3vh;
-    margin-left: 5vw;
-    float: left;
-    background-color: red;
+    height: 25vh;
 }
 
-.club2{
-    width: 42.5vw;
-    height: 24vh;
-    margin-bottom: 3vh;
-    margin-left: 5vw;
-    float: left;
-    background-color: blue;
-
-}
-
-.club3{
-    width: 42.5vw;
-    height: 24vh;
-    margin-bottom: 3vh;
-    margin-left: 5vw;
-    float: left;
-    background-color: green;
-
-}
-
-.club4{
-    width: 42.5vw;
-    height: 24vh;
-    margin-bottom: 3vh;
-    margin-left: 5vw;
-    float: left;
-    background-color: grey;
-
-}
-
-.clubImage1{
-    width: 42.5vw;
-    height: 24vh;
-    margin-bottom: 1vh;
-    background-color: red;
-    border-radius: 25px;
-}
-
-.clubImage2{
-    width: 42.5vw;
-    height: 24vh;
-    margin-bottom: 1vh;
-    background-color: blue;
-    border-radius: 25px;
-}
-
-.clubImage3{
-    width: 42.5vw;
-    height: 24vh;
-    margin-bottom: 1vh;
-    background-color: green;
-    border-radius: 25px;
-}
-
-.clubImage4{
-    width: 42.5vw;
-    height: 24vh;
-    margin-bottom: 1vh;
-    background-color: grey;
-    border-radius: 25px;
-}
-
-.userProfile1{
-    width: 9vw;
-    height: 5vh;
-    margin-bottom: 0.5vh;
-    margin-right : 0.9vw;
-    background-image: url(../img/son.jpeg);
-    background-size: cover;
-    float: left;
-    border-radius: 10px;
-
-}
-
-.userName1{
-    width: 32.6vw;
-    height: 5vh;
-    margin-bottom: 0.5vh;
-    background-color: whitesmoke;
-    float: right;
-}
-
-.userProfile2{
-    width: 9vw;
-    height: 5vh;
-    margin-bottom: 0.5vh;
-    margin-right : 0.9vw;
-    background-image: url(../img/son.jpeg);
-    background-size: cover;
-    float: left;
-    border-radius: 10px;
-}
-
-.userName2{
-    width: 32.6vw;
-    height: 5vh;
-    margin-bottom: 0.5vh;
-    background-color: whitesmoke;
-    float: right;
-}
-
-.userProfile3{
-    width: 9vw;
-    height: 5vh;
-    margin-bottom: 0.5vh;
-    margin-right : 0.9vw;
-    background-image: url(../img/son.jpeg);
-    background-size: cover;
-    float: left;
-    border-radius: 10px;
-}
-
-.userName3{
-    width: 32.6vw;
-    height: 5vh;
-    margin-bottom: 0.5vh;
-    background-color: whitesmoke;
-    float: right;
-}
-
-.userProfile4{
-    width: 9vw;
-    height: 5vh;
-    margin-bottom: 0.5vh;
-    margin-right : 0.9vw;
-    background-image: url(../img/son.jpeg);
-    background-size: cover;
-    float: left;
-    border-radius: 10px;
-}
-
-.userName4{
-    width: 32.6vw;
-    height: 5vh;
-    margin-bottom: 0.5vh;
-    background-color: whitesmoke;
-    float: right;
-}
-
-.club1:hover {
-    transition: 2s;
-    background-color: slategrey;
-}
-
-.club2:hover {
-    transition: 2s;
-    background-color: slategrey;
-}
-
-.club3:hover {
-    transition: 2s;
-    background-color: slategrey;
-}
-
-.club4:hover {
-    transition: 2s;
-    background-color: slategrey;
-}
-
-.userBox1{
-    margin-top: 2.8vh;
-    margin-left: 5vw;
-    margin-right: 2.5vw;
-    width: 42.5vw;
-    height: 11vh;
-    float: left;
-}
-
-.userTitle{
-    width: 42.5vw;
-    height: 5vh;
-    margin-bottom: 0.5vh;
-    float: left;
-    background-color: wheat;
-}
-
-.userProfile{
-    width: 9vw;
-    height: 5vh;
-    margin-bottom: 0.5vh;
-    margin-right : 0.9vw;
-    background-image: url(../img/son.jpeg);
-    background-size: cover;
-    float: left;
-}
-
-.userName{
-    width: 32.6vw;
-    height: 5vh;
-    margin-bottom: 0.5vh;
-    background-color: whitesmoke;
-    float: right;
-}
-
-.Buttonsection2 {
-    position: absolute;
-    width: 100vw;
-    height: 10vh;
-    top: 80vh;
-}
-
-.shareButton {
+.clubTitle{
     width: 50vw;
-    height: 8vh;
+    height: 5vh;
+    background: red;
+    margin-right: 50vw;
+}
+
+.clubLogo{
+    width: 35vw;
+    height: 20vh;
+    background: black;
     float: left;
 }
 
-.restartButton {
-    width: 50vw;
-    height: 8vh;
+.clubName{
+    width: 55vw;
+    height: 5vh;
+    background: green;
+    float: left;
+}
+
+.clubContents{
+    width: 55vw;
+    height: 15vh;
+    background: violet;
+    float: left;
 }
