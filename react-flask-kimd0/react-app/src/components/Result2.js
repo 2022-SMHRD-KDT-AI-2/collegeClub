@@ -40,7 +40,7 @@ const useResult2 = (props) => {
           <div className='clubTitle'></div>
           <div className='clubWrap2'>
             <div className='clubLogo'></div>
-            <div className='clubName'></div>
+            <div className='clubIrum'></div>
             <div className='clubContents'></div>
           </div>
         </div>
@@ -48,7 +48,7 @@ const useResult2 = (props) => {
           <div className='clubTitle'></div>
           <div className='clubWrap2'>
             <div className='clubLogo'></div>
-            <div className='clubName'></div>
+            <div className='clubIrum'></div>
             <div className='clubContents'></div>
           </div>
         </div>
@@ -56,7 +56,7 @@ const useResult2 = (props) => {
           <div className='clubTitle'></div>
           <div className='clubWrap2'>
             <div className='clubLogo'></div>
-            <div className='clubName'></div>
+            <div className='clubIrum'></div>
             <div className='clubContents'></div>
           </div>
         </div>
