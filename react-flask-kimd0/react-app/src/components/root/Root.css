@@ -7,34 +7,87 @@
 
 .Clublistgo {
     position: relative;
+    height: 5vh;
+    font-size: larger;
+    font-weight: 700;
+    margin-left: 5vw;
+}
 
-    height: 8vh;
-    padding-top: 2vh;
+.Buttonwrap{
+    width: 25vw;
+    height: 17vh;
+    float: left;
+}
 
+.Buttonimg{
+    width: 15vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height: 10vh;
+    float: left;
+    text-align: center;
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Buttondiv{
+    width: 25vw;
+    height: 3vh;
+    float: left;
+    text-align: center;
+}
+
+#Buttonimg7{
+    background-image: url(./img/club00.png);
+}
+
+#Buttonimg0{
+    background-image: url(./img/club01.png);
+}
+
+#Buttonimg1{
+    background-image: url(./img/club02.png);
+}
+
+#Buttonimg2{
+    background-image: url(./img/club03.png);
+}
+
+#Buttonimg3{
+    background-image: url(./img/club04.png);
+}
+
+#Buttonimg4{
+    background-image: url(./img/club05.png);
+}
+
+#Buttonimg5{
+    background-image: url(./img/club06.png);
+    background-size: contain;
+}
+
+#Buttonimg6{
+    background-image: url(./img/club07.png);
 }
 
 .render {
     position: relative;
-    height: 30vh;
+    height: 34vh;
 }
 
 .Buttonset {
     background: none;
     border: none;
+    font-weight: 600;
+    color: black;
 }
-
-.Buttondiv {
-    float: left;
-    text-align: center;
-}
-
 
 .Check {
     background: none;
     border: none;
     padding: 3vw;
-
-
 }
 
 .Checkdiv {
@@ -46,41 +99,61 @@
     background: none;
     border: none;
     height: 20vh;
-    width: 50%;
+    float: left;
 }
 
 .Check2 {
     background: none;
     border: none;
     height: 20vh;
-    width: 50%;
+    float: left;
 }
 
 #Checkid1 {
     text-align: right;
+    width: 55vw;
+    font-size: larger;
+    font-weight: 700;
+    color: black;
 }
-
 
 #Checkid2 {
     text-align: left;
+    width: 45vw;
+    padding-left: 10vw;
 }
 
 #Checkid3 {
     text-align: right;
+    width: 55vw;
+    font-size: larger;
+    font-weight: 700;
+    color: black;
 }
 
 #Checkid4 {
     text-align: left;
+    width: 45vw;
+    padding-left: 10vw;
 }
 
 .Checkinner {
     height: 20vh;
     border-top: 1px solid rgba(82, 178, 140, 0.75);
-    border-bottom: 1px solid rgba(82, 178, 140, 0.75);
 }
 
 .Checkinner2 {
     text-align: center;
     height: 20vh;
+    border-top: 1px solid rgba(82, 178, 140, 0.75);
 
+}
+
+.nextBtnImg{
+    width: 9vw;
+    height: 5vh;
+    background-image: url(./img/nextButton.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
 }
