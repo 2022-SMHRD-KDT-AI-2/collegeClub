@@ -1,8 +1,64 @@
+import pandas as pd
+import numpy as np
+
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier 
+from sklearn.model_selection import cross_val_score 
+from sklearn.ensemble import VotingClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.model_selection import GridSearchCV
+from sklearn.preprocessing import StandardScaler
+from xgboost import XGBClassifier
+from lightgbm import LGBMClassifier
+from sklearn import metrics
+
+
+
 from flask import Flask, request
 from flask_cors import CORS
 
+
 import pymysql
 import json
+
+df = pd.read_csv("./result.csv")
+X_train = df.iloc[:,:6]
+
+y_train = df.iloc[:,-1]
+print(X_train)
+print(y_train)
+
+
+knn_model = KNeighborsClassifier(n_neighbors=5)
+knn_model.fit(X_train, y_train)
+pre = knn_model.predict(X_train)
+acc = metrics.accuracy_score(pre, y_train)
+print("1223", acc)
+
+param_knn = {'n_neighbors':range(3,60)}
+GS_knn = GridSearchCV(KNeighborsClassifier(), param_knn, cv = 3)
+GS_knn.fit(X_train, y_train)
+print('최적 파라미터값 : ', GS_knn.best_params_)
+print('최고 교차검증 점수 : ', GS_knn.best_score_)
+print('최고 교차검증 점수 : ', GS_knn.best_estimator_)
+
+
+param_tree = {}
+GS_tree = GridSearchCV(DecisionTreeClassifier(), param_tree, cv = 10)
+GS_tree.fit(X_train, y_train)
+print('최적 파라미터값 : ', GS_tree.best_params_)
+print('최고 교차검증 점수 : ', GS_tree.best_score_)
+print('최고 교차검증 점수 : ', GS_tree.best_estimator_)
+
+
+param_for = {}
+GS_for = GridSearchCV(RandomForestClassifier(), param_for, cv = 10)
+GS_for.fit(X_train, y_train)
+print('최적 파라미터값 : ', GS_for.best_params_)
+print('최고 교차검증 점수 : ', GS_for.best_score_)
+print('최고 교차검증 점수 : ', GS_for.best_estimator_)
+
 
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',
                      db='yangdb', charset='utf8')
@@ -24,6 +80,7 @@ def sce():
             print(i)
         json_string = json.dumps(result)
         return json_string
+
 
 @app.route('/screen', methods=['GET','POST'])
 def sce_select():
@@ -83,6 +140,25 @@ def result():
     finally:
         for i in result:
             print(i)
+        json_string = json.dumps(result)
+        return json_string
+
+@app.route('/result2', methods=['GET','POST'])
+def result2():
+    print(result2)
+    try:
+        with db.cursor() as cursor4:
+            sql = "select stat1_r, stat1_e, stat1_a, stat1_c, stat1_s, stat1_i from t_stat1 where user_id = 'sampleroot1'"
+            cursor4.execute(sql)
+            result = cursor4.fetchall()
+            result = result[0]
+            X_train = pd.DataFrame(result).T
+            X_train.columns = ['0','1','2','3','4','5']
+            print(X_train)
+            print(GS_knn.predict(X_train))
+            print(GS_tree.predict(X_train))
+            print(GS_for.predict(X_train))
+    finally:
         json_string = json.dumps(result)
         return json_string
     
