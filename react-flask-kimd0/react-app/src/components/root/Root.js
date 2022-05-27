@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Root.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { Helmet } from "react-helmet";
 
 import Header from '../header/Header'
 import Menubar from '../menubar/Menubar'
@@ -32,7 +31,10 @@ function Root() {
   const rendering = () => {
     const result = [];
     for (let i = 0; i < data.length; i++) {
-      result.push(<div className='Buttondiv' id={"Buttondiv" + i}><button className='Buttonset' id={"Buttonset" + i} key={i}>{data[i].club_name + "  "}</button></div>);
+      let str = "/club/"+i
+      result.push(<div className='Buttondiv' id={"Buttondiv" + i}><Link key={i} to={str}><button className='Buttonset' id={"Buttonset" + i} key={i}>{data[i].club_name + "  "}</button></Link></div>);
+
+
     }
     result.push(<div className='Buttondiv' id="Buttondiv7"><button className='Buttonset' id="Buttonset7">ㅎㅇㅇ</button></div>)
     return result;
