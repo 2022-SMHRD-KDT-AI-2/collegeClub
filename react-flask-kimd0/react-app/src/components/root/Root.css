@@ -1,360 +1,81 @@
-.render {
-    height: 100vw;
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
 }
 
+.Clublistgo {
+    position: relative;
+
+    height: 8vh;
+    padding-top: 2vh;
+
+}
+
+.render {
+    position: relative;
+    height: 30vh;
+}
 
 .Buttonset {
     background: none;
     border: none;
-    text-align: center;
-    width: 18vw;
-    font-weight: bold;
-
 }
-
-.Buttonset:hover {
-    color: #f0094a;
-    background: transparent;
-    box-shadow: none;
-}
-
-.Buttonset:before,
-.Buttonset:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: 0;
-    background: #f0094a;
-    box-shadow:
-        -1px -1px 5px 0px #fff,
-        7px 7px 20px 0px #0003,
-        4px 4px 5px 0px #0002;
-    transition: 400ms ease all;
-}
-
-.Buttonset:after {
-    right: inherit;
-    top: inherit;
-    left: 0;
-    bottom: 0;
-}
-
-.Buttonset:hover:before,
-.Buttonset:hover:after {
-    width: 100%;
-    transition: 800ms ease all;
-}
-
 
 .Buttondiv {
-    position: absolute;
-    padding: 2vh;
-    width: 18vw;
+    float: left;
     text-align: center;
-    border: 1px solid rgba(82, 178, 140, 0.75);
-    border-radius: 25px;
-}
-
-.Buttondiv:hover {
-    border-style: none;
-}
-
-.Check {
-    background: none;
-    border: none;
-    padding: 3vw;
-
-
+    height: 15vh;
+    width: 25vw;
+    background: url(../menubar/img/Pikachu.gif);
+    background-repeat: none;
+    background-size: cover;
 }
 
 .Checkdiv {
     position: relative;
-    text-align: center;
-
+    height: 40vh;
 }
 
-
-#Buttondiv0 {
-    left: 15%;
-    animation: div0 20s linear Infinite Alternate;
-
+.Check1 {
+    background: none;
+    border: none;
+    height: 20vh;
+    width: 50%;
 }
 
-#Buttondiv1 {
-    top: 30%;
-    animation: div1 20s linear Infinite Alternate;
+.Check2 {
+    background: none;
+    border: none;
+    height: 20vh;
+    width: 50%;
 }
 
-#Buttondiv2 {
-    top: 31%;
-    left: 35%;
-
+#Checkid1 {
+    text-align: right;
 }
 
-#Buttondiv3 {
-    top: 50%;
-    left: 20%;
-    animation: div3 20s linear Infinite Alternate;
-
+#Checkid2 {
+    text-align: left;
 }
 
-#Buttondiv4 {
-    top: 50%;
-    left: 50%;
-    animation: div4 20s linear Infinite Alternate;
+#Checkid3 {
+    text-align: right;
 }
 
-#Buttondiv5 {
-    top: 30%;
-    left: 70%;
-    animation: div5 20s linear Infinite Alternate;
-
-}
-
-
-#Buttondiv6 {
-    left: 50%;
-    animation: div6 20s linear Infinite Alternate;
-
+#Checkid4 {
+    text-align: left;
 }
 
 .Checkinner {
-    border: none;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    background-image: linear-gradient(315deg, rgba(87, 151, 126, 0.75) 45%, rgba(82, 178, 140, 0.75) 74%);
-    border-top-right-radius: 0px;
+    height: 20vh;
+    border-top: 1px solid rgba(82, 178, 140, 0.75);
+    border-bottom: 1px solid rgba(82, 178, 140, 0.75);
 }
 
 .Checkinner2 {
-    border: none;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    background-image: linear-gradient(315deg, rgba(82, 178, 140, 0.75) 40%, rgba(82, 178, 140, 0.75) 74%);
-    border-bottom-left-radius: 20px;
-}
+    text-align: center;
+    height: 20vh;
 
-
-@-webkit-keyframes shiny-btn1 {
-    0% {
-        -webkit-transform: scale(0) rotate(45deg);
-        opacity: 0;
-    }
-
-    80% {
-        -webkit-transform: scale(0) rotate(45deg);
-        opacity: 0.5;
-    }
-
-    81% {
-        -webkit-transform: scale(4) rotate(45deg);
-        opacity: 1;
-    }
-
-    100% {
-        -webkit-transform: scale(50) rotate(45deg);
-        opacity: 0;
-    }
-}
-
-
-@keyframes div0 {
-    0% {
-        top: 12%;
-        left: 15%;
-
-    }
-
-    20% {
-        left: 0%;
-        top: 30%;
-    }
-
-    40% {
-        top: 50%;
-        left: 20%;
-    }
-
-    60% {
-        top: 50%;
-        left: 50%;
-    }
-
-    80% {
-        top: 30%;
-        left: 70%;
-    }
-
-    100% {
-        top: 12%;
-        left: 50%;
-    }
-}
-
-@keyframes div1 {
-    0% {
-        left: 0%;
-        top: 30%;
-
-    }
-
-    20% {
-        top: 50%;
-        left: 20%;
-    }
-
-    40% {
-        top: 50%;
-        left: 50%;
-    }
-
-    60% {
-        top: 30%;
-        left: 70%;
-    }
-
-    80% {
-        top: 12%;
-        left: 50%;
-    }
-
-    100% {
-        top: 12%;
-        left: 15%;
-    }
-}
-
-@keyframes div3 {
-    0% {
-        top: 50%;
-        left: 20%;
-
-    }
-
-    20% {
-        top: 50%;
-        left: 50%;
-    }
-
-    40% {
-        top: 30%;
-        left: 70%;
-    }
-
-    60% {
-        top: 12%;
-        left: 50%;
-    }
-
-    80% {
-        top: 12%;
-        left: 15%;
-    }
-
-    100% {
-        left: 0%;
-        top: 30%;
-    }
-}
-
-@keyframes div4 {
-    0% {
-        top: 50%;
-        left: 50%;
-
-    }
-
-    20% {
-        top: 30%;
-        left: 70%;
-    }
-
-    40% {
-        top: 12%;
-        left: 50%;
-    }
-
-    60% {
-        top: 12%;
-        left: 15%;
-    }
-
-    80% {
-        left: 0%;
-        top: 30%;
-    }
-
-    100% {
-        top: 50%;
-        left: 20%;
-    }
-}
-
-@keyframes div5 {
-    0% {
-        top: 30%;
-        left: 70%;
-
-    }
-
-    20% {
-        top: 12%;
-        left: 50%;
-    }
-
-    40% {
-        top: 12%;
-        left: 15%;
-    }
-
-    60% {
-        left: 0%;
-        top: 30%;
-    }
-
-    80% {
-        top: 50%;
-        left: 20%;
-    }
-
-    100% {
-        top: 50%;
-        left: 50%;
-    }
-}
-
-@keyframes div6 {
-    0% {
-        top: 12%;
-        left: 50%;
-
-    }
-
-    20% {
-        top: 12%;
-        left: 15%;
-    }
-
-    40% {
-        left: 0%;
-        top: 30%;
-    }
-
-    60% {
-        top: 50%;
-        left: 20%;
-    }
-
-    80% {
-        top: 50%;
-        left: 50%;
-    }
-
-    100% {
-        top: 30%;
-        left: 70%;
-
-    }
 }
