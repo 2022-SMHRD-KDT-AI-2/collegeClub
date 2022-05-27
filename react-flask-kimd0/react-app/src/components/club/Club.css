@@ -39,23 +39,17 @@
 }
 
 .Clubimg {
-    height: 13vh;
+    height: 15vh;
 
 }
 
 .Clubna {
-    height: 4vh;
+    height: 5vh;
     font-weight: bold;
 }
 
 .Clubca {
-    height: 4vh;
-    color: rgb(0 0 0 / 52%);
-    font-weight: bold;
-}
-
-.Clubw {
-    height: 4vh;
+    height: 5vh;
     color: rgb(0 0 0 / 52%);
     font-weight: bold;
 }

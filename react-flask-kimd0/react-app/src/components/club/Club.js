@@ -10,6 +10,8 @@ import { useState, useEffect } from 'react';
 
 import Header from '../header/Header'
 import Menubar from '../menubar/Menubar'
+import { Scroll } from 'react-scroll/modules/mixins/Helpers';
+
 
 
 
@@ -40,6 +42,8 @@ function useClub() {
     fetchData();
   }, []);
 
+
+
   function str(props) {
     // eslint-disable-next-line default-case
     switch (props.club_num) {
@@ -59,8 +63,43 @@ function useClub() {
         return <div key={data.cc_num}>창업</div>
     }
   }
+
+  function Menub() {
+    switch (scroll) {
+      case true:
+        return
+      case false:
+        return <Menubar></Menubar>
+    }
+  }
+
+
+
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll); //clean up
+    };
+  }, []);
+
+  const handleScroll = () => {
+    console.log(scroll)
+
+    if (window.scrollY >= 600) {
+      setScroll(true);
+    } else {
+
+      setScroll(false);
+    }
+
+  };
+
+
   const rendering = () => {
+
     const result = [];
+    console.log(scroll)
     console.log(data)
     for (let i = 0; i < data.length; i++) {
 
@@ -68,7 +107,6 @@ function useClub() {
         <div className='Clubimg'><img className='Inimg' src={data[i].cc_img + ".jpg"} alt='img1'></img></div>
         <div className='Clubna'>{data[i].cc_name}</div>
         <div className='Clubca'>{str(data[i])}</div>
-        <div className='Clubw'>{data[i].cc_num}</div>
 
       </div>);
     }
@@ -119,11 +157,17 @@ function useClub() {
       </div>
       <div className='Clubcount'>총{data.length}개의 동아리가 있습니다</div>
       <div className='Clubname'>{rendering()}</div>
-      <Menubar></Menubar>
+
+      <div>{Menub()}</div>
+
 
     </>
   )
+
+
 }
+
+
 
 
 export default useClub;
