@@ -10,6 +10,7 @@
     height: 5vh;
     font-size: larger;
     font-weight: 700;
+    margin-left: 5vw;
 }
 
 .Buttonwrap{
@@ -41,6 +42,7 @@
 #Buttonimg7{
     background-image: url(./img/club00.png);
 }
+
 #Buttonimg0{
     background-image: url(./img/club01.png);
 }
@@ -79,6 +81,7 @@
     background: none;
     border: none;
     font-weight: 600;
+    color: black;
 }
 
 .Check {
@@ -111,6 +114,7 @@
     width: 55vw;
     font-size: larger;
     font-weight: 700;
+    color: black;
 }
 
 #Checkid2 {
@@ -124,7 +128,7 @@
     width: 55vw;
     font-size: larger;
     font-weight: 700;
-    
+    color: black;
 }
 
 #Checkid4 {
