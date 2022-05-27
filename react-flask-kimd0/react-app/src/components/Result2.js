@@ -1,10 +1,35 @@
 import React from 'react';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
+
 import './Result2.css';
 import Header from './header/Header';
 import Menubar from './menubar/Menubar'
 
 
-const Screen1 = (props) => {
+
+const useResult2 = (props) => {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(true);
+
+
+  useEffect((data) => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `http://220.80.33.51:8083/result2`
+        );
+        setLoading(false);
+        setData(response.data[0]);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetchData();
+  }, []);
+  console.log(data)
 
   return (
     <>
@@ -13,24 +38,23 @@ const Screen1 = (props) => {
 
         <div className="club1"></div>
         <div className="userBox1">
-            <div className="userProfile"></div>
-            <div className="userName"></div>
+          <div className="userProfile"></div>
+          <div className="userName"></div>
         </div>
         <div className="club2"></div>
         <div className="userBox1">
-            <div className="userProfile"></div>
-            <div className="userName"></div>
+          <div className="userProfile"></div>
+          <div className="userName"></div>
         </div>
         <div className="club3"></div>
         <div className="userBox1">
-            <div className="userProfile"></div>
-            <div className="userName"></div>
+          <div className="userProfile"></div>
+          <div className="userName"></div>
         </div>
       </div>
       <Menubar></Menubar>
-
     </>
   );
 };
-export default Screen1;
+export default useResult2;
 

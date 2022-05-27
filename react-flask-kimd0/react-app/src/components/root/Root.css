@@ -14,7 +14,7 @@
 }
 
 .Buttonwrap{
-    width: 25vw;
+    width: 24vw;
     height: 17vh;
     float: left;
 }
@@ -120,7 +120,7 @@
 #Checkid2 {
     text-align: left;
     width: 45vw;
-    padding-left: 10vw;
+    padding-left: 5vw;
 }
 
 #Checkid3 {
@@ -134,7 +134,7 @@
 #Checkid4 {
     text-align: left;
     width: 45vw;
-    padding-left: 10vw;
+    padding-left: 5vw;
 }
 
 .Checkinner {
