@@ -4,11 +4,36 @@
 
 .club {
     align-content: center;
-    text-align: center;
     border-bottom: 2px solid whitesmoke;
     padding-top: 10px;
     padding-bottom: 10px;
+    height: 4vh;
+}
+
+.clubBack{
+    width: 7vw;
+    height: 4vh;
+    float: left;
+    left: 5vw;
+    position: absolute;
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/src/img/backButton.png);
+    /* background-image: url(); */
+}
+
+.clubsearch{
+    text-align: center;
+    padding-left: 25vw;
+    width: 50vw;
     font-size: 1.5rem;
+    font-weight: 900;
+    height: 4vh;
+    position: relative;
+    float: left;
+    z-index: -99;
 }
 
 .Clubscreen {
