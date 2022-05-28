@@ -1,5 +1,5 @@
 import React from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, FunnelChart } from 'recharts';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -11,11 +11,18 @@ import Menubar from './menubar/Menubar'
 
 import './result.css';
 
+
+
+
 function Data(props) {
     let top1 = 0;
     let top2 = 0;
+    let ttop1 = 0;
+    let ttop2 = 0;
     let top1Name = '';
     let top2Name = '';
+    let ttop1Name = '';
+    let ttop2Name = '';
 
     const data = [
         {
@@ -44,11 +51,18 @@ function Data(props) {
         },
     ];
 
+
     console.log(props.data);
+    ttop1 = props.data[0];
     for (let i = 0; i < 6; i++) {
         if (top1 < props.data[i]) {
             top1 = props.data[i];
-            top1Name = data[0]
+            top1Name = data[i]
+        }
+        if (top1 != props.data[i] && ttop1 <= props.data[i]) {
+            ttop1 = props.data[i]
+            ttop1Name = data[i]
+
         }
     }
 
@@ -78,16 +92,24 @@ function Data(props) {
             A: 80
         },
     ];
+    ttop2 = props.data[0];
     for (let i = 0; i < 6; i++) {
         if (top2 < props.data[i]) {
             top2 = props.data[i];
-            top2Name = data2[0]
+            top2Name = data2[i]
+
+        } if (top2 != props.data[i] && ttop2 <= props.data[i]) {
+            ttop2 = props.data[i]
+            ttop2Name = data2[i]
         }
     }
 
 
     return (
         <>
+
+
+
             <div className='wrap'>
                 <div className='Header'>
                     <div className='title'>테스트 결과</div>
@@ -110,12 +132,12 @@ function Data(props) {
                             <div>
                                 <progress></progress>
                             </div>
-                            <div>
-                                <progress value={50} max="100"></progress>
+                            <div className='progress'>
+                                <progress value={top1} max="100"></progress>
                             </div>
 
                             <div>
-                                <progress value="20" max="200"></progress>
+                                <progress value={ttop1} max="100"></progress>
                             </div>
                         </div></div>
 
@@ -125,11 +147,11 @@ function Data(props) {
                             </div>
 
                             <div>
-                                <progress value="20" max="100"></progress>
+                                <progress value={top2} max="100"></progress>
                             </div>
 
                             <div>
-                                <progress value="20" max="200"></progress>
+                                <progress value={ttop2} max="100"></progress>
                             </div>
                         </div></div>
                         <div className='innerHexa2'>
@@ -146,7 +168,12 @@ function Data(props) {
                         </div>
 
                     </div>
-                    <div className='result'></div>
+                    <div className='result'>
+
+                        <div className='firstType'>당신의가장 높은 성향은 <span className='type1'>{top1Name['subject']} {top2Name['subject']}</span>유형으로 각각 <span className='type2'>{top1}, {top2}</span>점 입니다</div>
+
+                        <div className='secondType'>그 다음 성향은 <span className='type1'>{ttop1Name['subject']} {ttop2Name['subject']}</span>유형으로 점수가 <span className='type2'>{ttop1}, {ttop2}</span>점 이네요</div>
+                    </div>
 
                     <button className='resultShare' type='button'>결과 공유하기</button>
                     <Link to='/result2'>

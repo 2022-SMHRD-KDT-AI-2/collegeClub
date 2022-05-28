@@ -118,7 +118,9 @@ function useClub() {
 
       <div className="Clubscreen">
         <div className="wrap">
-          <div className="club"><span className='clubsearch'>동아리검색</span></div>
+          <div className="club">
+            <Link to='/'><button type='button' className='clubBack'></button></Link>
+            <div className='clubsearch'>동아리검색</div></div>
           <div className='area'>
             <form className='form' action='' method=''>
               <select>
