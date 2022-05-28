@@ -1,5 +1,5 @@
 import React from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, FunnelChart } from 'recharts';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -11,9 +11,14 @@ import Menubar from './menubar/Menubar'
 
 import './result.css';
 
+  
+
+
 function Data(props) {
     let top1 = 0;
     let top2 = 0;
+    let low1 = props.data[0];
+    let low2 = 0;
     let top1Name = '';
     let top2Name = '';
 
@@ -44,10 +49,12 @@ function Data(props) {
         },
     ];
 
+
     console.log(props.data);
     for (let i = 0; i < 6; i++) {
         if (top1 < props.data[i]) {
             top1 = props.data[i];
+            
             top1Name = data[0]
         }
     }
@@ -88,6 +95,9 @@ function Data(props) {
 
     return (
         <>
+        
+
+
             <div className='wrap'>
                 <div className='Header'>
                     <div className='title'>테스트 결과</div>
@@ -111,11 +121,11 @@ function Data(props) {
                                 <progress></progress>
                             </div>
                             <div>
-                                <progress value={50} max="100"></progress>
+                                <progress value={top1} max="100"></progress>
                             </div>
 
                             <div>
-                                <progress value="20" max="200"></progress>
+                                <progress value="25" max="100"></progress>
                             </div>
                         </div></div>
 
@@ -125,7 +135,7 @@ function Data(props) {
                             </div>
 
                             <div>
-                                <progress value="20" max="100"></progress>
+                                <progress value={top2} max="100"></progress>
                             </div>
 
                             <div>
@@ -146,7 +156,7 @@ function Data(props) {
                         </div>
 
                     </div>
-                    <div className='result'></div>
+                    <div className='result'>{top1Name['subject']} {top2Name['subject']}</div>
 
                     <button className='resultShare' type='button'>결과 공유하기</button>
                     <Link to='/result2'>
