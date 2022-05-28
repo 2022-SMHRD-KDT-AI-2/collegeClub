@@ -16,7 +16,7 @@ function Data(props) {
     let top2 = 0;
     let top1Name = '';
     let top2Name = '';
-    
+
     const data = [
         {
             subject: '관습',
@@ -45,8 +45,8 @@ function Data(props) {
     ];
 
     console.log(props.data);
-    for(let i = 0; i < 6; i++){
-        if(top1 < props.data[i]){
+    for (let i = 0; i < 6; i++) {
+        if (top1 < props.data[i]) {
             top1 = props.data[i];
             top1Name = data[0]
         }
@@ -78,8 +78,8 @@ function Data(props) {
             A: 80
         },
     ];
-    for(let i = 0; i < 6; i++){
-        if(top2 < props.data[i]){
+    for (let i = 0; i < 6; i++) {
+        if (top2 < props.data[i]) {
             top2 = props.data[i];
             top2Name = data2[0]
         }
@@ -87,54 +87,17 @@ function Data(props) {
 
 
     return (
-        <div className='wrap'>
-            <div className='Header'>
-                <div className='title'>테스트 결과</div>
-                <div className='TypeResult'>당신은 <span className='Result'>{top1Name['subject']} {top2Name['subject']}</span> 유형입니다</div>
-            </div>
-            <div className='section'>
-                <div className='section1'>
-                    <div className='HexaLi'>
-                        <ResponsiveContainer width="90%" height="90%">
-                            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-                                <PolarGrid />
-                                <PolarAngleAxis dataKey="subject" />
-                                <PolarRadiusAxis angle={30} domain={[0, 100]} />
-                                <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-                            </RadarChart>
-                        </ResponsiveContainer>
-                    </div>
-
-                    <div className='Poi1'><div className='point1'>
-                        <div>
-                            <progress></progress>
-                        </div>
-                        <div>
-                            <progress value={50} max="100"></progress>
-                        </div>
-
-                        <div>
-                            <progress value="20" max="200"></progress>
-                        </div>
-                    </div></div>
-
-                    <div className='Poi2'> <div className='point2'>
-                        <div>
-                            <progress></progress>
-                        </div>
-
-                        <div>
-                            <progress value="20" max="100"></progress>
-                        </div>
-
-                        <div>
-                            <progress value="20" max="200"></progress>
-                        </div>
-                    </div></div>
-                    <div className='innerHexa2'>
-                        <div className='HexaLi2'>
+        <>
+            <div className='wrap'>
+                <div className='Header'>
+                    <div className='title'>테스트 결과</div>
+                    <div className='TypeResult'>당신은 <span className='Result'>{top1Name['subject']} {top2Name['subject']}</span> 유형입니다</div>
+                </div>
+                <div className='section'>
+                    <div className='section1'>
+                        <div className='HexaLi'>
                             <ResponsiveContainer width="90%" height="90%">
-                                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data2}>
+                                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
                                     <PolarGrid />
                                     <PolarAngleAxis dataKey="subject" />
                                     <PolarRadiusAxis angle={30} domain={[0, 100]} />
@@ -142,19 +105,59 @@ function Data(props) {
                                 </RadarChart>
                             </ResponsiveContainer>
                         </div>
+
+                        <div className='Poi1'><div className='point1'>
+                            <div>
+                                <progress></progress>
+                            </div>
+                            <div>
+                                <progress value={50} max="100"></progress>
+                            </div>
+
+                            <div>
+                                <progress value="20" max="200"></progress>
+                            </div>
+                        </div></div>
+
+                        <div className='Poi2'> <div className='point2'>
+                            <div>
+                                <progress></progress>
+                            </div>
+
+                            <div>
+                                <progress value="20" max="100"></progress>
+                            </div>
+
+                            <div>
+                                <progress value="20" max="200"></progress>
+                            </div>
+                        </div></div>
+                        <div className='innerHexa2'>
+                            <div className='HexaLi2'>
+                                <ResponsiveContainer width="90%" height="90%">
+                                    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data2}>
+                                        <PolarGrid />
+                                        <PolarAngleAxis dataKey="subject" />
+                                        <PolarRadiusAxis angle={30} domain={[0, 100]} />
+                                        <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                                    </RadarChart>
+                                </ResponsiveContainer>
+                            </div>
+                        </div>
+
                     </div>
+                    <div className='result'></div>
+
+                    <button className='resultShare' type='button'>결과 공유하기</button>
+                    <Link to='/result2'>
+                        <button className='resultNext' type='button'>다음으로</button>
+                    </Link>
 
                 </div>
-                <div className='result'></div>
 
-                <button className='resultShare' type='button'>결과 공유하기</button>
-                <Link to='/result2'>
-                    <button className='resultNext' type='button'>다음으로</button>
-                </Link>
-                
             </div>
             <Menubar></Menubar>
-        </div>
+        </>
     )
 
 }

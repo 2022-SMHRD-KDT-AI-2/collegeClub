@@ -76,7 +76,7 @@ const useResult2 = (props) => {
           </div>
           <div className='clubContents'>
             <div className='clubText'>
-              안주 호 안주 불호 안 주호 밖 주호 ,, 딥치즈 베이컨 포테이토 >>>>> 햄치즈 스페셜 
+              안주 호 안주 불호 안 주호 밖 주호 ,, 딥치즈 베이컨 포테이토 햄치즈 스페셜 
             </div>
           </div>
         </div>

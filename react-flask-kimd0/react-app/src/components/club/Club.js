@@ -10,7 +10,6 @@ import { useState, useEffect } from 'react';
 
 import Header from '../header/Header'
 import Menubar from '../menubar/Menubar'
-import { Scroll } from 'react-scroll/modules/mixins/Helpers';
 
 
 

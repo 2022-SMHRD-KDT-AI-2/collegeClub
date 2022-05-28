@@ -43,6 +43,7 @@ function Root() {
   return (
     <>
       <Header></Header>
+      <div className="wrap">
       <div className='Clublistgo'>⭐️ 동아리 리스트 바로가기</div>
 
 
@@ -67,6 +68,7 @@ function Root() {
               <div className='nextBtnImg'></div>
             </button></Link>
         </div>
+      </div>
       </div>
       <Menubar></Menubar>
     </>
