@@ -1,0 +1,331 @@
+-- 테이블 순서는 관계를 고려하여 한 번에 실행해도 에러가 발생하지 않게 정렬되었습니다.
+
+create database yangdb;
+use yangdb;
+-- t_sce Table Create SQL
+CREATE TABLE t_sce
+(
+    `sce_num`   INT UNSIGNED    NOT NULL    AUTO_INCREMENT COMMENT '시나리오 번호', 
+    `sce_name`  VARCHAR(30)     NOT NULL    COMMENT '시나리오 이름', 
+    `sce_exp`   VARCHAR(300)    NOT NULL    COMMENT '시나리오 설명', 
+     PRIMARY KEY (sce_num)
+);
+
+
+-- t_screen Table Create SQL
+CREATE TABLE t_screen
+(
+    `screen_num`    INT UNSIGNED    NOT NULL    AUTO_INCREMENT COMMENT '화면 번호', 
+    `screen_exp`    VARCHAR(30)     NOT NULL    COMMENT '화면 설명', 
+    `sce_num`       INT UNSIGNED    NOT NULL    COMMENT '시나리오 번호', 
+    `sce_category`  INT             NOT NULL    COMMENT '화면 유형', 
+     PRIMARY KEY (screen_num)
+);
+
+ALTER TABLE t_screen
+    ADD CONSTRAINT FK_t_screen_sce_num_t_sce_sce_num FOREIGN KEY (sce_num)
+        REFERENCES t_sce (sce_num) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+-- t_user Table Create SQL
+CREATE TABLE t_user
+(
+    `user_id`        VARCHAR(30)     NOT NULL    COMMENT '유저 아이디', 
+    `user_pw`        VARCHAR(30)     NOT NULL    COMMENT '유저 비밀번호', 
+    `user_phone`     VARCHAR(30)     NOT NULL    COMMENT '유저 연락처', 
+    `user_birth`     VARCHAR(30)     NOT NULL    COMMENT '유저 생년월일', 
+    `user_adress`    VARCHAR(300)    NOT NULL    COMMENT '유저 주소', 
+    `user_email`     VARCHAR(300)    NOT NULL    COMMENT '유저 이메일', 
+    `user_joindate`  VARCHAR(30)     NOT NULL    COMMENT '유저 가입일자', 
+    `user_admin`     INT             NOT NULL    COMMENT '유저 관리자', 
+     PRIMARY KEY (user_id)
+);
+
+ALTER TABLE t_user COMMENT '유저 테이블';
+
+
+-- t_club Table Create SQL
+CREATE TABLE t_club
+(
+    `club_num`   INT UNSIGNED    NOT NULL    AUTO_INCREMENT COMMENT '동아리 번호', 
+    `club_name`  VARCHAR(30)     NOT NULL    COMMENT '동아리 이름', 
+     PRIMARY KEY (club_num)
+);
+
+ALTER TABLE t_club COMMENT '동아리';
+
+
+-- t_digimon Table Create SQL
+CREATE TABLE t_digimon
+(
+    `digimon_num`     INT UNSIGNED    NOT NULL    AUTO_INCREMENT COMMENT '시나리오 번호', 
+    `digimon_brave`   INT             NOT NULL    COMMENT '시나리오 이름', 
+    `digimon_friend`  INT             NOT NULL    COMMENT '디지몬 우정', 
+    `digimon_love`    INT             NOT NULL    COMMENT '디지몬 사랑', 
+    `digimon_kn`      INT             NOT NULL    COMMENT '디지몬 지식', 
+    `digimon_pure`    INT             NOT NULL    COMMENT '디지몬 순수', 
+    `digimon_sin`     INT             NOT NULL    COMMENT '디지몬 성실', 
+    `digimon_hope`    INT             NOT NULL    COMMENT '디지몬 희망', 
+    `digimon_light`   INT             NOT NULL    COMMENT '디지몬 빛', 
+    `user_id`         VARCHAR(30)     NOT NULL    COMMENT '유저 아이디', 
+     PRIMARY KEY (digimon_num)
+);
+
+ALTER TABLE t_digimon
+    ADD CONSTRAINT FK_t_digimon_user_id_t_user_user_id FOREIGN KEY (user_id)
+        REFERENCES t_user (user_id) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+-- t_text Table Create SQL
+CREATE TABLE t_text
+(
+    `text_num`    INT UNSIGNED    NOT NULL    AUTO_INCREMENT COMMENT '텍스트 번호', 
+    `text_text`   VARCHAR(300)    NOT NULL    COMMENT '텍스트 텍스트', 
+    `screen_num`  INT UNSIGNED    NULL        COMMENT '화면 번호', 
+     PRIMARY KEY (text_num)
+);
+
+ALTER TABLE t_text
+    ADD CONSTRAINT FK_t_text_screen_num_t_screen_screen_num FOREIGN KEY (screen_num)
+        REFERENCES t_screen (screen_num) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+-- t_stat2 Table Create SQL
+CREATE TABLE t_stat2
+(
+    `stat2_num`   INT UNSIGNED    NOT NULL    AUTO_INCREMENT COMMENT '시나리오 번호', 
+    `stat2_inf`   INT             NOT NULL    COMMENT '시나리오 이름', 
+    `stat2_wits`  INT             NOT NULL    COMMENT '육각형2 순발력', 
+    `stat2_mmz`   INT             NOT NULL    COMMENT '육각형2 암기력', 
+    `stat2_ins`   INT             NOT NULL    COMMENT '육각형2 통찰력', 
+    `stat2_obs`   INT             NOT NULL    COMMENT '육각형2 관찰력', 
+    `stat2_lit`   INT             NOT NULL    COMMENT '육각형2 문해력', 
+    `user_id`     VARCHAR(30)     NOT NULL    COMMENT '유저 아이디', 
+     PRIMARY KEY (stat2_num)
+);
+
+CREATE UNIQUE INDEX UNIQUE_t_stat2_user_id
+    ON t_stat2(user_id);
+
+ALTER TABLE t_stat2
+    ADD CONSTRAINT FK_t_stat2_user_id_t_user_user_id FOREIGN KEY (user_id)
+        REFERENCES t_user (user_id) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+-- t_stat1 Table Create SQL
+CREATE TABLE t_stat1
+(
+    `stat1_num`     INT UNSIGNED    NOT NULL    AUTO_INCREMENT COMMENT '시나리오 번호', 
+    `stat1_r`    INT             NOT NULL    COMMENT '시나리오 이름', 
+    `stat1_e`     INT             NOT NULL    COMMENT '육각형1 탐구형', 
+    `stat1_a`     INT             NOT NULL    COMMENT '육각형1 예술형', 
+    `stat1_c`     INT             NOT NULL    COMMENT '육각형1 사회형', 
+    `stat1_s`     INT             NOT NULL    COMMENT '육각형1 기업형', 
+    `stat1_i`  INT             NOT NULL    COMMENT '육각형1 관습형', 
+    `user_id`       VARCHAR(30)     NOT NULL    COMMENT '유저 아이디', 
+     PRIMARY KEY (stat1_num)
+);
+
+CREATE UNIQUE INDEX UNIQUE_t_stat1_user_id
+    ON t_stat1(user_id);
+
+ALTER TABLE t_stat1
+    ADD CONSTRAINT FK_t_stat1_user_id_t_user_user_id FOREIGN KEY (user_id)
+        REFERENCES t_user (user_id) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+-- t_result Table Create SQL
+CREATE TABLE t_result
+(
+    `result_num`    INT UNSIGNED    NOT NULL    AUTO_INCREMENT COMMENT '시나리오 번호', 
+    `result_score`  INT             NOT NULL    COMMENT '시나리오 이름', 
+    `user_id`       VARCHAR(30)     NOT NULL    COMMENT '유저 아이디', 
+    `sce_num`       INT UNSIGNED    NOT NULL    COMMENT '시나리오 번호', 
+    `screen_num`    INT UNSIGNED    NOT NULL    COMMENT '화면 번호', 
+     PRIMARY KEY (result_num)
+);
+
+ALTER TABLE t_result
+    ADD CONSTRAINT FK_t_result_user_id_t_user_user_id FOREIGN KEY (user_id)
+        REFERENCES t_user (user_id) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE t_result
+    ADD CONSTRAINT FK_t_result_sce_num_t_sce_sce_num FOREIGN KEY (sce_num)
+        REFERENCES t_sce (sce_num) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE t_result
+    ADD CONSTRAINT FK_t_result_screen_num_t_screen_screen_num FOREIGN KEY (screen_num)
+        REFERENCES t_screen (screen_num) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+-- t_img Table Create SQL
+CREATE TABLE t_img
+(
+    `img_num`     INT UNSIGNED    NOT NULL    AUTO_INCREMENT COMMENT '이미지 번호', 
+    `img_path`    TEXT            NOT NULL    COMMENT '이미지 경로', 
+    `screen_num`  INT UNSIGNED    NOT NULL    COMMENT '화면 번호', 
+     PRIMARY KEY (img_num)
+);
+
+ALTER TABLE t_img
+    ADD CONSTRAINT FK_t_img_screen_num_t_screen_screen_num FOREIGN KEY (screen_num)
+        REFERENCES t_screen (screen_num) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+-- t_user_club Table Create SQL
+CREATE TABLE t_user_club
+(
+    `user_club_Num`  INT             NOT NULL    AUTO_INCREMENT COMMENT '가입된 동아리 번호', 
+    `user_id`        VARCHAR(30)     NOT NULL    COMMENT '유저 아이디', 
+    `club_num`       INT UNSIGNED    NULL        COMMENT '동아리 번호', 
+     PRIMARY KEY (user_club_Num)
+);
+
+ALTER TABLE t_user_club COMMENT '가입된 동아리';
+
+ALTER TABLE t_user_club
+    ADD CONSTRAINT FK_t_user_club_user_id_t_user_user_id FOREIGN KEY (user_id)
+        REFERENCES t_user (user_id) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE t_user_club
+    ADD CONSTRAINT FK_t_user_club_club_num_t_club_club_num FOREIGN KEY (club_num)
+        REFERENCES t_club (club_num) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+CREATE TABLE t_cc
+(
+    `cc_num`  INT             NOT NULL    AUTO_INCREMENT COMMENT '동아리 번호2', 
+    `cc_name`        VARCHAR(30)     NOT NULL    COMMENT '동아리 이름', 
+    `cc_img`       VARCHAR(30)    NULL        COMMENT '동아리 이미지',
+    `cc_exp`        VARCHAR(30)     NULL    COMMENT '동아리 설명',
+    `club_num`       INT UNSIGNED    NULL        COMMENT '동아리 번호', 
+     PRIMARY KEY (cc_num)
+);
+
+ALTER TABLE t_cc
+    ADD CONSTRAINT FK_t_cc_club_num_t_club_club_num FOREIGN KEY (club_num)
+        REFERENCES t_club (club_num) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+select * from t_user;
+
+insert into t_user values('root1', '1234', '000-0000-0000', '1234-56-78', 'sample_addres', 'sample_email', sysdate(), '1');
+insert into t_user values('root2', '1234', '000-0000-0000', '1234-56-78', 'sample_addres', 'sample_email', sysdate(), '0');
+insert into t_user values('root3', '1234', '000-0000-0000', '1234-56-78', 'sample_addres', 'sample_email', sysdate(), '0');
+insert into t_user values('root4', '1234', '000-0000-0000', '1234-56-78', 'sample_addres', 'sample_email', sysdate(), '0');
+insert into t_user values('sampleroot1', '1234', '000-0000-0000', '1234-56-78', 'sample_addres', 'sample_email', sysdate(), '0');
+insert into t_stat1 values(null, 20, 80, 40, 60, 20, 80, 'sampleroot1');
+
+select * from t_stat1;
+select * from t_club;
+
+insert into t_club values(null, '문화/취미');
+insert into t_club values(null, '공연/예술/음악');
+insert into t_club values(null, '종교');
+insert into t_club values(null, '학술');
+insert into t_club values(null, '봉사');
+insert into t_club values(null, '체육/레저');
+insert into t_club values(null, '창업');
+
+select * from t_user_club;
+
+insert into t_user_club values(null, 'root1', 1);
+insert into t_user_club values(null, 'root2', 4);
+
+select * from t_sce;
+
+insert into t_sce values(null, '샘플시나리오1번', '샘플시나리오1번 설명');
+insert into t_sce values(null, '샘플시나리오2번', '샘플시나리오2번 설명');
+insert into t_sce values(null, '샘플시나리오3번', '샘플시나리오3번 설명');
+
+select * from t_screen;
+
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플퀴즈', 1, 2);
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플미니게임', 1, 3);
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플퀴즈', 1, 2);
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플퀴즈', 1, 2);
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플퀴즈', 1, 2);
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플퀴즈', 1, 2);
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플퀴즈', 1, 2);
+insert into t_screen values(null, '샘플전개', 1, 1);
+insert into t_screen values(null, '샘플결과', 1, 4);
+
+select * from t_text;
+
+insert into t_text values(null, '...', 1);
+insert into t_text values(null, '국제관에 가는길을 잃어버렸다', 2);
+insert into t_text values(null, 'A:지나가는 사람에게 물어본다.', 3);
+insert into t_text values(null, 'B:지도어플을 켠다', 3);
+insert into t_text values(null, '"저.. 국제관은 어디로 가야하나요?"', 4);
+insert into t_text values(null, '"혹시 서대희씨 아니세요?', 5);
+insert into t_text values(null, '"..?!"', 5);
+insert into t_text values(null, '(누구였더라..)', 6);
+insert into t_text values(null, '(기억이 날 듯 말 듯..)', 6);
+insert into t_text values(null, '"아! 지은이였구나"', 7);
+insert into t_text values(null, '(뭔가 달라진 것 같은데...)', 7);
+insert into t_text values(null, '고등학교 동창 지은이를 만났다.', 8);
+insert into t_text values(null, '달라진 곳을 모두 찾아보자!', 8);
+insert into t_text values(null, 'A:세가지 이상 찾았다', 9);
+insert into t_text values(null, 'B:두가지 이하로 찾았다', 9);
+insert into t_text values(null, '(지은이의 머리가 예쁘다.)', 10);
+insert into t_text values(null, '(나도 머리 바꿔볼까?)', 10);
+insert into t_text values(null, 'A:새로운 머리 스타일로 도전!', 11);
+insert into t_text values(null, 'B:그냥 지금이 좋다.', 11);
+insert into t_text values(null, '"와 진짜 오랜만이야."', 12);
+insert into t_text values(null, '"그러게..."', 12);
+insert into t_text values(null, 'A:말없이 헤어진다.', 13);
+insert into t_text values(null, '다음약속을 잡는다.', 13);
+insert into t_text values(null, '"오랜만인데 카페라도 가자!"', 14);
+insert into t_text values(null, '"그럴까..."', 14);
+insert into t_text values(null, '카페에 왓는데 신메뉴를 추천받았다.', 15);
+insert into t_text values(null, 'A:늘 먹던 걸로 주문한다.', 16);
+insert into t_text values(null, 'B:신메뉴를 주문한다.', 16);
+insert into t_text values(null, '아이스로 주문한 메뉴가 핫으로 잘못나왔다.', 17);
+insert into t_text values(null, 'A:그냥 먹는다.', 18);
+insert into t_text values(null, 'B:바꿔달라고 한다.', 18);
+insert into t_text values(null, '"오늘 너무 재밌었다. 또 보자!"', 19);
+insert into t_text values(null, '"그래..."', 19);
+insert into t_text values(null, '결과', 20);
+
+insert into t_img values(null, '/img/img1.jpg', 1);
+insert into t_img values(null, '/img/img2.jpg', 2);
+insert into t_img values(null, '/img/img3.jpg', 3);
+insert into t_img values(null, '/img/img4.jpg', 4);
+insert into t_img values(null, '/img/img5.jpg', 5);
+insert into t_img values(null, '/img/img6.jpg', 6);
+insert into t_img values(null, '/img/img7.jpg', 7);
+insert into t_img values(null, '/img/img8.jpg', 8);
+insert into t_img values(null, '/img/img9.jpg', 9);
+insert into t_img values(null, '/img/img10.jpg', 10);
+insert into t_img values(null, '/img/img11.jpg', 11);
+insert into t_img values(null, '/img/img12.jpg', 12);
+insert into t_img values(null, '/img/img13.jpg', 13);
+insert into t_img values(null, '/img/img14.jpg', 14);
+insert into t_img values(null, '/img/img15.jpg', 15);
+insert into t_img values(null, '/img/img16.jpg', 16);
+insert into t_img values(null, '/img/img17.jpg', 17);
+insert into t_img values(null, '/img/img18.jpg', 18);
+insert into t_img values(null, '/img/img19.jpg', 19);
+insert into t_img values(null, '/img/img20.jpg', 20);
+select * from t_img;
+
+commit;
+select * from t_user_club;
+select * from t_user;
+delete from t_user where user_id = 'sampleroot1';
+delete from t_stat1 where user_id = 'sampleroot1';
+select * from t_stat1;
+select * from t_club;
+
+select * from t_cc;

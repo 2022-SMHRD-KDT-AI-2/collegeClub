@@ -6,16 +6,7 @@ import './Screen3.css';
 const Screen1 = (props) => {
     return (
         <>
-            <div className="wrap">
-                <div>
-                    <div class="main">
-                        <canvas id="canvas" width="300" height="300"></canvas>
-                        <p class="timer1"></p>
-                        <button class="send">버튼</button>
-                    </div>
-                </div>
-            </div >
-
+            <iframe src="http://localhost:3001/game.html"  width="360px" height="640px"></iframe>
         </>
     );
 };

@@ -64,13 +64,11 @@ progress {
 }
 
 .result {
-    position: absolute;
+    position: relative;
     width: 90vw;
     height: 18vh;
     background-color: white;
-    top: 50vh;
     border: 1px solid #52B28C;
-    left: 5vw;
     border-radius: 10px;
 }
 
@@ -81,37 +79,30 @@ progress {
     top: 70vh;
 }
 
-.shareButton {
-    width: 50vw;
+.resultShare {
+    position: absolute;
+    top: 70vh;
     height: 8vh;
-    float: left;
-}
-
-.restartButton {
-    width: 50vw;
-    height: 8vh;
-}
-
-.Butt1 {
-    height: 8vh;
-    background: rgba(82, 178, 140, 0.75);;
-    border: rgba(82, 178, 140, 0.75);;
+    width: 25vw;
+    background: rgba(82, 178, 140, 0.75);
+    border: rgba(82, 178, 140, 0.75);
     border-radius: 15px;
-    padding: 2vw;
     color: white;
     font-weight: bold;
-    margin-left: 45%;
+    margin-left: 25vw;
 }
 
-.Butt2 {
+.resultNext {
+    position: absolute;
+    top: 70vh;
     height: 8vh;
-    background: rgba(82, 178, 140, 0.75);;
-    border: rgba(82, 178, 140, 0.75);;
+    width: 20vw;
+    background: rgba(82, 178, 140, 0.75);
+    border: rgba(82, 178, 140, 0.75);
     border-radius: 15px;
-    padding: 2vw;
     color: white;
     font-weight: bold;
-    margin-left: 5%;
+    margin-left: 55vw;
 }
 
 .imgdiv {
@@ -160,9 +151,33 @@ progress {
 
 }
 
-#menuBarTop{
+#menuBarTop {
     position: absolute;
     width: 100vw;
     height: 10vh;
     top: 80vh;
+}
+
+.progress {
+    text-align: center;
+}
+
+.firstType {
+    padding: 1vh;
+    height: 8vh
+}
+
+.secondType {
+    padding: 1vh;
+    height: 8vh
+}
+
+.type1 {
+    color: red;
+    font-weight: bold;
+}
+
+.type2 {
+    color: rgba(82, 178, 140, 0.75);
+    font-weight: bold;
 }

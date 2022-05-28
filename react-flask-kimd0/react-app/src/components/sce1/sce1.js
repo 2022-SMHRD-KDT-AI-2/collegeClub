@@ -17,9 +17,9 @@ let stat1;
 
 function Order(props) {
     const [data, setData] = useState(true);
-    const [img, setImg] = useState("");
+    const [img, setImg] = useState(true);
     const [act, setAct] = useState(0);
-
+    
     useEffect((data) => {
         const fetchData = async () => {
             try {
@@ -39,22 +39,22 @@ function Order(props) {
         fetchData();
     }, [num]);
 
-
-    if (props.category[act][3] === 1) {
+    console.log(data[0])
+    if (props.category[act].sce_category === 1) {
         return (
             <>
                 <Screen1 data={data} img={img} />
                 {Bottom()}
             </>
         )
-    } else if (props.category[act][3] === 2) {
+    } else if (props.category[act].sce_category === 2) {
         return (
             <>
                 <Screen2 data={data} img={img} />
                 {Bottom2()}
             </>
         );
-    } else if (props.category[act][3] === 3) {
+    } else if (props.category[act].sce_category === 3) {
         return (
             <>
                 <Screen3C data={data} img={img} />
@@ -67,7 +67,7 @@ function Order(props) {
                 <Screen4 stat1 = {stat1}></Screen4>
                 <div className='bottom'>
                     <Link to="/result">
-                        <button type='button' className='next1'>ekdma</button>
+                        <button type='button' className='next1'>결과보기</button>
                     </Link>
                 </div>
             </>
@@ -248,11 +248,11 @@ function useSce1() {
             try {
                 console.log(num)
                 const response = await axios.get(
-                    `http://220.80.33.51:8083/screen?num=1`
+                    `http://220.80.33.51:8082/screen?num=1`
                 );
                 setLoading(false);
                 setData(response.data);
-
+                
             } catch (e) {
                 console.log(e);
             }
