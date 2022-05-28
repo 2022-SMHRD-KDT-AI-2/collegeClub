@@ -34,8 +34,8 @@ function useMain() {
         'loading...'
       ) : (
         <>
-          
-        <Header></Header>
+          <div className='blossom'></div>
+          <Header></Header>
           <div id="main">
             <div className="sce">
               <div className="sce1">
@@ -56,7 +56,7 @@ function useMain() {
               </div>
             </div>
           </div>
-        <Menubar></Menubar>
+          <Menubar></Menubar>
         </>
       )
       }

@@ -151,9 +151,33 @@ progress {
 
 }
 
-#menuBarTop{
+#menuBarTop {
     position: absolute;
     width: 100vw;
     height: 10vh;
     top: 80vh;
+}
+
+.progress {
+    text-align: center;
+}
+
+.firstType {
+    padding: 1vh;
+    height: 8vh
+}
+
+.secondType {
+    padding: 1vh;
+    height: 8vh
+}
+
+.type1 {
+    color: red;
+    font-weight: bold;
+}
+
+.type2 {
+    color: rgba(82, 178, 140, 0.75);
+    font-weight: bold;
 }
