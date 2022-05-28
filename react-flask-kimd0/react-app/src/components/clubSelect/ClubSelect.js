@@ -53,7 +53,7 @@ function ClubSelect() {
           <img className='backImg' src={img} />
         </div>
         <div className="profImg1">
-          <img className='profImg' src={a2} />
+          <img className='profImg' src={data.cc_img+".jpg"} />
         </div>
         <div className='clubName'>{data.cc_name}</div>
       </div>

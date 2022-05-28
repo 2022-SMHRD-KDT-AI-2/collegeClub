@@ -22,7 +22,7 @@ from flask_cors import CORS
 import pymysql
 import json
 
-df = pd.read_csv("./result.csv")
+df = pd.read_csv("./data.csv")
 X_train = df.iloc[:,:6]
 
 y_train = df.iloc[:,-1]
@@ -30,34 +30,48 @@ print(X_train)
 print(y_train)
 
 
-knn_model = KNeighborsClassifier(n_neighbors=5)
-knn_model.fit(X_train, y_train)
-pre = knn_model.predict(X_train)
-acc = metrics.accuracy_score(pre, y_train)
-print("1223", acc)
+from sklearn.preprocessing import OrdinalEncoder
+ordinal_encoder = OrdinalEncoder()
+X_train_one_hot = ordinal_encoder.fit_transform(X_train)
+y_train_one_hot = pd.get_dummies(y_train)
+print(X_train_one_hot)
 
-param_knn = {'n_neighbors':range(3,60)}
+
+param_knn = {'n_neighbors':range(3,10)}
 GS_knn = GridSearchCV(KNeighborsClassifier(), param_knn, cv = 3)
-GS_knn.fit(X_train, y_train)
+GS_knn.fit(X_train_one_hot, y_train)
 print('최적 파라미터값 : ', GS_knn.best_params_)
 print('최고 교차검증 점수 : ', GS_knn.best_score_)
 print('최고 교차검증 점수 : ', GS_knn.best_estimator_)
 
 
-param_tree = {}
-GS_tree = GridSearchCV(DecisionTreeClassifier(), param_tree, cv = 10)
-GS_tree.fit(X_train, y_train)
+param_tree = {"max_depth":range(1,15)}
+GS_tree = GridSearchCV(DecisionTreeClassifier(), param_tree, cv = 3)
+GS_tree.fit(X_train_one_hot, y_train)
 print('최적 파라미터값 : ', GS_tree.best_params_)
 print('최고 교차검증 점수 : ', GS_tree.best_score_)
 print('최고 교차검증 점수 : ', GS_tree.best_estimator_)
 
-
-param_for = {}
-GS_for = GridSearchCV(RandomForestClassifier(), param_for, cv = 10)
-GS_for.fit(X_train, y_train)
+param_for = {"max_depth":range(1,12)}
+GS_for = GridSearchCV(RandomForestClassifier(), param_for, cv = 5)
+GS_for.fit(X_train_one_hot, y_train)
 print('최적 파라미터값 : ', GS_for.best_params_)
 print('최고 교차검증 점수 : ', GS_for.best_score_)
 print('최고 교차검증 점수 : ', GS_for.best_estimator_)
+
+result = [[80,10,70,30,30,70],[70,20,35,80,70,30],[80,25,80,60,40,90]
+         ,[50,30,10,50,60,20],[80,50,20,90,20,30]]
+X_train = pd.DataFrame(result)
+print(X_train)
+X_train.columns = ['0','1','2','3','4','5']
+
+X_train_one_hot = ordinal_encoder.transform(X_train)
+print(X_train_one_hot)
+print(GS_knn.predict(X_train_one_hot))
+print(GS_tree.predict(X_train_one_hot))
+print(GS_for.predict(X_train_one_hot))
+
+
 
 
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',
@@ -154,12 +168,39 @@ def result2():
             result = result[0]
             X_train = pd.DataFrame(result).T
             X_train.columns = ['0','1','2','3','4','5']
-            print(X_train)
-            print(GS_knn.predict(X_train))
-            print(GS_tree.predict(X_train))
-            print(GS_for.predict(X_train))
+            X_train_one_hot = ordinal_encoder.transform(X_train)
+            result10 = GS_knn.predict(X_train_one_hot)
+            result20 = GS_tree.predict(X_train_one_hot)
+            result30 = GS_for.predict(X_train_one_hot)
+            sql = "select cc_name from t_cc where club_num in("+str(result10[0])+") and cc_num in(49, 60, 76, 86, 91, 95)"
+            cursor4.execute(sql)
+            result41 = cursor4.fetchone()
+
+            sql = "select cc_exp from t_cc where club_num in("+str(result10[0])+") and cc_num in(49, 60, 76, 86, 91, 95)"
+            cursor4.execute(sql)
+            result42 = cursor4.fetchone()
+
+            sql = "select cc_name from t_cc where club_num in("+str(result20[0])+") and cc_num in(49, 60, 76, 86, 91, 95)"
+            cursor4.execute(sql)
+            result43 = cursor4.fetchone()
+
+            sql = "select cc_exp from t_cc where club_num in("+str(result20[0])+") and cc_num in(49, 60, 76, 86, 91, 95)"
+            cursor4.execute(sql)
+            result44 = cursor4.fetchone()
+
+            sql = "select cc_name from t_cc where club_num in("+str(result30[0])+") and cc_num in(49, 60, 76, 86, 91, 95)"
+            cursor4.execute(sql)
+            result45 = cursor4.fetchone()
+
+            sql = "select cc_exp from t_cc where club_num in("+str(result30[0])+") and cc_num in(49, 60, 76, 86, 91, 95)"
+            cursor4.execute(sql)
+            result46 = cursor4.fetchone()
+            
+            
+            d = {"cc_name1":result41, "cc_exp1":result42, "cc_name2":result43, "cc_exp2":result44, "cc_name3":result45, "cc_exp3":result46}
+            
     finally:
-        json_string = json.dumps(result)
+        json_string = json.dumps(d)
         return json_string
     
 
