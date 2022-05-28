@@ -40,6 +40,7 @@
     background-color: #C4C4C4;
     float: left;
     border: none;
+    color: black;
 }
 
 .next1 {
@@ -54,6 +55,7 @@
     background-color: #C4C4C4;
     float: left;
     border: none;
+    color: black;
 }
 
 .pre {
@@ -69,6 +71,7 @@
     background-color: white;
     border: 5px solid #52B28C;
     float: left;
+    color: black;
 }
 
 .next {
@@ -84,6 +87,7 @@
     background-color: white;
     border: 5px solid #52B28C;
     float: left;
+    color: black;
 }
 
 .buttonBar {
