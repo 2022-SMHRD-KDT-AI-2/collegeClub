@@ -30,7 +30,7 @@ function Root() {
   console.log(data)
   const rendering = () => {
     const result = [];
-    result.push(<div className='Buttonwrap'><div className='Buttonimg' id='Buttonimg7'></div><div className='Buttondiv' id="Buttondiv7"><button className='Buttonset' id="Buttonset7">전체</button></div></div>)
+    result.push(<div className='Buttonwrap'><Link to="/club/0"><div className='Buttonimg' id='Buttonimg7'></div></Link><div className='Buttondiv' id="Buttondiv7"><Link to="/club/0"><button className='Buttonset' id="Buttonset7">전체</button></Link></div></div>)
     for (let i = 0; i < data.length; i++) {
       let str = "/club/" + (i + 1)
       result.push(<div className='Buttonwrap'><Link key={i} to={str}><button className='Buttonimg' id={"Buttonimg" + i}></button></Link><div className='Buttondiv' id={"Buttondiv" + i}><Link key={i} to={str}><button className='Buttonset' id={"Buttonset" + i} key={i}>{data[i].club_name + "  "}</button></Link></div></div>);

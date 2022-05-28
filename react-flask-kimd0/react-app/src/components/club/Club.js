@@ -102,12 +102,11 @@ function useClub() {
     console.log(scroll)
     console.log(data)
     for (let i = 0; i < data.length; i++) {
-
-      result.push(<div className='ClubN'>
+      let num = "/clubSelect/" + (data[i].cc_num)
+      result.push(<div className='ClubN'><Link to={num}>
         <div className='Clubimg'><img className='Inimg' src={data[i].cc_img + ".jpg"} alt='img1'></img></div>
         <div className='Clubna'>{data[i].cc_name}</div>
-        <div className='Clubca'>{str(data[i])}</div>
-
+        <div className='Clubca'>{str(data[i])}</div></Link>
       </div>);
     }
 

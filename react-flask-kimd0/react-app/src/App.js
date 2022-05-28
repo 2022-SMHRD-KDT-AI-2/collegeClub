@@ -24,7 +24,9 @@ function App() {
           <Route path="/club" element={<Club />}>
            <Route path=":id" element={<Club />} />
           </Route>
-          <Route path="/clubSelect" element={<ClubSelect />}></Route>
+          <Route path="/clubSelect" element={<ClubSelect />}>
+            <Route path=":id" element={<ClubSelect />} />
+          </Route>
 
           <Route path="/screen3" element={<Screen3 />}></Route>
 
@@ -39,5 +41,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
