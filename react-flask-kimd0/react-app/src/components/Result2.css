@@ -2,40 +2,83 @@
 .wrap{
     text-decoration: none;
     width: 100%;
-    height: 80%;
+    height: 90%;
 }
 
 .clubWrap1{
     position: relative;
-    margin-bottom: 2vh;
     width: 90vw;
-    height: 25vh;
+    height: 21vh;
+}
+
+.clubWrap2{
+    width: 35vw;
+    height: 18vh;
+    float: left;
 }
 
 .clubTitle{
-    width: 50vw;
-    height: 5vh;
-    background: red;
-    margin-right: 50vw;
+    width: 90vw;
+    height: 3vh;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: left;
 }
 
 .clubLogo{
-    width: 35vw;
-    height: 20vh;
-    background: black;
+    width: 20vw;
+    height: 13vh;
+    margin-top: 2vh;
+    margin-left: 7.5vw;
+    margin-right: 7.5vw;
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: contain;
     float: left;
 }
 
 .clubIrum{
-    width: 55vw;
-    height: 5vh;
-    background: green;
-    float: left;
+    position: absolute;
+    width: 35vw;
+    height: 3.5vh;
+    margin-top: 14.5vh;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
 }
 
 .clubContents{
     width: 55vw;
-    height: 15vh;
-    background: violet;
+    height: 18vh;
+    background: rgba(82, 178, 140, 0.2);
+    border-radius: 25px;
     float: left;
+}
+
+.clubText{
+    width: 45vw;
+    height: 13vh;
+    margin-top: 2.5vh;
+    font-size: 0.78em;
+    font-weight: 600;
+}
+
+.result2Line{
+    width: 90vw;
+    height: 2.5vh;
+    margin-bottom: 2.5vh;
+    border-bottom: 1px solid rgba(82, 178, 140, 0.75);
+}
+
+#logoImg1{
+    background-image: url(root/img/club02.png);
+}
+
+#logoImg2{
+    background-image: url(root/img/club04.png);
+}
+
+#logoImg3{
+    background-image: url(root/img/club06.png);
 }

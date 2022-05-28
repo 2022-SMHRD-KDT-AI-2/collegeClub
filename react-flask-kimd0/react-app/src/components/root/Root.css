@@ -112,8 +112,7 @@
 
 #Checkid1 {
     text-align: right;
-    width: 55vw;
-    font-size: larger;
+    width: 50vw;
     font-weight: 700;
     color: black;
     font-size: 1.3em;
@@ -121,14 +120,13 @@
 
 #Checkid2 {
     text-align: left;
-    width: 45vw;
+    width: 40vw;
     padding-left: 5vw;
 }
 
 #Checkid3 {
     text-align: right;
-    width: 55vw;
-    font-size: larger;
+    width: 50vw;
     font-weight: 700;
     color: black;
     font-size: 1.3em;
@@ -136,18 +134,22 @@
 
 #Checkid4 {
     text-align: left;
-    width: 45vw;
+    width: 40vw;
     padding-left: 5vw;
 }
 
 .Checkinner {
     height: 20vh;
+    width: 90vw;
+    margin-left: 5vw;
     border-top: 1px solid rgba(82, 178, 140, 0.75);
 }
 
 .Checkinner2 {
     text-align: center;
     height: 20vh;
+    width: 90vw;
+    margin-left: 5vw;
     border-top: 1px solid rgba(82, 178, 140, 0.75);
 
 }
