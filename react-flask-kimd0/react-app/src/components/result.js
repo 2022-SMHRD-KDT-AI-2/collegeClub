@@ -147,12 +147,11 @@ function Data(props) {
                 </div>
                 <div className='result'></div>
 
-                <div className='Buttonsection'>
-                    <div className='shareButton'><button className='Butt1' type='button'>결과 공유하기</button></div>
-                    <Link to='/result2'>
-                        <div className='restartButton'><button className='Butt2' type='button'>다음으로</button></div>
-                    </Link>
-                </div>
+                <button className='resultShare' type='button'>결과 공유하기</button>
+                <Link to='/result2'>
+                    <button className='resultNext' type='button'>다음으로</button>
+                </Link>
+                
             </div>
             <Menubar></Menubar>
         </div>

@@ -8,12 +8,12 @@
 .clubWrap1{
     position: relative;
     width: 90vw;
-    height: 21vh;
+    height: 19.5vh;
 }
 
 .clubWrap2{
     width: 35vw;
-    height: 18vh;
+    height: 12vh;
     float: left;
 }
 
@@ -27,8 +27,8 @@
 
 .clubLogo{
     width: 20vw;
-    height: 13vh;
-    margin-top: 2vh;
+    height: 10vh;
+    margin-top: 1vh;
     margin-left: 7.5vw;
     margin-right: 7.5vw;
     border: none;
@@ -42,7 +42,7 @@
     position: absolute;
     width: 35vw;
     height: 3.5vh;
-    margin-top: 14.5vh;
+    margin-top: 13vh;
     font-size: 1em;
     font-weight: 700;
     text-align: center;
@@ -50,7 +50,7 @@
 
 .clubContents{
     width: 55vw;
-    height: 18vh;
+    height: 16.5vh;
     background: rgba(82, 178, 140, 0.2);
     border-radius: 25px;
     float: left;
@@ -58,16 +58,16 @@
 
 .clubText{
     width: 45vw;
-    height: 13vh;
+    height: 12vh;
     margin-top: 2.5vh;
-    font-size: 0.78em;
+    font-size: 0.75em;
     font-weight: 600;
 }
 
 .result2Line{
     width: 90vw;
-    height: 2.5vh;
-    margin-bottom: 2.5vh;
+    height: 2vh;
+    margin-bottom: 2vh;
     border-bottom: 1px solid rgba(82, 178, 140, 0.75);
 }
 
@@ -81,4 +81,17 @@
 
 #logoImg3{
     background-image: url(root/img/club06.png);
+}
+
+.resultRestart {
+    position: absolute;
+    top: 80vh;
+    height: 8vh;
+    width: 20vw;
+    background: rgba(82, 178, 140, 0.75);
+    border: rgba(82, 178, 140, 0.75);
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    margin-left: 40vw;
 }

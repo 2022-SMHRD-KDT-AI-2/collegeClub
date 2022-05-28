@@ -80,6 +80,10 @@ const useResult2 = (props) => {
             </div>
           </div>
         </div>
+
+        <Link to='/'>
+          <button className='resultRestart' type='button'>처음으로</button>
+        </Link>
         
       </div>
       <Menubar></Menubar>
