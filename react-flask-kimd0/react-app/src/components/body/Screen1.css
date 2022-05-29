@@ -37,6 +37,8 @@
     width: 90vw;
     padding-top: 2vh;
     left: 5vw;
+    font-weight: bold;
+    font-size: 0.9em;
 }
 
 @keyframes fadeIn {

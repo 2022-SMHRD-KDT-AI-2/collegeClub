@@ -83,7 +83,7 @@ function Order(props) {
                             num = 0;
                         }
                         setAct(num);
-                    }} className='pre1'>이전</button>
+                    }} className='pre1'><div className='buttonInnerText'>이전</div></button>
 
                     <button type='button' onClick={() => {
                         if (num === props.len-1) {
