@@ -12,35 +12,40 @@
 
 #menuBarIcon1 {
     position: absolute;
-    height: 50%;
-    left: 5%;
-    top: 25%;
+    height: 4vh;
+    width: 8vw;
+    left: 5vw;
+    top: 3vh;
 }
 
 #menuBarIcon2 {
     position: absolute;
-    height: 50%;
-    left: 25%;
-    top: 25%;
+    height: 4vh;
+    width: 8vw;
+    left: 25.5vw;
+    top: 3vh;
 }
 
 #menuBarIcon3 {
     position: absolute;
-    height: 50%;
-    left: 45%;
-    top: 25%;
+    height: 4vh;
+    width: 8vw;
+    left: 46vw;
+    top: 3vh;
 }
 
 #menuBarIcon4 {
     position: absolute;
-    height: 50%;
-    right: 25%;
-    top: 25%;
+    height: 4vh;
+    width: 8vw;
+    left: 66.5vw;
+    top: 3vh;
 }
 
 #menuBarIcon5 {
     position: absolute;
-    height: 50%;
-    right: 5%;
-    top: 25%;
+    height: 4vh;
+    width: 8vw;
+    left: 87vw;
+    top: 3vh;
 }
