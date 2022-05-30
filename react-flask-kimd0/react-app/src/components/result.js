@@ -170,7 +170,7 @@ function Data(props) {
                     </div>
                     <div className='result'>
 
-                        <div className='firstType'>당신의가장 높은 성향은 <span className='type1'>{top1Name['subject']} {top2Name['subject']}</span>유형으로 각각 <span className='type2'>{top1}, {top2}</span>점 입니다</div>
+                        <div className='firstType'>당신의 성향은 <span className='type1'>{top1Name['subject']} {top2Name['subject']}</span>유형으로 각각 <span className='type2'>{top1}, {top2}</span>점 입니다</div>
 
                         <div className='secondType'>그 다음 성향은 <span className='type1'>{ttop1Name['subject']} {ttop2Name['subject']}</span>유형으로 점수가 <span className='type2'>{ttop1}, {ttop2}</span>점 이네요</div>
                     </div>
