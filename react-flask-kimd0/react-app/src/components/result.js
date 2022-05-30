@@ -72,27 +72,27 @@ function Data(props) {
     const data2 = [
         {
             subject: '추론',
-            A: 80
+            A: 50
         },
         {
             subject: '암기',
-            A: 80
+            A: 40
         },
         {
             subject: '순발',
-            A: 80
+            A: 50
         },
         {
             subject: '통찰',
-            A: 80
+            A: 50
         },
         {
             subject: '관찰',
-            A: 80
+            A: 30
         },
         {
             subject: '문해',
-            A: 80
+            A: 40
         },
     ];
     ttop2 = props.data[0];

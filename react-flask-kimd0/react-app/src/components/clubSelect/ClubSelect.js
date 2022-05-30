@@ -36,7 +36,7 @@ function ClubSelect() {
     <div className='page'>
       <div className="head">
         <div className="club">
-          <Link to='/club/0'><button type='button' className='clubBack'></button></Link>
+          <Link to={'/club/0'}><button type='button' className='clubBack'></button></Link>
           <div className='clubname'>{data.cc_name}</div></div>
       </div>
       <table className='club_top_menu'>
