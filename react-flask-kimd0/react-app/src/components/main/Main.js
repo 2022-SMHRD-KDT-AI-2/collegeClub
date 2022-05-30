@@ -10,8 +10,6 @@ import SimpleSlider from '../img';
 import FSlider from '../img';
 
 
-
-
 const settings = {
   dots: true,
   infinite: true,
@@ -73,7 +71,6 @@ function useMain() {
               </div>
             </div>
           </div>
-
 
           <Menubar></Menubar>
 
