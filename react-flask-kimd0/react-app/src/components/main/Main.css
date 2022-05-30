@@ -50,28 +50,12 @@
      margin-top: 4vh;
  }
 
- .sce11 {
-     position: sticky;
-     width: 80vw;
-     height: 21vh;
-     font-size: 1.5rem;
-     background: rgba(82, 178, 140, 0.25);
-     border-radius: 15px;
-     text-align: center;
-     font-size: 3em;
-     margin-top: 4vh;
-     background-color: black;
-     opacity: 70%;
-     background-image: url(../../img/blossom.jpg);
-     background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
- }
+
 
  .sce11:hover {
 
      transition: 2s;
-     background-image: url(../../img/jin01.jpeg);
+     background-image: url(../menubar/img/ilust1.jpg);
 
  }
 
@@ -201,6 +185,6 @@ top: 802px;
      background-size: cover;
      background-repeat: none;
      position: absolute;
-     background: url(../menubar/img/blossom.jpg);
-     left: 80%
+     background-image: url(../menubar/img/blossom.jpg);
+     left: 80%;
  }

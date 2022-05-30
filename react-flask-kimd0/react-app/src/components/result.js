@@ -140,7 +140,7 @@ function Data(props) {
                             </div>
 
                             <div>
-                                <progress value={ttop1-10} max="100"></progress>
+                                <progress value={ttop1 - 10} max="100"></progress>
                             </div>
                         </div></div>
 
@@ -150,11 +150,11 @@ function Data(props) {
                             </div>
 
                             <div>
-                                <progress value={top2-5} max="100"></progress>
+                                <progress value={top2 - 5} max="100"></progress>
                             </div>
 
                             <div>
-                                <progress value={ttop2-10} max="100"></progress>
+                                <progress value={ttop2 - 10} max="100"></progress>
                             </div>
                         </div></div>
                         <div className='innerHexa2'>
@@ -173,9 +173,9 @@ function Data(props) {
                     </div>
                     <div className='result'>
 
-                        <div className='firstType'>당신의 성향은 <span className='type1'>{top1Name['subject']} {top2Name['subject']}</span>유형으로 각각 <span className='type2'>{top1}, {top2-10}</span>점 입니다</div>
+                        <div className='firstType'>당신의 성향은 <span className='type1'>{top1Name['subject']} {top2Name['subject']}</span>유형으로 각각 <span className='type2'>{top1}, {top2}</span>점 입니다</div>
 
-                        <div className='secondType'>그 다음 성향은 <span className='type1'>{ttop1Name['subject']} {ttop2Name['subject']}</span>유형으로 점수가 <span className='type2'>{ttop1-5}, {ttop2-10}</span>점 이네요</div>
+                        <div className='secondType'>그 다음 성향은 <span className='type1'>{ttop1Name['subject']} {ttop2Name['subject']}</span>유형으로 점수가 <span className='type2'>{ttop1 - 5}, {ttop2 - 10}</span>점 이네요</div>
                     </div>
 
                     <button className='resultShare' type='button'>결과 공유하기</button>
