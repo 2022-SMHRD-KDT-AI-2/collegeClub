@@ -1,5 +1,7 @@
 # collegeClub
 
+![image](https://user-images.githubusercontent.com/43737757/171017954-47488219-8095-476f-a324-b3a49a41eb6e.png)
+
 성향 파악 딥러닝 모델 데이터 기반 동아리 서비스
 
 - 퀴즈 20가지, 미니게임 5가지 테스트
