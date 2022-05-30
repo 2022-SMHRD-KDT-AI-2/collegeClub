@@ -80,6 +80,23 @@
      border: none
  }
 
+ .sce11 {
+     position: sticky;
+     width: 80vw;
+     height: 21vh;
+     font-size: 1.5rem;
+     background: rgba(82, 178, 140, 0.25);
+     border-radius: 15px;
+     text-align: center;
+     font-size: 3em;
+     background: url(../menubar/img/blossom.jpg);
+     opacity: 70%;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+
+ }
+
  .sce11:hover #sc1 {
      display: block;
  }

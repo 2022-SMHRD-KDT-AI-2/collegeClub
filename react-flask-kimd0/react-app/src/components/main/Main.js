@@ -56,10 +56,10 @@ function useMain() {
           <div id="main">
             <div className="sce">
               <div className="sce1">
-                <FSlider {...settings}>
+                <div className='sce11'>
                   <button id='sc1' type='button'>      <Link to="/Sce1" className='link'>  <span className='start'>{data[0].sce_name}</span></Link></button>
 
-                </FSlider>
+                </div>
               </div>
               <div className="sce2">
                 <FSlider {...settings}>
