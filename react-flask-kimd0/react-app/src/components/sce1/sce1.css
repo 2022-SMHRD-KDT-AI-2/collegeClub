@@ -30,23 +30,17 @@
 
 .pre1 {
     position: relative;
+    font-size: 2vh;
     width: 20vw;
     height: 7vh;
     border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
     margin-left: 10vw;
     background-color: #C4C4C4;
     float: left;
     border: none;
-}
-
-.buttonInnerText{
-    position: relative;
-    font-size: 2vh;
-    width: 20vw;
-    text-align: center;
-    font-weight: bold;
-    float: left;
-    color: red;
+    color: black;
 }
 
 .next1 {
