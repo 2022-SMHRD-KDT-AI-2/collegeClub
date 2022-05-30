@@ -36,7 +36,7 @@ const useResult2 = (props) => {
     <>
         <Header></Header>
       <div className="wrap">
-
+        <Link to={"/clubSelect/"+data.cc_num1}>
         <div className='clubWrap1'>
           <div className='clubTitle'>⭐️ 건우 픽!</div>
           <div className='clubWrap2'>
@@ -49,9 +49,10 @@ const useResult2 = (props) => {
             </div>
           </div>
         </div>
+        </Link>
 
         <div className='result2Line'></div>
-
+        <Link to={"/clubSelect/"+data.cc_num2}>
         <div className='clubWrap1'>
           <div className='clubTitle'>⭐️ 도영 픽!</div>
           <div className='clubWrap2'>
@@ -64,9 +65,11 @@ const useResult2 = (props) => {
             </div>
           </div>
         </div>
+        </Link>
 
         <div className='result2Line'></div>
 
+        <Link to={"/clubSelect/"+data.cc_num2}>
         <div className='clubWrap1'>
           <div className='clubTitle'>⭐️ 주호 픽!</div>
           <div className='clubWrap2'>
@@ -79,6 +82,7 @@ const useResult2 = (props) => {
             </div>
           </div>
         </div>
+        </Link>
 
         <Link to='/'>
           <button className='resultRestart' type='button'>처음으로</button>
