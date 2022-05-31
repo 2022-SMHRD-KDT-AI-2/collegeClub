@@ -30,11 +30,11 @@ const useResult2 = (props) => {
     fetchData();
   }, []);
   console.log(data)
-  
+
 
   return (
     <>
-        <Header></Header>
+      <Header></Header>
       <div className="wrap">
         <Link to={"/clubSelect/"+data.cc_num1}>
         <div className='clubWrap1'>
@@ -48,7 +48,7 @@ const useResult2 = (props) => {
               {data.cc_exp1}
             </div>
           </div>
-        </div>
+          </div>
         </Link>
 
         <div className='result2Line'></div>
@@ -64,7 +64,7 @@ const useResult2 = (props) => {
               {data.cc_exp2}
             </div>
           </div>
-        </div>
+          </div>
         </Link>
 
         <div className='result2Line'></div>
@@ -81,13 +81,13 @@ const useResult2 = (props) => {
               {data.cc_exp3}
             </div>
           </div>
-        </div>
+          </div>
         </Link>
 
         <Link to='/'>
           <button className='resultRestart' type='button'>처음으로</button>
         </Link>
-        
+
       </div>
       <Menubar></Menubar>
     </>

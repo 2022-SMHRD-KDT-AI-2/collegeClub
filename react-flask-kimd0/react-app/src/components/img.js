@@ -25,9 +25,6 @@ export default class FSlider extends Component {
                     <div className="sliimg3">
 
                     </div>
-                    <div className="sliimg4">
-
-                    </div>
                 </Slider>
             </div>
         );
