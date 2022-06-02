@@ -21,6 +21,7 @@ from flask_cors import CORS
 
 import pymysql
 import json
+import random
 
 df = pd.read_csv("./data.csv")
 X_train = df.iloc[:,:6]
@@ -173,52 +174,59 @@ def result2():
             print(result10)
             result20 = GS_tree.predict(X_train_one_hot)
             result30 = GS_for.predict(X_train_one_hot)
-            sql = "select cc_num from t_cc where club_num in("+str(result10[0])+") and cc_num in(1, 12, 28, 38, 43, 47)"
+            a = random.randrange(1,12)
+            print(a)
+            b = random.randrange(12,28)
+            c = random.randrange(28,38)
+            d = random.randrange(38,43)
+            e = random.randrange(43,47)
+            f = random.randrange(47,60)
+            sql = "select cc_num from t_cc where club_num in("+str(result10[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result31 = cursor4.fetchone()
             print(result31)
             
-            sql = "select cc_name from t_cc where club_num in("+str(result10[0])+") and cc_num in(1, 12, 28, 38, 43, 47)"
+            sql = "select cc_name from t_cc where club_num in("+str(result10[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result41 = cursor4.fetchone()
 
-            sql = "select cc_exp from t_cc where club_num in("+str(result10[0])+") and cc_num in(1, 12, 28, 38, 43, 47)"
+            sql = "select cc_exp from t_cc where club_num in("+str(result10[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result42 = cursor4.fetchone()
 
-            sql = "select cc_img from t_cc where club_num in("+str(result10[0])+") and cc_num in(1, 12, 28, 38, 43, 47)"
+            sql = "select cc_img from t_cc where club_num in("+str(result10[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result51 = cursor4.fetchone()
 
-            sql = "select cc_num from t_cc where club_num in("+str(result20[0])+") and cc_num in(1, 12, 28, 38, 43, 47)"
+            sql = "select cc_num from t_cc where club_num in("+str(result20[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result32 = cursor4.fetchone()
 
-            sql = "select cc_name from t_cc where club_num in("+str(result20[0])+") and cc_num in(1, 12, 28, 38, 43, 47)"
+            sql = "select cc_name from t_cc where club_num in("+str(result20[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result43 = cursor4.fetchone()
 
-            sql = "select cc_exp from t_cc where club_num in("+str(result20[0])+") and cc_num in(1, 12, 28, 38, 43, 47)"
+            sql = "select cc_exp from t_cc where club_num in("+str(result20[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result44 = cursor4.fetchone()
 
-            sql = "select cc_img from t_cc where club_num in("+str(result20[0])+") and cc_num in(1, 12, 28, 38, 43, 47)"
+            sql = "select cc_img from t_cc where club_num in("+str(result20[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result52 = cursor4.fetchone()
 
-            sql = "select cc_num from t_cc where club_num in("+str(result30[0])+") and cc_num in(1, 12, 28, 38, 43, 47)"
+            sql = "select cc_num from t_cc where club_num in("+str(result30[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result33 = cursor4.fetchone()
 
-            sql = "select cc_name from t_cc where club_num in("+str(result30[0])+") and cc_num in(1, 12, 28, 38, 43, 475)"
+            sql = "select cc_name from t_cc where club_num in("+str(result30[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result45 = cursor4.fetchone()
 
-            sql = "select cc_exp from t_cc where club_num in("+str(result30[0])+") and cc_num in(1, 12, 28, 38, 43, 47)"
+            sql = "select cc_exp from t_cc where club_num in("+str(result30[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result46 = cursor4.fetchone()
 
-            sql = "select cc_img from t_cc where club_num in("+str(result30[0])+") and cc_num in(1, 12, 28, 38, 43, 47)"
+            sql = "select cc_img from t_cc where club_num in("+str(result30[0])+") and cc_num in("+str(a)+", "+str(b)+", "+str(c)+", "+str(d)+", "+str(e)+", "+str(f)+")"
             cursor4.execute(sql)
             result53 = cursor4.fetchone()
             
