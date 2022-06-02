@@ -3,8 +3,6 @@ import './Screen1.css';
 import Header from '../header/Header';
 
 const Screen1 = (props) => {
-  
-
   return (
     <>
       <div className="wrap">

@@ -18,6 +18,7 @@
     font-size: 1em;
     font-weight: 700;
     text-align: left;
+    color: black;
 }
 
 .clubLogo{
@@ -41,6 +42,7 @@
     font-size: 1em;
     font-weight: 700;
     text-align: center;
+    color: black;
 }
 
 .clubContents{
@@ -57,6 +59,8 @@
     margin-top: 2.5vh;
     font-size: 0.75em;
     font-weight: 600;
+    overflow: scroll;
+    color: black;
 }
 
 .result2Line{

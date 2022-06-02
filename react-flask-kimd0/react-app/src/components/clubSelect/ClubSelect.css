@@ -10,10 +10,15 @@
 }
 td{width: 50%;}
 .clubname{
-    padding-bottom: 1.5vh;
-    padding-top: 1.5vh;
-    font-size: 2.5vh;
-    
+    text-align: center;
+    padding-left: 25vw;
+    width: 50vw;
+    font-size: 1.5rem;
+    font-weight: 900;
+    height: 4vh;
+    position: relative;
+    float: left;
+    z-index: -99;
 }
 .club_top_menu{
     width: 100%;

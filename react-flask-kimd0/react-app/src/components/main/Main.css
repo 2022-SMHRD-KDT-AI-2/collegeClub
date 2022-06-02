@@ -50,30 +50,6 @@
      margin-top: 4vh;
  }
 
- .sce11 {
-     position: sticky;
-     width: 80vw;
-     height: 21vh;
-     font-size: 1.5rem;
-     background: rgba(82, 178, 140, 0.25);
-     border-radius: 15px;
-     text-align: center;
-     font-size: 3em;
-     margin-top: 4vh;
-     background-color: black;
-     opacity: 70%;
-     background-image: url(../../img/blossom.jpg);
-     background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
- }
-
- .sce11:hover {
-
-     transition: 2s;
-     background-image: url(../../img/jin01.jpeg);
-
- }
 
 
  .start {
@@ -96,7 +72,27 @@
      border: none
  }
 
- .sce11:hover #sc1 {
+ .sce11 {
+     animation: fadein 2s;
+     position: sticky;
+     width: 80vw;
+     height: 21vh;
+     font-size: 1.5rem;
+     background: rgba(82, 178, 140, 0.25);
+     border-radius: 15px;
+     text-align: center;
+     font-size: 3em;
+
+     transition: 2s;
+     background-image: url(../menubar/img/ilust1.jpg);
+     opacity: 70%;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+
+ }
+
+ #sc1 {
      display: block;
  }
 
@@ -156,6 +152,7 @@
 
 
  .sce33 {
+
      position: sticky;
      width: 80vw;
      height: 21vh;
@@ -189,18 +186,22 @@
  }
 
 
- /* #bar{
-position: absolute;
-left: 0px;
-top: 802px;
-}
-*/
  .blossom {
      width: 30px;
      height: 30px;
      background-size: cover;
      background-repeat: none;
      position: absolute;
-     background: url(../menubar/img/blossom.jpg);
-     left: 80%
+     background-image: url(../menubar/img/blossom.jpg);
+     left: 80%;
+ }
+
+ @keyframes fadein {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
  }

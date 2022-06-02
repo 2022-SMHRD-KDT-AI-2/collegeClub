@@ -54,7 +54,7 @@ df_last.to_csv("df.csv")
 
 
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234',
-                     db='yangdb', charset='utf8');
+                     db='yangdb3', charset='utf8');
 cursor = db.cursor();
 
 df = pd.read_csv("./project2 설문.csv", encoding='cp949');
